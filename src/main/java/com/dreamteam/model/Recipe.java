@@ -8,7 +8,7 @@ public class Recipe {
     private String opis;
     private int ocena;
     private int typ;
-    private File zdjecie;
+    private FileInputStream zdjecie;
 
     public long getId_przepis() {
         return id_przepis;
@@ -35,10 +35,10 @@ public class Recipe {
         this.ocena = ocena;
     }
     public FileInputStream getZdjecie() {
-        FileInputStream photoBuffer= new FileInputStream(this.zdjecie);
-        return zdjecie;
+        return this.zdjecie;
     }
-    public void setZdjecie(FileInputStream zdjecie) {
+    public void setZdjecie(File zdjecie) {
+        FileInputStream photoBuff = new FileInputStream(zdjecie);
         this.zdjecie = zdjecie;
     }
     public int getTyp() {
