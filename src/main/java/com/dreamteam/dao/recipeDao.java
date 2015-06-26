@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import com.dreamteam.model.Recipe;
 import com.dreamteam.util.DbUtil;
+import java.io.File;
+import java.io.FileInputStream;
 /**
  * chuj, dupa, kurwa, cipa
  */
@@ -21,14 +23,13 @@ public class recipeDao {
 
     public void addRecipe(Recipe przepis) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("insert into przepis (id_przepis,nazwa,opis,ocena, typ, zdjecie) values (?, ?, ?, ?, ?, ? )");
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into przepis (nazwa, opis, ocena, typ, zdjecie) values (?, ?, ?, ?, ? )");
             // Parameters start with 1
-            preparedStatement.setLong(1, przepis.getId_przepis());
-            preparedStatement.setString(2, przepis.getNazwa());
-            preparedStatement.setString(3, przepis.getOpis());
-            preparedStatement.setInt(4, przepis.getOcena());
-            preparedStatement.setInt(5, przepis.getTyp());
-            preparedStatement.setString(6, przepis.getZdjecie());
+            preparedStatement.setString(1, przepis.getNazwa());
+            preparedStatement.setString(2, przepis.getOpis());
+            preparedStatement.setInt(3, przepis.getOcena());
+            preparedStatement.setInt(4, przepis.getTyp());
+            preparedStatement.setBinaryStream(5, przepis.getZdjecie(), );
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -50,15 +51,14 @@ public class recipeDao {
 
     public void updateRecipe(Recipe przepis) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("update przepis set id_przepis=? ,nazwa=? , " +
+            PreparedStatement preparedStatement = connection.prepareStatement("update przepis set nazwa=? , " +
                     "opis=? ,ocena=? , typ=?, zdjecie=?" + "where userid=?");
             // Parameters start with 1
-            preparedStatement.setLong(1, przepis.getId_przepis());
-            preparedStatement.setString(2, przepis.getNazwa());
-            preparedStatement.setString(3, przepis.getOpis());
-            preparedStatement.setInt(4, przepis.getOcena());
-            preparedStatement.setInt(5, przepis.getTyp());
-            preparedStatement.setString(6, przepis.getZdjecie());
+            preparedStatement.setString(1, przepis.getNazwa());
+            preparedStatement.setString(2, przepis.getOpis());
+            preparedStatement.setInt(3, przepis.getOcena());
+            preparedStatement.setInt(4, przepis.getTyp());
+            preparedStatement.setFile(5, przepis.getZdjecie());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -88,7 +88,7 @@ public class recipeDao {
         return recipes;
     }
 
-    public Recipe getUserById(int przepisId) {
+    public Recipe getRecipeById(int przepisId) {
         Recipe przepis = new Recipe();
         try {
             PreparedStatement preparedStatement = connection.
