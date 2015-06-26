@@ -7,7 +7,7 @@
 </head>
 <body>
 Janek, kurwa, ja to wrzucam
-<p><a href="UserController?action=insert">Add User</a></p>
+<p><a href="RecipeController?action=insert">Add User</a></p>
 
 </body>
 </html>
