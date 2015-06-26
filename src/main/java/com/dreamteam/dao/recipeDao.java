@@ -78,12 +78,7 @@ public class recipeDao {
                 przepis.setOpis(rs.getString("opis"));
                 przepis.setOcena(rs.getInt("ocena"));
                 przepis.setTyp(rs.getInt("typ"));
-                File photoStream=null;
-                try {
-                    photoStream = new File(rs.getBinaryStream("zdjecie"));
-                }
-                catch (java.io.FileNotFoundException ignored){}
-                przepis.setZdjecie(rs.getBinaryStream("zdjecie"));
+                przepis.setPhotoFromStream(rs.getBinaryStream("zdjecie"));
                 recipes.add(przepis);
             }
         } catch (SQLException e) {
@@ -107,7 +102,7 @@ public class recipeDao {
                 przepis.setOpis(rs.getString("opis"));
                 przepis.setOcena(rs.getInt("ocena"));
                 przepis.setTyp(rs.getInt("typ"));
-                przepis.setZdjecie(rs.getString("zdjecie"));
+                przepis.setZdjecie(rs.getBinaryStream("zdjecie"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
