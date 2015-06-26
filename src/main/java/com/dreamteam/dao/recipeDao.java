@@ -29,7 +29,7 @@ public class recipeDao {
             preparedStatement.setString(2, przepis.getOpis());
             preparedStatement.setInt(3, przepis.getOcena());
             preparedStatement.setInt(4, przepis.getTyp());
-            preparedStatement.setBinaryStream(5, przepis.getZdjecie(), );
+            preparedStatement.setString(5, przepis.getZdjecie());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -58,7 +58,7 @@ public class recipeDao {
             preparedStatement.setString(2, przepis.getOpis());
             preparedStatement.setInt(3, przepis.getOcena());
             preparedStatement.setInt(4, przepis.getTyp());
-            preparedStatement.setFile(5, przepis.getZdjecie());
+            preparedStatement.setString(5, przepis.getZdjecie());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {

@@ -3,11 +3,22 @@
 <head>
   <title>kurwa ma</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../siwm/style.css" type="text/css">
 </head>
 <body>
 Janek, kurwa, ja to wrzucam
-<p><a href="UserController?action=insert">Add User</a></p>
+
+
+<h1 align="center">Coupons categories</h1>
+<form method="POST" action="RecipeController">
+  <input type="text" name="nazwa" value="nazwa przepisu">
+  <input type="text" name="opis" value="opis">
+  <input type="text" name="ocena" value="ocena">
+  <input type="text" name="typ" value="typ">
+  <input type="text" name="zdjecie" value="zdjecie">
+  <input type="Submit">
+</form>
+
+<p><a href="RecipeController?action=insert">Add User</a></p>
 
 </body>
 </html>
