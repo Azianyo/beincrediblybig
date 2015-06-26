@@ -37,7 +37,7 @@ public class Recipe {
     public FileInputStream getZdjecie() {
         return this.zdjecie;
     }
-    public void setZdjecie(File zdjecie);
+    public void setZdjecie(FileInputStream(zdjecie));
     public int getTyp() {
         return typ;
     }
