@@ -38,10 +38,8 @@ public class Recipe {
         return zdjecie;
     }
     public void setZdjecie(FileInputStream zdjecie) {
-        File photoFile= new File(this.zdjecie);
         this.zdjecie = zdjecie;
     }
-    public int photoSize(){return (int) this.zdjecie.length();}
     public int getTyp() {
         return typ;
     }
