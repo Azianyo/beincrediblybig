@@ -14,4 +14,14 @@
     <servlet-name>UserController</servlet-name>
     <url-pattern>/UserController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RecipeController</display-name>
+    <servlet-name>RecipeController</servlet-name>
+    <servlet-class>com.dreamteam.controller.RecipeController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RecipeController</servlet-name>
+    <url-pattern>/RecipeController</url-pattern>
+  </servlet-mapping>
 </web-app>
