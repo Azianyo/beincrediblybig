@@ -29,7 +29,7 @@ public class recipeDao {
             preparedStatement.setString(2, przepis.getOpis());
             preparedStatement.setInt(3, przepis.getOcena());
             preparedStatement.setInt(4, przepis.getTyp());
-            preparedStatement.setBinaryStream(5, przepis.getZdjecie(), );
+            preparedStatement.setBinaryStream(5, przepis.getPhotoStream(), przepis.PhotoLen());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -58,7 +58,7 @@ public class recipeDao {
             preparedStatement.setString(2, przepis.getOpis());
             preparedStatement.setInt(3, przepis.getOcena());
             preparedStatement.setInt(4, przepis.getTyp());
-            preparedStatement.setFile(5, przepis.getZdjecie());
+            preparedStatement.setBinaryStream(5, przepis.getPhotoStream(), przepis.PhotoLen());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -78,7 +78,12 @@ public class recipeDao {
                 przepis.setOpis(rs.getString("opis"));
                 przepis.setOcena(rs.getInt("ocena"));
                 przepis.setTyp(rs.getInt("typ"));
-                przepis.setZdjecie(rs.getString("zdjecie"));
+                File photoStream=null;
+                try {
+                    photoStream = new File(rs.getBinaryStream("zdjecie"));
+                }
+                catch (java.io.FileNotFoundException ignored){}
+                przepis.setZdjecie(rs.getBinaryStream("zdjecie"));
                 recipes.add(przepis);
             }
         } catch (SQLException e) {
