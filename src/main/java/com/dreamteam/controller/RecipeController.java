@@ -59,7 +59,7 @@ public class RecipeController extends HttpServlet {
         recipe.setNazwa(request.getParameter("nazwa"));
         recipe.setOpis(request.getParameter("opis"));
         recipe.setTyp(Integer.parseInt(request.getParameter("typ")));
-        recipe.setZdjecie();
+        //recipe.setPhotoFromStream(request.getParameter("zdjecie"));
 
 
         String recipeId = request.getParameter("id_przepis");
