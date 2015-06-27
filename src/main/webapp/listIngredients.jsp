@@ -28,7 +28,7 @@
   <tbody>
   <c:forEach items="${skladniki}" var="skladnik">
     <tr>
-      <td><c:out value="${skladnik.id_przepis}" /></td>
+      <td><c:out value="${skladnik.id_skladnik}" /></td>
       <td><c:out value="${skladnik.nazwa}" /></td>
 
       <td><a href="RecipeController?action=edit&id_przepis=<c:out value="${skladnik.id_skladnik}"/>">Update</a></td>
