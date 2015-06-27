@@ -25,8 +25,8 @@ public class RecipeController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String forward="";
-        //String action = request.getParameter("action");
-        String action = "delete";
+        String action = request.getParameter("action");
+
 
         if (action.equalsIgnoreCase("delete")){
             long recipeID = Long.parseLong(request.getParameter("przepis_id"));
