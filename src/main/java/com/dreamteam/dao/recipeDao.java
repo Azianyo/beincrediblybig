@@ -52,7 +52,7 @@ public class recipeDao {
     public void updateRecipe(Recipe przepis) {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("update przepis set nazwa=? , " +
-                    "opis=? ,ocena=? , typ=?, zdjecie=?" + "where przepis_id=?");
+                    "opis=? ,ocena=? , typ=?, zdjecie=? where przepis_id=?");
             // Parameters start with 1
             preparedStatement.setString(1, przepis.getNazwa());
             preparedStatement.setString(2, przepis.getOpis());
