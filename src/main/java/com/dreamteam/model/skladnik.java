@@ -1,4 +1,6 @@
 package com.dreamteam.model;
+import java.io.File;
+import java.io.FileInputStream;
 public class skladnik {
 
 	private long id_skladnik;
