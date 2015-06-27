@@ -19,5 +19,13 @@ Janek, kurwa, ja to wrzucam
   <input type="Submit">
 </form>
 <p><a href="RecipeController?action=insert"></a></p>
+
+<h1 align="center">Coupons categories</h1>
+<form method=GET" action="RecipeController">
+    <input type="text" name="id_przepis">
+    <input type="Submit">
+</form>
+<p><a href="RecipeController?action=delete"></a></p>
+
 </body>
 </html>
