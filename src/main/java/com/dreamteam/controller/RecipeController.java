@@ -64,7 +64,7 @@ public class RecipeController extends HttpServlet {
         }
         else
         {
-            recipe.setId_przepis(Integer.parseInt(recipeId));
+            recipe.setId_przepis(Long.parseLong(recipeId));
             dao.updateRecipe(recipe);
         }
 
