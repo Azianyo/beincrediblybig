@@ -37,6 +37,6 @@
   </c:forEach>
   </tbody>
 </table>
-<p><a href="UserController?action=insert">Add User</a></p>
+<p><a href="RecipeController?action=insert">Add User</a></p>
 </body>
 </html>
