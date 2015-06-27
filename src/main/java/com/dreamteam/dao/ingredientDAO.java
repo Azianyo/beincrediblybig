@@ -39,7 +39,7 @@ public class ingredientDAO {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("delete from skladnik where id_skladnik=?");
             // Parameters start with 1
-            preparedStatement.setLong(1, ingredientId);
+            preparedStatement.setLong(1, IngredientId);
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -47,9 +47,9 @@ public class ingredientDAO {
         }
     }
 
-    public void updateRecipe(Recipe przepis) {
+    public void updateIngredient(Ingredient skladnik) {
         try {
-            String command="update przepis set nazwa=? where id_skladnik=?";
+            String command="update skladnik set nazwa=? where id_skladnik=?";
             PreparedStatement preparedStatement = connection.prepareStatement(command);
             // Parameters start with 1
             BufferedWriter out = null;
@@ -71,62 +71,51 @@ public class ingredientDAO {
                     System.err.println("Error: " + e.getMessage());
                 }
             }
-            preparedStatement.setString(1, przepis.getNazwa());
-            preparedStatement.setString(2, przepis.getOpis());
-            preparedStatement.setInt(3, przepis.getOcena());
-            preparedStatement.setInt(4, przepis.getTyp());
-            preparedStatement.setString(5, przepis.getZdjecie());
-            preparedStatement.setLong(6, przepis.getId_przepis());
-            preparedStatement.executeUpdate();
+            preparedStatement.setString(1, skladnik.getNazwa());
+
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public List<Recipe> getAllRecipes() {
-        List<Recipe> recipes = new ArrayList<Recipe>();
+    public List<Ingredient> getAllIngredients() {
+        List<Ingredient> Ingredients = new ArrayList<Ingredient>();
         try {
             Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery("select * from przepis");
+            ResultSet rs = statement.executeQuery("select * from skladnik");
             while (rs.next()) {
-                Recipe przepis = new Recipe();
-                przepis.setId_przepis(rs.getLong("id_przepis"));
-                przepis.setNazwa(rs.getString("nazwa"));
-                przepis.setOpis(rs.getString("opis"));
-                przepis.setOcena(rs.getInt("ocena"));
-                przepis.setTyp(rs.getInt("typ"));
-                przepis.setZdjecie(rs.getString("zdjecie"));
-                recipes.add(przepis);
+                Ingredient skladnik = new Ingredient();
+                skladnik.setId_skladnik(rs.getLong("id_skladnik"));
+                skladnik.setNazwa(rs.getString("nazwa"));
+
+                Ingredients.add(skladnik);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return recipes;
+        return Ingredients;
     }
 
-    public Recipe getRecipeById(int przepisId) {
-        Recipe przepis = new Recipe();
+    public Ingredient getIngredientById(int skladnikId) {
+        Ingredient skladnik = new Ingredient();
         try {
             PreparedStatement preparedStatement = connection.
-                    prepareStatement("select * from przepis where id_przepis=?");
-            preparedStatement.setLong(1, przepis.getId_przepis());
+                    prepareStatement("select * from skladnik where id_skladnik=?");
+            preparedStatement.setLong(1, skladnik.getId_skladnik());
             ResultSet rs = preparedStatement.executeQuery();
 
             if (rs.next()) {
-                przepis.setId_przepis(rs.getLong("przepis_id"));
-                przepis.setNazwa(rs.getString("nazwa"));
-                przepis.setOpis(rs.getString("opis"));
-                przepis.setOcena(rs.getInt("ocena"));
-                przepis.setTyp(rs.getInt("typ"));
-                przepis.setZdjecie(rs.getString("zdjecie"));
+                skladnik.setId_skladnik(rs.getLong("przepis_id"));
+                skladnik.setNazwa(rs.getString("nazwa"));
+
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return przepis;
+        return skladnik;
     }
 }
-}
+
