@@ -27,7 +27,7 @@ public class RecipeIngedientDao {
             // Parameters start with 1
             preparedStatement.setInt(1, recipeIngredient.getId_przepis());
             preparedStatement.setInt(2, recipeIngredient.getId_skladnik());
-            preparedStatement.setInt(1, recipeIngredient.getIlosc());
+            preparedStatement.setInt(3, recipeIngredient.getIlosc());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
