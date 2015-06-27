@@ -30,8 +30,8 @@ public class RecipeController extends HttpServlet {
         if (action.equalsIgnoreCase("delete")){
             long recipeID = Long.parseLong(request.getParameter("przepis_id"));
             dao.deleteRecipe(recipeID);
-            forward = LIST_RECIPE;
-            request.setAttribute("przepis", dao.getAllRecipes());
+           // forward = LIST_RECIPE;
+           // request.setAttribute("przepis", dao.getAllRecipes());
         } else if (action.equalsIgnoreCase("edit")){
             forward = INSERT_OR_EDIT;
             int recipeID = Integer.parseInt(request.getParameter("przepis_id"));
@@ -67,8 +67,8 @@ public class RecipeController extends HttpServlet {
             recipe.setId_przepis(Integer.parseInt(recipeId));
             dao.updateRecipe(recipe);
         }
-        RequestDispatcher view = request.getRequestDispatcher(LIST_RECIPE);
-        request.setAttribute("users", dao.getAllRecipes());
-        view.forward(request, response);
+        //RequestDispatcher view = request.getRequestDispatcher(LIST_RECIPE);
+        //request.setAttribute("przepis", dao.getAllRecipes());
+        //view.forward(request, response);
     }
 }
