@@ -55,8 +55,6 @@ public class RecipeController extends HttpServlet {
         recipe.setOcena(Integer.parseInt(request.getParameter("ocena")));
         recipe.setTyp(Integer.parseInt(request.getParameter("typ")));
         recipe.setZdjecie(request.getParameter("zdjecie"));
-
-
         String recipeId = request.getParameter("id_przepis");
         if(recipeId == null || recipeId.isEmpty())
         {
