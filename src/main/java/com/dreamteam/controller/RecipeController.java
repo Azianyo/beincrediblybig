@@ -1,9 +1,6 @@
 package com.dreamteam.controller;
 
 import java.io.IOException;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,21 +25,6 @@ public class RecipeController extends HttpServlet {
         dao = new recipeDao();
     }
 
-    public List<Recipe> generateRecipes() {
-        List<Recipe> recipes = new ArrayList<Recipe>();
-
-        for (long chuj=0; chuj<10; chuj++) {
-            Recipe przepis = new Recipe();
-            przepis.setId_przepis(chuj);
-            przepis.setNazwa("nazwa");
-            przepis.setOpis("chuj");
-            przepis.setOcena(4);
-            przepis.setTyp(4);
-            przepis.setZdjecie("zdjecie");
-            recipes.add(przepis);
-        }
-        return recipes;
-    }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String forward="";
         String action = request.getParameter("action");
