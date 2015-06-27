@@ -39,7 +39,7 @@ public class recipeDao {
 
     public void deleteRecipe(long recipeId) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("delete from przepis where przepis_id=?");
+            PreparedStatement preparedStatement = connection.prepareStatement("delete from przepis where id_przepis=?");
             // Parameters start with 1
             preparedStatement.setLong(1, recipeId);
             preparedStatement.executeUpdate();
