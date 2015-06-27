@@ -42,7 +42,7 @@ public class IngredientController extends HttpServlet {
             long ingredientID = Long.parseLong(request.getParameter("id_skladnik"));
             dao.deleteIngredient(ingredientID);
             forward = LIST_INGREDIENT;
-            request.setAttribute("sladniki", dao.getAllIngredients());
+            request.setAttribute("skladniki", dao.getAllIngredients());
         } else if (action.equalsIgnoreCase("edit")){
             forward = INSERT_OR_EDIT;
             int ingredientID = Integer.parseInt(request.getParameter("id_skladnik"));
