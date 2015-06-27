@@ -44,4 +44,14 @@
     <servlet-name>MealController</servlet-name>
     <url-pattern>/MealController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RecipeIngredientController</display-name>
+    <servlet-name>RecipeIngredientController</servlet-name>
+    <servlet-class>com.dreamteam.controller.RecipeIngredientController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RecipeIngredientController</servlet-name>
+    <url-pattern>/RecipeIngredientController</url-pattern>
+  </servlet-mapping>
 </web-app>
