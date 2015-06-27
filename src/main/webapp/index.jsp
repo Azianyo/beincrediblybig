@@ -22,7 +22,7 @@ witness true greatness
 
 <h1 align="center">przepis</h1>
 <form method="GET" action="RecipeController">
-    <input type="text" name="przepis_id">
+    <input type="text" name="id_przepis">
     <input type="hidden" name="action" value="delete">
     <input type="Submit">
 </form>
