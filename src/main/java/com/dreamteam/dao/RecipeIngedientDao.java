@@ -84,7 +84,7 @@ public class RecipeIngedientDao {
         return RecipeIngredients;
     }
 
-    public przepis_skladnik getRecipeIngredientById(int przepisSkladnikId) {
+    public przepis_skladnik getRecipeIngredientById(long przepisSkladnikId) {
         przepis_skladnik recipeIngredient = new przepis_skladnik();
         try {
             PreparedStatement preparedStatement = connection.

@@ -38,7 +38,7 @@ public class RecipeIngredientController extends HttpServlet {
             request.setAttribute("przepis_skladnik", dao.getAllRecipeIngredients());
         } else if (action.equalsIgnoreCase("edit")){
             forward = INSERT_OR_EDIT;
-            int recipeIngredientID = Integer.parseInt(request.getParameter("id_przepis_skladnik"));
+            long recipeIngredientID = Long.parseLong(request.getParameter("id_przepis_skladnik"));
             przepis_skladnik recipeIngredient = dao.getRecipeIngredientById(recipeIngredientID);
             request.setAttribute("przepis_skladnik", recipeIngredient );
         } else if (action.equalsIgnoreCase("listRecipesIngredients")){
