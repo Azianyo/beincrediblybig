@@ -27,7 +27,7 @@ Janek, kurwa, ja to wrzucam
   <input type="text" name="ocena" value="ocena">
   <input type="text" name="typ" value="typ">
   <input type="text" name="zdjecie" value="zdjecie">
-  <input type="text" name="id_przepisu" value="Nr przepisu">
+  <input type="text" name="id_przepis" value="Nr przepisu">
   <input type="Submit">
 </form>
 <p><a href="RecipeController?action=insert"></a></p>
