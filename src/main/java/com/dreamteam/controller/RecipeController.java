@@ -36,10 +36,10 @@ public class RecipeController extends HttpServlet {
             forward = INSERT_OR_EDIT;
             int recipeID = Integer.parseInt(request.getParameter("przepis_id"));
             Recipe recipe = dao.getRecipeById(recipeID);
-            request.setAttribute("przepis", recipe );
+            request.setAttribute("przepisy", recipe );
         } else if (action.equalsIgnoreCase("listUser")){
             forward = LIST_RECIPE;
-            request.setAttribute("przepis", dao.getAllRecipes());
+            request.setAttribute("przepisy", dao.getAllRecipes());
         } else {
             forward = INSERT_OR_EDIT;
         }
@@ -68,7 +68,7 @@ public class RecipeController extends HttpServlet {
             dao.updateRecipe(recipe);
         }
         RequestDispatcher view = request.getRequestDispatcher(LIST_RECIPE);
-        request.setAttribute("przepis", dao.getAllRecipes());
+        request.setAttribute("przepisy", dao.getAllRecipes());
         view.forward(request, response);
     }
 }

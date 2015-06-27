@@ -59,6 +59,7 @@ public class recipeDao {
             preparedStatement.setInt(3, przepis.getOcena());
             preparedStatement.setInt(4, przepis.getTyp());
             preparedStatement.setString(5, przepis.getZdjecie());
+            preparedStatement.setLong(6, przepis.getId_przepis());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
