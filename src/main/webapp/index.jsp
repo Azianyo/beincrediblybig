@@ -17,15 +17,15 @@ Janek, kurwa, ja to wrzucam
   <input type="text" name="zdjecie" value="zdjecie">
   <input type="text" name="id_przepis">
   <input type="Submit">
-    <p><a href="RecipeController?action=insert"></a></p>
+    <p><a href="RecipeController?action=insert"></a>Akcja</p>
 </form>
 
 
 <h1 align="center">Coupons categories</h1>
 <form method="GET" action="RecipeController">
     <input type="text" name="przepis_id">
-    <input type="Submit"
-    <p><a href="RecipeController?action=delete"></a></p>
+    <input type="Submit">
+    <p><a href="RecipeController?action=delete"></a>Akcja 2</p>
 </form>
 
 
