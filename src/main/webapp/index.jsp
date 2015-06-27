@@ -8,7 +8,7 @@
 Janek, kurwa, ja to wrzucam
 
 
-<h1 align="center">Coupons categories</h1>
+<%--<h1 align="center">Coupons categories</h1>
 <form method="POST" action="RecipeController">
   <input type="text" name="nazwa" value="nazwa przepisu">
   <input type="text" name="opis" value="opis">
@@ -16,9 +16,9 @@ Janek, kurwa, ja to wrzucam
   <input type="text" name="typ" value="typ">
   <input type="text" name="zdjecie" value="zdjecie">
   <input type="Submit">
-</form>
+</form>*
 <br><br>
-<p><a href="RecipeController?action=insert"></a></p>
+<p><a href="RecipeController?action=insert"></a></p>--%>
 
 <h1 align="center">Coupons categories</h1>
 <form method="POST" action="RecipeController">
