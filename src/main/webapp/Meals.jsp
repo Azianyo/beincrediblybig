@@ -15,12 +15,12 @@
 </head>
 <body>
 
-<form method="POST" action='IngredientController' name="frmAddIngedients">
-  ID Skladnik : <input type="text" readonly="readonly" name="id_skladnik"
-                       value="<c:out value="${skladnik.id_skladnik}" />" /> <br />
+<form method="POST" action='MealController' name="frmAddMeal">
+  ID Posilek : <input type="text" readonly="readonly" name="id_posilek"
+                       value="<c:out value="${posilek.id_posilek}" />" /> <br />
   Nazwa : <input
         type="text" name="nazwa"
-        value="<c:out value="${skladnik.nazwa}" />" /> <br />
+        value="<c:out value="${posilek.nazwa}" />" /> <br />
 
   <input type="submit" value="Submit" />
 </form>

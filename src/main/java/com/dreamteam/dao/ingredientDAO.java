@@ -3,7 +3,7 @@ package com.dreamteam.dao;
 /**
  * Created by macie_000 on 2015-06-27.
  */
-import java.io.*;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.dreamteam.model.Ingredient;
-import com.dreamteam.model.Recipe;
+
 import com.dreamteam.util.DbUtil;
 public class ingredientDAO {
     private Connection connection;
@@ -80,12 +80,12 @@ public class ingredientDAO {
         return Ingredients;
     }
 
-    public Ingredient getIngredientById(int skladnikId) {
+    public Ingredient getIngredientById(long skladnikId) {
         Ingredient skladnik = new Ingredient();
         try {
             PreparedStatement preparedStatement = connection.
                     prepareStatement("select * from skladnik where id_skladnik=?");
-            preparedStatement.setLong(1, skladnik.getId_skladnik());
+            preparedStatement.setLong(1, skladnikId);
             ResultSet rs = preparedStatement.executeQuery();
 
             if (rs.next()) {

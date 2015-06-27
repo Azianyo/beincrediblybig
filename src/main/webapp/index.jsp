@@ -24,7 +24,7 @@ witness true greatness
 <form method="GET" action="RecipeController">
     <input type="text" name="id_przepis">
     <input type="hidden" name="action" value="delete">
-    <input type="Submit">
+    <input type="Submit" value="Usun">
 </form>
 
 <h1 align="center">Skladnik</h1>
@@ -40,23 +40,40 @@ witness true greatness
 <form method="GET" action="IngredientController">
     <input type="text" name="id_skladnik">
     <input type="hidden" name="action" value="delete">
+    <input type="Submit" value="Usun">
+</form>
+
+<h1 align="center">Uzytkownik</h1>
+<form method="POST" action="UserController">
+    <input type="text" name="isAdmin" value="admin">
+    <input type="text" name="email" value="email">
+    <input type="password" name="haslo" value="haslo">
+    <input type="text" name="id_uzytkownik">
     <input type="Submit">
 </form>
 
-<h1 align="center">SkladnikPrzepis</h1>
-<form method="POST" action="RecipeIngredientController">
-    <input type="text" name="nazwa" value="nazwa skladnika">
-    <input type="text" name="id_przepis_skladnik">
 
-    <input type="Submit">
-</form>
-
-
-<h1 align="center">SkladnikPrzepis</h1>
-<form method="GET" action="RecipeIngredientController">
-    <input type="text" name="id_przepis_skladnik">
+<h1 align="center">Uzytkownik</h1>
+<form method="GET" action="UserController">
+    <input type="text" name="id_uzytkownik">
     <input type="hidden" name="action" value="delete">
+    <input type="Submit" value="Usun konto">
+</form>
+
+<h1 align="center">Posilek</h1>
+<form method="POST" action="MealController">
+    <input type="text" name="nazwa" value="nazwa posilku">
+    <input type="text" name="id_posilek">
+
     <input type="Submit">
+</form>
+
+
+<h1 align="center">Posilek</h1>
+<form method="GET" action="MealController">
+    <input type="text" name="id_posilek">
+    <input type="hidden" name="action" value="delete">
+    <input type="Submit" value="Usun">
 </form>
 </body>
 </html>
