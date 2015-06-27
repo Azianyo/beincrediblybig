@@ -17,10 +17,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dreamteam.dao.recipeDao;
+
 import com.dreamteam.model.Ingredient;
 import com.dreamteam.dao.ingredientDAO;
-import com.dreamteam.model.Recipe;
+
 public class IngredientController extends HttpServlet {
         private static final long serialVersionUID = 1L;
         private static String INSERT_OR_EDIT = "/index.jsp";
