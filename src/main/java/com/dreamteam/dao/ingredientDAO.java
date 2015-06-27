@@ -24,7 +24,7 @@ public class ingredientDAO {
 
     public void addIngredient(Ingredient skladnik) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("insert into skladnik (nazwa) values (?) )");
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into skladnik (nazwa) values (?)");
             // Parameters start with 1
             preparedStatement.setString(1, skladnik.getNazwa());
 
