@@ -23,9 +23,7 @@ public class recipeDao {
 
     public void addRecipe(Recipe przepis) {
         try {
-            String command="insert into przepis (nazwa, opis, ocena, typ, zdjecie) values (?, ?, ?, ?, ? )";
-            PreparedStatement preparedStatement = connection.prepareStatement(command);
-            write2History(command);
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into przepis (nazwa, opis, ocena, typ, zdjecie) values (?, ?, ?, ?, ? )");
             // Parameters start with 1
             preparedStatement.setString(1, przepis.getNazwa());
             preparedStatement.setString(2, przepis.getOpis());
@@ -41,9 +39,7 @@ public class recipeDao {
 
     public void deleteRecipe(long recipeId) {
         try {
-            String command="delete from przepis where przepis_id=?";
-            PreparedStatement preparedStatement = connection.prepareStatement(command);
-            write2History(command);
+            PreparedStatement preparedStatement = connection.prepareStatement("delete from przepis where id_przepis=?");
             // Parameters start with 1
             preparedStatement.setLong(1, recipeId);
             preparedStatement.executeUpdate();
@@ -58,7 +54,25 @@ public class recipeDao {
             String command="update przepis set nazwa=? ,opis=? ,ocena=? , typ=?, zdjecie=? where id_przepis=?";
             PreparedStatement preparedStatement = connection.prepareStatement(command);
             // Parameters start with 1
-            write2History(command);
+            BufferedWriter out = null;
+            try {
+                FileWriter fstream = new FileWriter("history.txt", true); //true tells to append data.
+                out = new BufferedWriter(fstream);
+                out.write(command);
+            }
+            catch (IOException e)
+            {
+                System.err.println("Error: " + e.getMessage());
+            }
+            finally
+            {
+                try {
+                    out.close();
+                }
+                catch (IOException e){
+                    System.err.println("Error: " + e.getMessage());
+                }
+            }
             preparedStatement.setString(1, przepis.getNazwa());
             preparedStatement.setString(2, przepis.getOpis());
             preparedStatement.setInt(3, przepis.getOcena());
@@ -76,12 +90,10 @@ public class recipeDao {
         List<Recipe> recipes = new ArrayList<Recipe>();
         try {
             Statement statement = connection.createStatement();
-            String command ="select * from przepis";
-            ResultSet rs = statement.executeQuery(command);
-            write2History(command);
-            Recipe przepis = new Recipe();
+            ResultSet rs = statement.executeQuery("select * from przepis");
             while (rs.next()) {
-                przepis.setId_przepis(rs.getLong("przepis_id"));
+                Recipe przepis = new Recipe();
+                przepis.setId_przepis(rs.getLong("id_przepis"));
                 przepis.setNazwa(rs.getString("nazwa"));
                 przepis.setOpis(rs.getString("opis"));
                 przepis.setOcena(rs.getInt("ocena"));
@@ -99,15 +111,13 @@ public class recipeDao {
     public Recipe getRecipeById(int przepisId) {
         Recipe przepis = new Recipe();
         try {
-            String command ="select * from users where userid=?";
             PreparedStatement preparedStatement = connection.
-                    prepareStatement(command);
-            write2History(command);
+                    prepareStatement("select * from przepis where id_przepis=?");
             preparedStatement.setInt(1, przepisId);
             ResultSet rs = preparedStatement.executeQuery();
 
             if (rs.next()) {
-                przepis.setId_przepis(rs.getLong("przepis_id"));
+                przepis.setId_przepis(rs.getLong("id_przepis"));
                 przepis.setNazwa(rs.getString("nazwa"));
                 przepis.setOpis(rs.getString("opis"));
                 przepis.setOcena(rs.getInt("ocena"));
@@ -119,26 +129,5 @@ public class recipeDao {
         }
 
         return przepis;
-    }
-    public void write2History(String command){
-        BufferedWriter out = null;
-        try {
-            FileWriter fstream = new FileWriter("history.txt", true); //true tells to append data.
-            out = new BufferedWriter(fstream);
-            out.write(command);
-        }
-        catch (IOException e)
-        {
-            System.err.println("Error: " + e.getMessage());
-        }
-        finally
-        {
-            try {
-                out.close();
-            }
-            catch (IOException e){
-                System.err.println("Error: " + e.getMessage());
-            }
-        }
     }
 }

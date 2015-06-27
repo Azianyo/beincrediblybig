@@ -1,6 +1,8 @@
 package com.dreamteam.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 import javax.servlet.RequestDispatcher;
@@ -15,7 +17,7 @@ import com.dreamteam.model.Recipe;
 public class RecipeController extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static String INSERT_OR_EDIT = "/Recipe.jsp";
-    private static String LIST_RECIPE = "/index.jsp";
+    private static String LIST_RECIPE = "/listRecipes.jsp";
     private recipeDao dao;
 
     public RecipeController() {
@@ -29,15 +31,15 @@ public class RecipeController extends HttpServlet {
 
 
         if (action.equalsIgnoreCase("delete")){
-            long recipeID = Long.parseLong(request.getParameter("przepis_id"));
+            long recipeID = Long.parseLong(request.getParameter("id_przepis"));
             dao.deleteRecipe(recipeID);
             forward = LIST_RECIPE;
-           // request.setAttribute("przepis", dao.getAllRecipes());
+            request.setAttribute("przepisy", dao.getAllRecipes());
         } else if (action.equalsIgnoreCase("edit")){
             forward = INSERT_OR_EDIT;
-            int recipeID = Integer.parseInt(request.getParameter("przepis_id"));
+            int recipeID = Integer.parseInt(request.getParameter("id_przepis"));
             Recipe recipe = dao.getRecipeById(recipeID);
-            request.setAttribute("przepisy", recipe );
+            request.setAttribute("przepis", recipe );
         } else if (action.equalsIgnoreCase("listRecipes")){
             forward = LIST_RECIPE;
             request.setAttribute("przepisy", dao.getAllRecipes());
