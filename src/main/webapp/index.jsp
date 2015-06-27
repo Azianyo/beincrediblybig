@@ -18,7 +18,7 @@ Janek, kurwa, ja to wrzucam
   <input type="Submit">
 </form>
 
-<p><a href="RecipeController?action=insert">Add User</a></p>
+<p><a href="RecipeController?action=insert"></a></p>
 
 </body>
 </html>
