@@ -54,7 +54,7 @@ public class ingredientDAO {
             // Parameters start with 1
             BufferedWriter out = null;
             try {
-                FileWriter fstream = new FileWriter("history.txt", true); //true tells to append data.
+                FileWriter fstream = new FileWriter("history2.txt", true); //true tells to append data.
                 out = new BufferedWriter(fstream);
                 out.write(command);
             }
