@@ -38,7 +38,7 @@ public class RecipeController extends HttpServlet {
             int recipeID = Integer.parseInt(request.getParameter("przepis_id"));
             Recipe recipe = dao.getRecipeById(recipeID);
             request.setAttribute("przepisy", recipe );
-        } else if (action.equalsIgnoreCase("listUser")){
+        } else if (action.equalsIgnoreCase("listRecipes")){
             forward = LIST_RECIPE;
             request.setAttribute("przepisy", dao.getAllRecipes());
         } else {
