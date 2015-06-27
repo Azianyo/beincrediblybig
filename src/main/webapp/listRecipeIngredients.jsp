@@ -27,8 +27,8 @@
       <td><c:out value="${przepis_skladnik.id_przepis}" /></td>
       <td><c:out value="${przepis_skladnik.id_skladnik}" /></td>
       <td><c:out value="${przepis_skladnik.ilosc}" /></td>
-      <td><a href="RecipeIngredientController?action=edit&id_przepis=<c:out value="${przepis_skladnik.id_przepis_skladnik}"/>">Update</a></td>
-      <td><a href="RecipeIngredientController?action=delete&id_przepis=<c:out value="${przepis_skladnik.id_przepis_skladnik}"/>">Delete</a></td>
+      <td><a href="RecipeIngredientController?action=edit&id_przepis_skladnik=<c:out value="${przepis_skladnik.id_przepis_skladnik}"/>">Update</a></td>
+      <td><a href="RecipeIngredientController?action=delete&id_przepis_skladnik=<c:out value="${przepis_skladnik.id_przepis_skladnik}"/>">Delete</a></td>
     </tr>
   </c:forEach>
   </tbody>
