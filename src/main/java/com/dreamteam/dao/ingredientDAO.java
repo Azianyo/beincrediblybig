@@ -73,7 +73,7 @@ public class ingredientDAO {
             }
             preparedStatement.setString(1, skladnik.getNazwa());
             preparedStatement.setLong(2, skladnik.getId_skladnik());
-
+            preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
