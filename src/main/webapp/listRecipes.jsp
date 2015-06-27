@@ -18,6 +18,7 @@
     <th>opis</th>
     <th>ocena</th>
     <th>typ</th>
+    <th>zdjecie</th>
     <th colspan=2>Action</th>
   </tr>
   </thead>
@@ -29,12 +30,13 @@
       <td><c:out value="${przepis.opis}" /></td>
       <td><c:out value="${przepis.ocena}" /></td>
         <td><c:out value="${przepis.typ}" /></td>
+        <td><c:out value="${przepis.zdjecie}" /></td>
       <td><a href="RecipeController?action=edit&id_przepis=<c:out value="${przepis.id_przepis}"/>">Update</a></td>
       <td><a href="RecipeController?action=delete&id_przepis=<c:out value="${przepis.id_przepis}"/>">Delete</a></td>
     </tr>
   </c:forEach>
   </tbody>
 </table>
-<p><a href="UserController?action=insert">Add User</a></p>
+<p><a href="RecipeController?action=insert">Add User</a></p>
 </body>
 </html>
