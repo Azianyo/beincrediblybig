@@ -23,7 +23,9 @@ public class recipeDao {
 
     public void addRecipe(Recipe przepis) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("insert into przepis (nazwa, opis, ocena, typ, zdjecie) values (?, ?, ?, ?, ? )");
+            String command="insert into przepis (nazwa, opis, ocena, typ, zdjecie) values (?, ?, ?, ?, ? )";
+            PreparedStatement preparedStatement = connection.prepareStatement(command);
+            write2History(command);
             // Parameters start with 1
             preparedStatement.setString(1, przepis.getNazwa());
             preparedStatement.setString(2, przepis.getOpis());
@@ -39,7 +41,9 @@ public class recipeDao {
 
     public void deleteRecipe(long recipeId) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("delete from przepis where przepis_id=?");
+            String command="delete from przepis where przepis_id=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(command);
+            write2History(command);
             // Parameters start with 1
             preparedStatement.setLong(1, recipeId);
             preparedStatement.executeUpdate();
@@ -54,7 +58,7 @@ public class recipeDao {
             String command="update przepis set nazwa=? ,opis=? ,ocena=? , typ=?, zdjecie=? where id_przepis=?";
             PreparedStatement preparedStatement = connection.prepareStatement(command);
             // Parameters start with 1
-
+            write2History(command);
             preparedStatement.setString(1, przepis.getNazwa());
             preparedStatement.setString(2, przepis.getOpis());
             preparedStatement.setInt(3, przepis.getOcena());
@@ -72,7 +76,9 @@ public class recipeDao {
         List<Recipe> recipes = new ArrayList<Recipe>();
         try {
             Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery("select * from przepis");
+            String command ="select * from przepis";
+            ResultSet rs = statement.executeQuery(command);
+            write2History(command);
             Recipe przepis = new Recipe();
             while (rs.next()) {
                 przepis.setId_przepis(rs.getLong("przepis_id"));
@@ -93,8 +99,10 @@ public class recipeDao {
     public Recipe getRecipeById(int przepisId) {
         Recipe przepis = new Recipe();
         try {
+            String command ="select * from users where userid=?";
             PreparedStatement preparedStatement = connection.
-                    prepareStatement("select * from users where userid=?");
+                    prepareStatement(command);
+            write2History(command);
             preparedStatement.setInt(1, przepisId);
             ResultSet rs = preparedStatement.executeQuery();
 
