@@ -30,8 +30,9 @@ public class RecipeController extends HttpServlet {
 
     public List<Recipe> generateRecipes() {
         List<Recipe> recipes = new ArrayList<Recipe>();
-        Recipe przepis = new Recipe();
+
         for (long chuj=0; chuj<10; chuj++) {
+            Recipe przepis = new Recipe();
             przepis.setId_przepis(chuj);
             przepis.setNazwa("nazwa");
             przepis.setOpis("chuj");
