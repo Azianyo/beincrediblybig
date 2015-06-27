@@ -3,6 +3,8 @@ package com.dreamteam.model;
 /**
  * Created by macie_000 on 2015-06-27.
  */
+import java.io.File;
+import java.io.FileInputStream;
 public class Ingredient {
 
     private long id_skladnik;
