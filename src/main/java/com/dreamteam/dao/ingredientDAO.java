@@ -52,25 +52,7 @@ public class ingredientDAO {
             String command="update skladnik set nazwa=? where id_skladnik=?";
             PreparedStatement preparedStatement = connection.prepareStatement(command);
             // Parameters start with 1
-            BufferedWriter out = null;
-            try {
-                FileWriter fstream = new FileWriter("history2.txt", true); //true tells to append data.
-                out = new BufferedWriter(fstream);
-                out.write(command);
-            }
-            catch (IOException e)
-            {
-                System.err.println("Error: " + e.getMessage());
-            }
-            finally
-            {
-                try {
-                    out.close();
-                }
-                catch (IOException e){
-                    System.err.println("Error: " + e.getMessage());
-                }
-            }
+
             preparedStatement.setString(1, skladnik.getNazwa());
             preparedStatement.setLong(2, skladnik.getId_skladnik());
             preparedStatement.executeUpdate();
