@@ -9,8 +9,8 @@
 <body>
 
 <form method="POST" action='UserController' name="frmAddUser">
-  ID Uzytkownika : <input type="text" readonly="readonly" name="id_uzytkownika"
-                       value="<c:out value="${user.id_uzytkownika}" />" /> <br />
+  ID Uzytkownika : <input type="text" readonly="readonly" name="id_uzytkownik"
+                       value="<c:out value="${user.id_uzytkownik}" />" /> <br />
   Admin Status : <input
         type="text" name="isAdmin"
         value="<c:out value="${user.isAdmin}" />" /> <br />
