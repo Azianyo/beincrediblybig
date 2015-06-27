@@ -74,7 +74,7 @@ public class IngredientController extends HttpServlet {
         }
 
         RequestDispatcher view = request.getRequestDispatcher(LIST_INGREDIENT);
-        request.setAttribute("przepisy", dao.getAllIngredients());
+        request.setAttribute("skladniki", dao.getAllIngredients());
         view.forward(request, response);
     }
 }
