@@ -60,5 +60,20 @@ witness true greatness
     <input type="Submit" value="Usun konto">
 </form>
 
+<h1 align="center">Posilek</h1>
+<form method="POST" action="MealController">
+    <input type="text" name="nazwa" value="nazwa posilku">
+    <input type="text" name="id_posilek">
+
+    <input type="Submit">
+</form>
+
+
+<h1 align="center">Posilek</h1>
+<form method="GET" action="MealController">
+    <input type="text" name="id_posilek">
+    <input type="hidden" name="action" value="delete">
+    <input type="Submit" value="Usun">
+</form>
 </body>
 </html>
