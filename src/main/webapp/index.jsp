@@ -43,5 +43,23 @@ witness true greatness
     <input type="Submit">
 </form>
 
+<h1 align="center">Uzytkownik</h1>
+<form method="POST" action="UserController">
+    <input type="text" name="id_uzytkownik" value="id_uzytkownik">
+    <input type="text" name="isAdmin" value="admin">
+    <input type="text" name="email" value="email">
+    <input type="password" name="haslo" value="haslo">
+    <input type="text" name="id_uzytkownik">
+    <input type="Submit">
+</form>
+
+
+<h1 align="center">Uzytkownik</h1>
+<form method="GET" action="UserController">
+    <input type="text" name="id_uzytkownika">
+    <input type="hidden" name="action" value="delete">
+    <input type="Submit" value="Usun konto">
+</form>
+
 </body>
 </html>
