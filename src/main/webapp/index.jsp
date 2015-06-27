@@ -43,5 +43,20 @@ witness true greatness
     <input type="Submit">
 </form>
 
+<h1 align="center">SkladnikPrzepis</h1>
+<form method="POST" action="RecipeIngredientController">
+    <input type="text" name="nazwa" value="nazwa skladnika">
+    <input type="text" name="id_przepis_skladnik">
+
+    <input type="Submit">
+</form>
+
+
+<h1 align="center">SkladnikPrzepis</h1>
+<form method="GET" action="RecipeIngredientController">
+    <input type="text" name="id_przepis_skladnik">
+    <input type="hidden" name="action" value="delete">
+    <input type="Submit">
+</form>
 </body>
 </html>
