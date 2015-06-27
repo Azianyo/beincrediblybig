@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<form method="POST" action='IngredientController' name="frmAddUser">
+<form method="POST" action='IngredientController' name="frmAddIngedients">
   ID Skladnik : <input type="text" readonly="readonly" name="id_skladnik"
                        value="<c:out value="${skladnik.id_skladnik}" />" /> <br />
   Nazwa : <input
