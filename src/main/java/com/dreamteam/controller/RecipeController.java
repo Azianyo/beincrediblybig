@@ -25,13 +25,14 @@ public class RecipeController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String forward="";
-        String action = request.getParameter("action");
+        //String action = request.getParameter("action");
+        String action = "delete";
 
         if (action.equalsIgnoreCase("delete")){
             long recipeID = Long.parseLong(request.getParameter("przepis_id"));
             dao.deleteRecipe(recipeID);
             forward = LIST_RECIPE;
-            request.setAttribute("przepis", dao.getAllRecipes());
+           // request.setAttribute("przepis", dao.getAllRecipes());
         } else if (action.equalsIgnoreCase("edit")){
             forward = INSERT_OR_EDIT;
             int recipeID = Integer.parseInt(request.getParameter("przepis_id"));
