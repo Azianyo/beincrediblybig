@@ -78,11 +78,10 @@ witness true greatness
 
 <h1 align="center">Skladnik przepisu</h1>
 <form method="POST" action="RecipeIngredientController">
-    <input type="text" name="nazwa" value="nazwa posilku">
     <input type="text" name="id_przepis_skladnik">
     <input type="text" name="id_przepis" value="id_przepis">
     <input type="text" name="id_skladnik" value="id_skladnik">
-    <input type="password" name="ilosc" value="ilosc">
+    <input type="text" name="ilosc" value="ilosc">
     <input type="Submit">
 </form>
 
