@@ -51,13 +51,12 @@ public class recipeDao {
 
     public void updateRecipe(Recipe przepis) {
         try {
-            String command="update przepis set nazwa=? , " +
-                    "opis=? ,ocena=? , typ=?, zdjecie=?" + "where przepis_id=?";
+            String command="update przepis set nazwa=? ,opis=? ,ocena=? , typ=?, zdjecie=? where id_przepis=?";
             PreparedStatement preparedStatement = connection.prepareStatement(command);
             // Parameters start with 1
             BufferedWriter out = null;
             try {
-                FileWriter fstream = new FileWriter("out.txt", true); //true tells to append data.
+                FileWriter fstream = new FileWriter("history.txt", true); //true tells to append data.
                 out = new BufferedWriter(fstream);
                 out.write(command);
             }
