@@ -24,7 +24,7 @@
         type="text" name="typ"
         value="<c:out value="${przepis.typ}" />" /> <br />
   Zdjecie : <input type="text" name="zdjecie"
-                 value="<c:out value="${user.zdjecie}" />" /> <br />
+                 value="<c:out value="${przepis.zdjecie}" />" /> <br />
   <input type="submit" value="Submit" />
 </form>
 </body>
