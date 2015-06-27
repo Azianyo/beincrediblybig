@@ -22,7 +22,7 @@ Janek, kurwa, ja to wrzucam
 
 <h1 align="center">Coupons categories</h1>
 <form method="GET" action="RecipeController">
-    <input type="text" name="id_przepis">
+    <input type="text" name="przepis_id">
     <input type="Submit">
 </form>
 <p><a href="RecipeController?action=delete"></a></p>
