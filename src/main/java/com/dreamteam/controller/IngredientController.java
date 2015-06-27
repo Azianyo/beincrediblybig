@@ -24,7 +24,7 @@ import com.dreamteam.dao.ingredientDAO;
 public class IngredientController extends HttpServlet {
         private static final long serialVersionUID = 1L;
         private static String INSERT_OR_EDIT = "/index.jsp";
-        private static String LIST_INGREDIENT = "/index.jsp";
+        private static String LIST_INGREDIENT = "/listIngredients.jsp";
         private ingredientDAO dao;
 
         public IngredientController() {
