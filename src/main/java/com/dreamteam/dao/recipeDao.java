@@ -113,11 +113,11 @@ public class recipeDao {
         try {
             PreparedStatement preparedStatement = connection.
                     prepareStatement("select * from przepis where id_przepis=?");
-            preparedStatement.setLong(1, przepis.getId_przepis());
+            preparedStatement.setInt(1, przepisId);
             ResultSet rs = preparedStatement.executeQuery();
 
             if (rs.next()) {
-                przepis.setId_przepis(rs.getLong("przepis_id"));
+                przepis.setId_przepis(rs.getLong("id_przepis"));
                 przepis.setNazwa(rs.getString("nazwa"));
                 przepis.setOpis(rs.getString("opis"));
                 przepis.setOcena(rs.getInt("ocena"));
