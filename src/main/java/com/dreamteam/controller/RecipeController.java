@@ -15,7 +15,7 @@ import com.dreamteam.model.Recipe;
 public class RecipeController extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static String INSERT_OR_EDIT = "/Recipe.jsp";
-    private static String LIST_RECIPE = "/listRecipes.jsp";
+    private static String LIST_RECIPE = "/index.jsp";
     private recipeDao dao;
 
     public RecipeController() {
