@@ -22,8 +22,8 @@
     <tr>
       <td><c:out value="${posilek.id_posilek}" /></td>
       <td><c:out value="${posilek.nazwa}" /></td>
-      <td><a href="RecipeController?action=edit&id_posilek=<c:out value="${posilek.id_posilek}"/>">Update</a></td>
-      <td><a href="RecipeController?action=delete&id_posilek=<c:out value="${posilek.id_posilek}"/>">Delete</a></td>
+      <td><a href="MealController?action=edit&id_posilek=<c:out value="${posilek.id_posilek}"/>">Update</a></td>
+      <td><a href="MealController?action=delete&id_posilek=<c:out value="${posilek.id_posilek}"/>">Delete</a></td>
     </tr>
   </c:forEach>
   </tbody>
