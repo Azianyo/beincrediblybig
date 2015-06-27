@@ -14,8 +14,8 @@ import com.dreamteam.model.Recipe;
 
 public class RecipeController extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private static String INSERT_OR_EDIT = "/user.jsp";
-    private static String LIST_RECIPE = "/listUser.jsp";
+    private static String INSERT_OR_EDIT = "/Recipe.jsp";
+    private static String LIST_RECIPE = "/listRecipe.jsp";
     private recipeDao dao;
 
     public RecipeController() {
@@ -35,11 +35,11 @@ public class RecipeController extends HttpServlet {
         } else if (action.equalsIgnoreCase("edit")){
             forward = INSERT_OR_EDIT;
             int recipeID = Integer.parseInt(request.getParameter("przepis_id"));
-            Recipe user = dao.getRecipeById(recipeID);
-            request.setAttribute("przepis", user);
+            Recipe recipe = dao.getRecipeById(recipeID);
+            request.setAttribute("przepis", recipe );
         } else if (action.equalsIgnoreCase("listUser")){
             forward = LIST_RECIPE;
-            request.setAttribute("users", dao.getAllRecipes());
+            request.setAttribute("przepis", dao.getAllRecipes());
         } else {
             forward = INSERT_OR_EDIT;
         }
