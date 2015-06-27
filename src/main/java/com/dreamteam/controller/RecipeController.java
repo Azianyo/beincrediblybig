@@ -1,13 +1,7 @@
 package com.dreamteam.controller;
 
-/**
- * chuj, dupa, kurwa, cipa.
- */
-
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -58,8 +52,9 @@ public class RecipeController extends HttpServlet {
         Recipe recipe = new Recipe();
         recipe.setNazwa(request.getParameter("nazwa"));
         recipe.setOpis(request.getParameter("opis"));
+        recipe.setOcena(Integer.parseInt(request.getParameter("ocena")));
         recipe.setTyp(Integer.parseInt(request.getParameter("typ")));
-        //recipe.setPhotoFromStream(request.getParameter("zdjecie"));
+        recipe.setZdjecie(request.getParameter("zdjecie"));
 
 
         String recipeId = request.getParameter("id_przepis");

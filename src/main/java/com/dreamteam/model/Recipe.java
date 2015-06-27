@@ -1,6 +1,5 @@
 package com.dreamteam.model;
 import java.io.File;
-import java.io.InputStream;
 import java.io.FileInputStream;
 public class Recipe {
 
@@ -9,7 +8,7 @@ public class Recipe {
     private String opis;
     private int ocena;
     private int typ;
-    private File zdjecie;
+    private String zdjecie;
 
     public long getId_przepis() {
         return id_przepis;
@@ -35,26 +34,11 @@ public class Recipe {
     public void setOcena(int ocena) {
         this.ocena = ocena;
     }
-    public File getZdjecie() {
+    public String getZdjecie() {
         return this.zdjecie;
     }
-    public void setZdjecie(InputStream zdjecie) {
-        ;
-    }
-    public int PhotoLen(){
-        return (int)this.zdjecie.length();
-    }
-    public FileInputStream getPhotoStream(){
-        FileInputStream photo=null;
-        try {
-            photo = new FileInputStream(this.zdjecie);
-        }
-        catch (java.io.FileNotFoundException ignored){}
-        return photo;
-    }
-    public void setPhotoFromStream(InputStream photoIn){
-        //keep calm & fuck some bitches
-        ;
+    public void setZdjecie(String zdjecie){
+        this.zdjecie=zdjecie;
     }
     public int getTyp() {
         return typ;
