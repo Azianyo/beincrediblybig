@@ -1,6 +1,6 @@
 package com.dreamteam.dao;
 
-import java.io.*;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -54,25 +54,6 @@ public class recipeDao {
             String command="update przepis set nazwa=? ,opis=? ,ocena=? , typ=?, zdjecie=? where id_przepis=?";
             PreparedStatement preparedStatement = connection.prepareStatement(command);
             // Parameters start with 1
-            BufferedWriter out = null;
-            try {
-                FileWriter fstream = new FileWriter("history.txt", true); //true tells to append data.
-                out = new BufferedWriter(fstream);
-                out.write(command);
-            }
-            catch (IOException e)
-            {
-                System.err.println("Error: " + e.getMessage());
-            }
-            finally
-            {
-                try {
-                    out.close();
-                }
-                catch (IOException e){
-                    System.err.println("Error: " + e.getMessage());
-                }
-            }
             preparedStatement.setString(1, przepis.getNazwa());
             preparedStatement.setString(2, przepis.getOpis());
             preparedStatement.setInt(3, przepis.getOcena());

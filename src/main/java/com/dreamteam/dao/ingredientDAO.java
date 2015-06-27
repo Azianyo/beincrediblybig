@@ -3,7 +3,7 @@ package com.dreamteam.dao;
 /**
  * Created by macie_000 on 2015-06-27.
  */
-import java.io.*;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.dreamteam.model.Ingredient;
-import com.dreamteam.model.Recipe;
+
 import com.dreamteam.util.DbUtil;
 public class ingredientDAO {
     private Connection connection;
