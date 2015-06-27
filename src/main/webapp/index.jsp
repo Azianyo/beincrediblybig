@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>kurwa ma</title>
+  <title>kurwa mać</title>
   <meta charset="UTF-8">
 </head>
 <body>
