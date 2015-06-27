@@ -108,12 +108,12 @@ public class recipeDao {
         return recipes;
     }
 
-    public Recipe getRecipeById(int przepisId) {
+    public Recipe getRecipeById(long przepisId) {
         Recipe przepis = new Recipe();
         try {
             PreparedStatement preparedStatement = connection.
                     prepareStatement("select * from przepis where id_przepis=?");
-            preparedStatement.setInt(1, przepisId);
+            preparedStatement.setLong(1, przepisId);
             ResultSet rs = preparedStatement.executeQuery();
 
             if (rs.next()) {

@@ -80,12 +80,12 @@ public class ingredientDAO {
         return Ingredients;
     }
 
-    public Ingredient getIngredientById(int skladnikId) {
+    public Ingredient getIngredientById(long skladnikId) {
         Ingredient skladnik = new Ingredient();
         try {
             PreparedStatement preparedStatement = connection.
                     prepareStatement("select * from skladnik where id_skladnik=?");
-            preparedStatement.setLong(1, skladnik.getId_skladnik());
+            preparedStatement.setLong(1, skladnikId);
             ResultSet rs = preparedStatement.executeQuery();
 
             if (rs.next()) {
