@@ -91,8 +91,8 @@ public class recipeDao {
         try {
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery("select * from przepis");
-            Recipe przepis = new Recipe();
             while (rs.next()) {
+                Recipe przepis = new Recipe();
                 przepis.setId_przepis(rs.getLong("id_przepis"));
                 przepis.setNazwa(rs.getString("nazwa"));
                 przepis.setOpis(rs.getString("opis"));

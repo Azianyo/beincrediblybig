@@ -52,7 +52,7 @@ public class RecipeController extends HttpServlet {
             long recipeID = Long.parseLong(request.getParameter("przepis_id"));
             dao.deleteRecipe(recipeID);
             forward = LIST_RECIPE;
-            request.setAttribute("przepisy", generateRecipes());
+            request.setAttribute("przepisy", dao.getAllRecipes());
         } else if (action.equalsIgnoreCase("edit")){
             forward = INSERT_OR_EDIT;
             int recipeID = Integer.parseInt(request.getParameter("przepis_id"));
