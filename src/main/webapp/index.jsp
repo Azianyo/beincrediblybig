@@ -24,7 +24,7 @@ witness true greatness
 <form method="GET" action="RecipeController">
     <input type="text" name="id_przepis">
     <input type="hidden" name="action" value="delete">
-    <input type="Submit">
+    <input type="Submit" value="Usuń">
 </form>
 
 <h1 align="center">Skladnik</h1>
@@ -40,7 +40,7 @@ witness true greatness
 <form method="GET" action="IngredientController">
     <input type="text" name="id_skladnik">
     <input type="hidden" name="action" value="delete">
-    <input type="Submit">
+    <input type="Submit" value="Usuń">
 </form>
 
 <h1 align="center">Uzytkownik</h1>
@@ -57,7 +57,7 @@ witness true greatness
 <form method="GET" action="UserController">
     <input type="text" name="id_uzytkownik">
     <input type="hidden" name="action" value="delete">
-    <input type="Submit" value="Usun konto">
+    <input type="Submit" value="Usuń konto">
 </form>
 
 </body>

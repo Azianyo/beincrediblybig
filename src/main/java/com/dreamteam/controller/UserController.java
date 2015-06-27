@@ -36,7 +36,7 @@ public class UserController extends HttpServlet {
 			request.setAttribute("users", dao.getAllUsers());
 		} else if (action.equalsIgnoreCase("edit")){
 			forward = INSERT_OR_EDIT;
-			int userID = Integer.parseInt(request.getParameter("id_uzytkownika"));
+			long userID = Long.parseLong(request.getParameter("id_uzytkownik"));
 			User user = dao.getUserById(userID);
 			request.setAttribute("user", user);
 		} else if (action.equalsIgnoreCase("listUsers")){
