@@ -31,8 +31,8 @@
       <td><c:out value="${skladnik.id_skladnik}" /></td>
       <td><c:out value="${skladnik.nazwa}" /></td>
 
-      <td><a href="RecipeController?action=edit&id_przepis=<c:out value="${skladnik.id_skladnik}"/>">Update</a></td>
-      <td><a href="RecipeController?action=delete&id_przepis=<c:out value="${skladnik.id_skladnik}"/>">Delete</a></td>
+      <td><a href="IngredientsController?action=edit&id_przepis=<c:out value="${skladnik.id_skladnik}"/>">Update</a></td>
+      <td><a href="IngredientsController?action=delete&id_przepis=<c:out value="${skladnik.id_skladnik}"/>">Delete</a></td>
     </tr>
   </c:forEach>
   </tbody>
