@@ -47,7 +47,7 @@ public class IngredientController extends HttpServlet {
             forward = INSERT_OR_EDIT;
             int ingredientID = Integer.parseInt(request.getParameter("id_skladnik"));
             Ingredient ingredient = dao.getIngredientById(ingredientID);
-            request.setAttribute("skladniki", ingredient );
+            request.setAttribute("skladnik", ingredient );
         } else if (action.equalsIgnoreCase("listIngredients")){
             forward = LIST_INGREDIENT;
             request.setAttribute("skladniki", dao.getAllIngredients());
