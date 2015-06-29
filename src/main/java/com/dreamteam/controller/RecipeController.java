@@ -48,6 +48,8 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("przepisy", dao.getAllRecipes());
 
         } else if (action.equalsIgnoreCase("CreateDiet")){
+            //getRecipeIngredientById_Skladnik();
+            request.setAttribute("przepisy", dao.getAllRecipes());
             forward = DIET_GENERATOR;
         } else if (action.equalsIgnoreCase("generate")){
             response.setContentType("application/pdf");

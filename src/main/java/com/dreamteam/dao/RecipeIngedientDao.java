@@ -129,4 +129,26 @@ public class RecipeIngedientDao {
         return RecipeIngredients;
     }
 
+    /*public przepis_skladnik getRecipeIngredientById_Skladnik(long id_skladnik) {
+        przepis_skladnik recipeIngredient = new przepis_skladnik();
+        try {
+            PreparedStatement preparedStatement = connection.
+                    prepareStatement("select * from przepis_skladnik where id_skladnik=id_skladnik");
+            preparedStatement.setLong(1, przepisSkladnikId);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            if (rs.next()) {
+                recipeIngredient.setId_przepis_skladnik(rs.getLong("id_przepis_skladnik"));
+                recipeIngredient.setId_przepis(rs.getInt("id_przepis"));
+                recipeIngredient.setId_skladnik(rs.getInt("id_skladnik"));
+                recipeIngredient.setIlosc(rs.getInt("ilosc"));
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return recipeIngredient;
+    }*/
+
 }
