@@ -10,16 +10,16 @@
 
 <form method="POST" action='RecipeIngredientController' name="frmAddUser">
   ID PrzepisSkladnik : <input type="text" readonly="readonly" name="id_przepis_skladnik"
-                       value="<c:out value="${przepis_skladnik.id_przepis_skladnik}" />" /> <br />
+                       value="<c:out value="${RecipeToIngredient.id_przepis_skladnik}" />" /> <br />
   ID  Przepis: <input
         type="text" name="id_przepis"
-        value="<c:out value="${przepis_skladnik.id_przepis}" />" /> <br />
+        value="<c:out value="${RecipeToIngredient.id_przepis}" />" /> <br />
   ID Skladnik : <input
         type="text" name="id_skladnik"
-        value="<c:out value="${przepis_skladnik.id_skladnik}" />" /> <br />
+        value="<c:out value="${RecipeToIngredient.id_skladnik}" />" /> <br />
   Ilosc : <input
         type="text" name="ilosc"
-        value="<c:out value="${przepis_skladnik.ilosc}" />" /> <br />
+        value="<c:out value="${RecipeToIngredient.ilosc}" />" /> <br />
   <input type="submit" value="Submit" />
 </form>
 </body>

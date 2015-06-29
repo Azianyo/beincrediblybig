@@ -1,5 +1,5 @@
 package com.dreamteam.model;
-public class przepis_skladnik {
+public class RecipeToIngredient {
 	
 	private long id_przepis_skladnik;
 	private int id_przepis;

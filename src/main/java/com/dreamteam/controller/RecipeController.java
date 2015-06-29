@@ -1,9 +1,6 @@
 package com.dreamteam.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,13 +10,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dreamteam.dao.recipeDao;
 import com.dreamteam.model.Recipe;
-import com.dreamteam.model.PDFGenerator;
 
 public class RecipeController extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static String INSERT_OR_EDIT = "/Recipe.jsp";
     private static String LIST_RECIPE = "/listRecipes.jsp";
     private static String DIET_GENERATOR = "/dietGenerator.jsp";
+    private static String MAIN = "/index.jsp";
     private recipeDao dao;
 
     public RecipeController() {
@@ -28,7 +25,7 @@ public class RecipeController extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String forward="";
+        String forward = MAIN;
         String action = request.getParameter("action");
 
 
@@ -45,14 +42,10 @@ public class RecipeController extends HttpServlet {
         } else if (action.equalsIgnoreCase("listRecipes")){
             forward = LIST_RECIPE;
             request.setAttribute("przepisy", dao.getAllRecipes());
-
         } else if (action.equalsIgnoreCase("CreateDiet")){
+            int sniadanie = 2;
+            request.setAttribute("Posilki_pierwsze", dao.getAllRecipes_byTyp(sniadanie));
             forward = DIET_GENERATOR;
-        } else if (action.equalsIgnoreCase("generate")){
-            forward = "";
-            long recipeID = Long.parseLong(request.getParameter("id_przepis"));
-            Recipe recipe = dao.getRecipeById(recipeID);
-            new PDFGenerator(recipe);
         } else {
             forward = INSERT_OR_EDIT;
         }

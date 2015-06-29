@@ -11,18 +11,45 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+    <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+    <title>Show All Users</title>
 </head>
 <body>
+<table border=1>
+    <thead>
+    <tr>
+        <th colspan=5>id</th>
+        <th colspan=5>nazwa</th>
+        <th colspan=5>opis</th>
+        <th colspan=5>typ</th>
 
-<form method="POST" action='IngredientController' name="frmAddIngedients">
-  ID Skladnik : <input type="text" readonly="readonly" name="id_skladnik"
-                       value="<c:out value="${skladnik.id_skladnik}" />" /> <br />
-  Nazwa : <input
-        type="text" name="nazwa"
-        value="<c:out value="${skladnik.nazwa}" />" /> <br />
 
-  <input type="submit" value="Submit" />
-</form>
+        <%--<th colspan=2>Action</th>--%>
+    </tr>
+    </thead>
+  <tbody>
+
+
+    <c:forEach items="${Posilki_pierwsze}" var="przepis">
+        <tr>
+            <td><c:out value="${przepis.id_przepis}" /></td>
+            <td><c:out value="${przepis.nazwa}" /></td>
+            <td><c:out value="${przepis.opis}" /></td>
+
+            <td><c:out value="${przepis.typ}" /></td>
+
+
+        </tr>
+    </c:forEach>
+
+        <%--<tr>
+            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">I (8.00)</a></td>
+
+        </tr>--%>
+
+    </tbody>
+
+</table>
+<p><a href="IngredientController?action=insert">Generuj PDF</a></p>
 </body>
 </html>

@@ -6,7 +6,9 @@
 </head>
 <body>
 witness true greatness
-
+<style type="text/css" media="print">
+    .no-print { display: none; }
+</style>
 
 <h1 align="center">Przepisy</h1>
 <form method="POST" action="RecipeController">
@@ -38,11 +40,8 @@ witness true greatness
     <input type="Submit" value = "Uloz Diete">
 </form>
 
-<h1 align="center">Generuj PDF</h1>
-<form method="GET" action="RecipeController">
-    <input type="text" name="id_przepis">
-    <input type="hidden" name="action" value="generate">
-    <input type="Submit" value="Generuj">
+<form>
+    <input type="button" onClick="window.print()" class="no-print" value="Wydrukuj lub ściągnij wypis w PDF">
 </form>
 
 <h1 align="center">Skladnik</h1>
