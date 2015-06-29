@@ -17,7 +17,7 @@
 <body>
 <table border=1>
     <thead>
-    <tr>
+
         <tr>
             <th colspan=2>Poniedzialek</th>
             <th colspan=2>Wtorek</th>
@@ -25,7 +25,7 @@
             <th colspan=2>Czwartek</th>
             <th colspan=2>Piatek</th>
         </tr>
-    </tr>
+
     </thead>
   <tbody>
   <tr>
