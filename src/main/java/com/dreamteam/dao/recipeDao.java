@@ -112,46 +112,6 @@ public class recipeDao {
         return przepis;
     }
 
-    public Recipe getRecipeWithoutId(long przepisId) {
-        Recipe przepis = new Recipe();
-        try {
-            PreparedStatement preparedStatement = connection.
-                    prepareStatement("select * from przepis where id_przepis!=?");
-            preparedStatement.setLong(1, przepisId);
-            ResultSet rs = preparedStatement.executeQuery();
-
-            if (rs.next()) {
-                przepis.setId_przepis(rs.getLong("id_przepis"));
-                przepis.setNazwa(rs.getString("nazwa"));
-                przepis.setOpis(rs.getString("opis"));
-                przepis.setOcena(rs.getInt("ocena"));
-                przepis.setTyp(rs.getInt("typ"));
-                przepis.setZdjecie(rs.getString("zdjecie"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return przepis;
-    }
-
-    public long getRecipeByIdIngredient(long SkladnikId) {
-        long id = 666; //liczba z dupy zeby dalo sie skompilowac
-        try {
-            PreparedStatement preparedStatement = connection.
-                    prepareStatement("select id_przepis from przepis_skladnik where id_skladnik=?");
-            preparedStatement.setLong(1, SkladnikId);
-            ResultSet rs = preparedStatement.executeQuery();
-
-            if (rs.next()) {
-                id = rs.getLong("id_przepis");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return id;
-    }
 
     public List<Recipe> getAllRecipes_byTyp(int typ) {
 
@@ -191,21 +151,18 @@ public class recipeDao {
             String selectSQL2 = "select * from przepis";
             PreparedStatement preparedStatement2 = connection.prepareStatement(selectSQL2);
             ResultSet rs2 = preparedStatement2.executeQuery();
-
+            if(id==0){
             while (rs2.next()) {
                 Recipe przepis = new Recipe();
-                while(rs1.next()) {
-                    if (rs2.getLong("id_przepis") == rs1.getLong("id_przepis")) {
-                        continue;
-                    } else {
-                        przepis.setId_przepis(rs2.getLong("id_przepis"));
-                        przepis.setNazwa(rs2.getString("nazwa"));
-                        przepis.setOpis(rs2.getString("opis"));
-                        przepis.setOcena(rs2.getInt("ocena"));
-                        przepis.setTyp(rs2.getInt("typ"));
-                        przepis.setZdjecie(rs2.getString("zdjecie"));
-                        recipes.add(przepis);
-                    }
+                               przepis.setId_przepis(rs2.getLong("id_przepis"));
+                    przepis.setNazwa(rs2.getString("nazwa"));
+                    przepis.setOpis(rs2.getString("opis"));
+                    przepis.setOcena(rs2.getInt("ocena"));
+                    przepis.setTyp(rs2.getInt("typ"));
+                    przepis.setZdjecie(rs2.getString("zdjecie"));
+                    recipes.add(przepis);
+
+
                 }
             }
         } catch (SQLException e) {
