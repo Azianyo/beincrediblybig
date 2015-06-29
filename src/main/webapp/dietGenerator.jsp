@@ -31,8 +31,31 @@
   <tbody>
 
         <tr>
-            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Sniadanie</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Po Sniadaniu</a></td>
+            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">I (8.00)</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">III (14.00)</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>"> Przed Treningiem</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Po treningu</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">V (22.00)</a></td>
+            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">I (8.00)</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">III (14.00)</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>"> Przed Treningiem</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Po treningu</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">V (22.00)</a></td>
+            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">I (8.00)</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">III (14.00)</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>"> Przed Treningiem</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Po treningu</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">V (22.00)</a></td>
+            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">I (8.00)</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">III (14.00)</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>"> Przed Treningiem</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Po treningu</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">V (22.00)</a></td>
+            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">I (8.00)</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">III (14.00)</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>"> Przed Treningiem</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Po treningu</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">V (22.00)</a></td>
         </tr>
 
     </tbody>
