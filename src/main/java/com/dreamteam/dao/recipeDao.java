@@ -162,7 +162,7 @@ public class recipeDao {
                     przepis.setZdjecie(rs2.getString("zdjecie"));
                     recipes.add(przepis);
                 }
-            }
+
             /*else {
                 while (rs2.next()) {
                     while (rs1.next()) {
