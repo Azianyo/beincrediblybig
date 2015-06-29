@@ -13,8 +13,8 @@ import java.io.OutputStream;
 
 public class PDFGenerator {
 
-    OutputStream file;
-    Document document;
+    private OutputStream file;
+    private Document document;
 
     public PDFGenerator(Recipe recipe) {
 
@@ -32,4 +32,5 @@ public class PDFGenerator {
                 e.printStackTrace();
             }
         }
+
 }
