@@ -1,6 +1,9 @@
 package com.dreamteam.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,7 +19,6 @@ public class RecipeController extends HttpServlet {
     private static String INSERT_OR_EDIT = "/Recipe.jsp";
     private static String LIST_RECIPE = "/listRecipes.jsp";
     private static String DIET_GENERATOR = "/dietGenerator.jsp";
-    private static String MAIN = "/index.jsp";
     private recipeDao dao;
 
     public RecipeController() {
@@ -25,27 +27,29 @@ public class RecipeController extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String forward = MAIN;
+        String forward = "";
         String action = request.getParameter("action");
 
 
-        if (action.equalsIgnoreCase("delete")){
+        if (action.equalsIgnoreCase("delete")) {
             long recipeID = Long.parseLong(request.getParameter("id_przepis"));
             dao.deleteRecipe(recipeID);
             forward = LIST_RECIPE;
             request.setAttribute("przepisy", dao.getAllRecipes());
-        } else if (action.equalsIgnoreCase("edit")){
+        } else if (action.equalsIgnoreCase("edit")) {
             forward = INSERT_OR_EDIT;
             long recipeID = Long.parseLong(request.getParameter("id_przepis"));
             Recipe recipe = dao.getRecipeById(recipeID);
-            request.setAttribute("przepis", recipe );
-        } else if (action.equalsIgnoreCase("listRecipes")){
+            request.setAttribute("przepis", recipe);
+        } else if (action.equalsIgnoreCase("listRecipes")) {
             forward = LIST_RECIPE;
             request.setAttribute("przepisy", dao.getAllRecipes());
-        } else if (action.equalsIgnoreCase("CreateDiet")){
-            int sniadanie = 2;
-            request.setAttribute("Posilkipierwsze", dao.getAllRecipes_byTyp(sniadanie));
+        } else if (action.equalsIgnoreCase("CreateDiet")) {
             forward = DIET_GENERATOR;
+        } else if (action.equalsIgnoreCase("SearchRecipes")) {
+            forward = LIST_RECIPE;
+            long ingredient = Long.parseLong(request.getParameter("name_skladnik"));
+            request.setAttribute("przepisy", dao.getRecipeWithoutId(dao.getRecipeByIdIngredient(ingredient)));
         } else {
             forward = INSERT_OR_EDIT;
         }
