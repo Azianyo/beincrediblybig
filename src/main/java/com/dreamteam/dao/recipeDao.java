@@ -155,9 +155,9 @@ public class recipeDao {
 
         List<Recipe> recipes = new ArrayList<Recipe>();
         try {
-            String selectSQL = "select * from przepis where typ=?";
+            String selectSQL = "select * from przepis where typ=:typ";
             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
-            preparedStatement.setInt(1, typ);
+            //preparedStatement.setInt(1, typ);
             ResultSet rs = preparedStatement.executeQuery("selectSQL");
 
             while (rs.next()) {
