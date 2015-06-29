@@ -18,22 +18,16 @@
 <table border=1>
     <thead>
     <tr>
-        <th>id</th>
-        <th>nazwa</th>
-        <th>opis</th>
-        <th>typ</th>
-
-
-        <%--<th colspan=2>Action</th>--%>
+        <th colspan=5>Poniedzialek</th>
     </tr>
     </thead>
   <tbody>
-    <c:forEach items="${pierwszyposilek}" var="przepis">
+    <c:forEach items="${firstmeal}" var="recipe">
          <tr>
-            <td><c:out value="${przepis.id_przepis}" /></td>
-            <td><c:out value="${przepis.nazwa}" /></td>
-            <td><c:out value="${przepis.opis}" /></td>
-            <td><c:out value="${przepis.typ}" /></td>
+            <td><c:out value="${recipe.id_przepis}" /></td>
+            <td><c:out value="${recipe.nazwa}" /></td>
+            <td><c:out value="${recipe.opis}" /></td>
+            <td><c:out value="${recipe.typ}" /></td>
         </tr>
     </c:forEach>
     </tbody>
