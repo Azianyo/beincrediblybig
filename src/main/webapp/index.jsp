@@ -27,7 +27,7 @@ witness true greatness
 </form>
 
 <h1 align="center">Uloz Diete</h1>
-<form method="POST" action="RecipeController">
+<form method="GET" action="RecipeController">
     Czego nie trawisz:
     <input type="text" name="nazwa" value="nazwa skladnika">
     <input type="text" name="nazwa1" value="nazwa skladnika">
