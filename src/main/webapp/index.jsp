@@ -26,6 +26,14 @@ witness true greatness
     <input type="Submit" value="Usun">
 </form>
 
+<h1 align="center">Ułóż Dietę</h1>
+<form method="POST" action="IngredientController">
+    <input type="text" name="nazwa" value="nazwa skladnika">
+    <input type="text" name="id_skladnik">
+
+    <input type="Submit">
+</form>
+
 <h1 align="center">Generuj PDF</h1>
 <form method="GET" action="RecipeController">
     <input type="text" name="id_przepis">
