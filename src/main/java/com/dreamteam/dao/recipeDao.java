@@ -155,10 +155,10 @@ public class recipeDao {
 
         List<Recipe> recipes = new ArrayList<Recipe>();
         try {
-            PreparedStatement preparedStatement = connection.
-                    prepareStatement("select * from przepis where typ=?");
+            String selectSQL = "select * from przepis where typ=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
             preparedStatement.setInt(1, typ);
-            ResultSet rs = preparedStatement.executeQuery("select * from przepis where typ=?");
+            ResultSet rs = preparedStatement.executeQuery("selectSQL");
 
             while (rs.next()) {
                 Recipe przepis = new Recipe();
