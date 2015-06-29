@@ -175,7 +175,40 @@ public class recipeDao {
         }
         return recipes;
     }
+    /*
+    public  List<Recipe> getRecipesWithoutIngredient(int id) {
 
+        List<Recipe> recipes = new ArrayList<Recipe>();
+        try {
+
+            String selectSQL1 = "select id_przepis from przepis_skladnik where id_skladnik=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(selectSQL1);
+            preparedStatement.setInt(1, id);
+            ResultSet rs1 = preparedStatement.executeQuery();
+
+            String selectSQL2 = "select * from przepis";
+            PreparedStatement preparedStatement2 = connection.prepareStatement(selectSQL2);
+            ResultSet rs2 = preparedStatement2.executeQuery();
+
+            while(rs2.next()) {
+                Recipe przepis = new Recipe();
+                if(rs2.getLong("id_przepis")==rs1.getLong("id_przepis")){continue;}
+                else {
+                    przepis.setId_przepis(rs2.getLong("id_przepis"));
+                    przepis.setNazwa(rs2.getString("nazwa"));
+                    przepis.setOpis(rs2.getString("opis"));
+                    przepis.setOcena(rs2.getInt("ocena"));
+                    przepis.setTyp(rs2.getInt("typ"));
+                    przepis.setZdjecie(rs2.getString("zdjecie"));
+                    recipes.add(przepis);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return recipes;
+    }
+    */
 }
 
 
