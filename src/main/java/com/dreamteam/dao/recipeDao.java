@@ -151,15 +151,17 @@ public class recipeDao {
         return id;
     }
 
-    public Recipe getAllRecipes_byTyp(int typ) {
-        Recipe przepis = new Recipe();
+    public  List<Recipe> getAllRecipes_byTyp(int typ) {
+
+        List<Recipe> recipes = new ArrayList<Recipe>();
         try {
             PreparedStatement preparedStatement = connection.
                     prepareStatement("select * from przepis where typ=typ");
 
             ResultSet rs = preparedStatement.executeQuery();
 
-            if (rs.next()) {
+            while (rs.next()) {
+                Recipe przepis = new Recipe();
                 przepis.setId_przepis(rs.getLong("id_przepis"));
                 przepis.setNazwa(rs.getString("nazwa"));
                 przepis.setOpis(rs.getString("opis"));
@@ -171,7 +173,7 @@ public class recipeDao {
             e.printStackTrace();
         }
 
-        return przepis;
+        return recipes;
     }
 
 }
