@@ -19,6 +19,7 @@ public class RecipeController extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static String INSERT_OR_EDIT = "/Recipe.jsp";
     private static String LIST_RECIPE = "/listRecipes.jsp";
+    private static String DIET_GENERATOR = "/dietGenerator.jsp";
     private recipeDao dao;
 
     public RecipeController() {
@@ -46,7 +47,7 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("przepisy", dao.getAllRecipes());
 
         } else if (action.equalsIgnoreCase("CreateDiet")){
-            forward = "/DietGenerator.jsp";
+            forward = DIET_GENERATOR;
         } else if (action.equalsIgnoreCase("generate")){
             forward = INSERT_OR_EDIT;
             long recipeID = Long.parseLong(request.getParameter("id_przepis"));
