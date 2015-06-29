@@ -19,11 +19,11 @@
     <thead>
     <tr>
         <tr>
-            <th colspan=4>Poniedzialek</th>
-            <th colspan=4>Wtorek</th>
-            <th colspan=4>Sroda</th>
-            <th colspan=4>Czwartek</th>
-            <th colspan=4>Piatek</th>
+            <th colspan=2>Poniedzialek</th>
+            <th colspan=2>Wtorek</th>
+            <th colspan=2>Sroda</th>
+            <th colspan=2>Czwartek</th>
+            <th colspan=2>Piatek</th>
         </tr>
     </tr>
     </thead>
@@ -39,12 +39,12 @@
         </c:forEach>
   </tr>
   <tr>
-      <c:forEach items="${wtorek}" var="recipe">
-      <th>$i</th>
-  <tr>
-      <td><c:out value="${recipe.nazwa}" /></td>
-      <td><c:out value="${recipe.opis}" /></td>
-  </tr>
+          <c:forEach items="${wtorek}" var="recipe">
+          <th>$i</th>
+      <tr>
+          <td><c:out value="${recipe.nazwa}" /></td>
+          <td><c:out value="${recipe.opis}" /></td>
+      </tr>
 
   </c:forEach>
   <tr>
