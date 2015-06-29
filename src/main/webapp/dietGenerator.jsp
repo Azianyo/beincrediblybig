@@ -28,7 +28,7 @@
 
     </thead>
   <tbody>
-
+<td>
         <c:forEach items="${poniedzialek}" var="recipe">
             <tr>
                 <td><c:out value="${recipe.nazwa}" /></td>
@@ -36,6 +36,8 @@
              </tr>
 
         </c:forEach>
+</td>
+<td>
         <c:forEach items="${wtorek}" var="recipe">
             <tr>
                 <td><c:out value="${recipe.nazwa}" /></td>
@@ -43,7 +45,7 @@
             </tr>
 
         </c:forEach>
-
+</td>
     </tbody>
 </table>
 <p><a href="IngredientController?action=insert">Generuj PDF</a></p>
