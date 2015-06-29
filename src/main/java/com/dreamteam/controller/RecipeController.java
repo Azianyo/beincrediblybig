@@ -51,36 +51,34 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("przepisy", dao.getAllRecipes());
         } else if (action.equalsIgnoreCase("CreateDiet")) {
             forward = DIET_GENERATOR;
-            List<Recipe> Poniedzialek = new ArrayList<Recipe>();
-            List<Recipe> Wtorek = new ArrayList<Recipe>();
-            List<Recipe> Sroda = new ArrayList<Recipe>();
-            List<Recipe> Czwartek = new ArrayList<Recipe>();
-            List<Recipe> Piatek = new ArrayList<Recipe>();
-            List<Recipe> Sobota = new ArrayList<Recipe>();
-            List<Recipe> Niedziela = new ArrayList<Recipe>();
+            List<Recipe> P = new ArrayList<Recipe>();
+            List<Recipe> D = new ArrayList<Recipe>();
+            List<Recipe> T = new ArrayList<Recipe>();
+            List<Recipe> C = new ArrayList<Recipe>();
+            List<Recipe> Piate = new ArrayList<Recipe>();
             List<List<Recipe>> Week = new ArrayList<List<Recipe>>();
-            Week.add(Poniedzialek);
-            Week.add(Wtorek);
-            Week.add(Sroda);
-            Week.add(Czwartek);
-            Week.add(Piatek);
-            Week.add(Sobota);
-            Week.add(Niedziela);
+            Week.add(P);
+            Week.add(D);
+            Week.add(T);
+            Week.add(C);
+            Week.add(Piate);
             for(List<Recipe> i : Week) {
+                int j=1;
+                List<Recipe> meal = dao.getAllRecipes_byTyp(j);
                 for (int counter = 0; counter < 5; counter++) {
-                    List<Recipe> meal = dao.getAllRecipes_byTyp(counter + 1);
                     int list_size = meal.size();
                     Random rand = new Random();
                     int meal_position_in_list = rand.nextInt(list_size);
                     Recipe recipe = meal.get(meal_position_in_list);
                     i.add(recipe);
                 }
+                j++;
             }
-            request.setAttribute("poniedzialek", Poniedzialek);
-            request.setAttribute("wtorek", Wtorek);
-            request.setAttribute("sroda", Sroda);
-            request.setAttribute("czwartek", Czwartek);
-            request.setAttribute("piatek", Piatek);
+            request.setAttribute("poniedzialek", P);
+            request.setAttribute("wtorek", D);
+            request.setAttribute("sroda", T);
+            request.setAttribute("czwartek", C);
+            request.setAttribute("piatek", Piate);
 
         } else if (action.equalsIgnoreCase("SearchRecipes")) {
             forward = LIST_RECIPE;
