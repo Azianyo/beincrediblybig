@@ -44,10 +44,9 @@ public class RecipeController extends HttpServlet {
         } else if (action.equalsIgnoreCase("listRecipes")){
             forward = LIST_RECIPE;
             request.setAttribute("przepisy", dao.getAllRecipes());
-        }
-        else if (action.equalsIgnoreCase("CreateDiet")){
+        } else if (action.equalsIgnoreCase("CreateDiet")){
             System.print.out("GENERATOR DIETY");
-        }else if (action.equalsIgnoreCase("generate")){
+        } else if (action.equalsIgnoreCase("generate")){
             forward = INSERT_OR_EDIT;
             long recipeID = Long.parseLong(request.getParameter("id_przepis"));
             Recipe recipe = dao.getRecipeById(recipeID);
