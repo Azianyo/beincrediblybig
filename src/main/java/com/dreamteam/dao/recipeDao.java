@@ -152,17 +152,33 @@ public class recipeDao {
             PreparedStatement preparedStatement2 = connection.prepareStatement(selectSQL2);
             ResultSet rs2 = preparedStatement2.executeQuery();
             if(id==0){
-            while (rs2.next()) {
-                Recipe przepis = new Recipe();
-                               przepis.setId_przepis(rs2.getLong("id_przepis"));
+                while (rs2.next()) {
+                    Recipe przepis = new Recipe();
+                    przepis.setId_przepis(rs2.getLong("id_przepis"));
                     przepis.setNazwa(rs2.getString("nazwa"));
                     przepis.setOpis(rs2.getString("opis"));
                     przepis.setOcena(rs2.getInt("ocena"));
                     przepis.setTyp(rs2.getInt("typ"));
                     przepis.setZdjecie(rs2.getString("zdjecie"));
                     recipes.add(przepis);
-
-
+                }
+            }
+            else {
+                while (rs2.next()) {
+                    while (rs1.next()) {
+                        if (rs2.getLong("id_przepis") == rs1.getLong("id_przepis")) {
+                            continue;
+                        } else {
+                            Recipe przepis = new Recipe();
+                            przepis.setId_przepis(rs2.getLong("id_przepis"));
+                            przepis.setNazwa(rs2.getString("nazwa"));
+                            przepis.setOpis(rs2.getString("opis"));
+                            przepis.setOcena(rs2.getInt("ocena"));
+                            przepis.setTyp(rs2.getInt("typ"));
+                            przepis.setZdjecie(rs2.getString("zdjecie"));
+                            recipes.add(przepis);
+                        }
+                    }
                 }
             }
         } catch (SQLException e) {
@@ -172,4 +188,3 @@ public class recipeDao {
     }
 
 }
-
