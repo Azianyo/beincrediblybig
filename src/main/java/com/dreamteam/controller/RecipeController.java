@@ -47,8 +47,7 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("przepisy", dao.getAllRecipes());
         } else if (action.equalsIgnoreCase("CreateDiet")) {
             forward = DIET_GENERATOR;
-            int typ = 1;
-            request.setAttribute("pierwszyposilek", dao.getAllRecipes_byTyp(typ));
+            request.setAttribute("pierwszyposilek", dao.getAllRecipes_byTyp(1));
 
         } else if (action.equalsIgnoreCase("SearchRecipes")) {
             forward = LIST_RECIPE;
