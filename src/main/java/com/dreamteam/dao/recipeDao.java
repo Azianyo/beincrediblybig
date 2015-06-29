@@ -192,10 +192,11 @@ public class recipeDao {
             PreparedStatement preparedStatement2 = connection.prepareStatement(selectSQL2);
             ResultSet rs2 = preparedStatement2.executeQuery();
 
-            while(rs2.next()) {
+            while (rs2.next()) {
                 Recipe przepis = new Recipe();
-                if(rs2.getLong("id_przepis")==rs1.getLong("id_przepis")){continue;}
-                else {
+                if (rs2.getLong("id_przepis") == rs1.getLong("id_przepis")) {
+                    continue;
+                } else {
                     przepis.setId_przepis(rs2.getLong("id_przepis"));
                     przepis.setNazwa(rs2.getString("nazwa"));
                     przepis.setOpis(rs2.getString("opis"));
@@ -209,7 +210,7 @@ public class recipeDao {
             e.printStackTrace();
         }
         return recipes;
-
+    }
 
 }
 
