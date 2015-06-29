@@ -82,11 +82,11 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("czwartek", Czwartek);
             request.setAttribute("piatek", Piatek);
 
-        } /*else if (action.equalsIgnoreCase("SearchRecipes")) {
+        } else if (action.equalsIgnoreCase("SearchRecipes")) {
             forward = LIST_RECIPE;
-           int ingredient = Int.parseInt(request.getParameter("name_skladnik"));
+           long ingredient = Long.parseLong(request.getParameter("name_skladnik"));
            request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(ingredient));
-        } */else {
+        } else {
             forward = INSERT_OR_EDIT;
         }
 

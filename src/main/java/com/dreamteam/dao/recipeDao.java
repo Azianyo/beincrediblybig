@@ -177,15 +177,15 @@ public class recipeDao {
         }
         return recipes;
     }
-    /*
-    public  List<Recipe> getRecipesWithoutIngredient(int id) {
+
+    public  List<Recipe> getRecipesWithoutIngredient(long id) {
 
         List<Recipe> recipes = new ArrayList<Recipe>();
         try {
 
             String selectSQL1 = "select id_przepis from przepis_skladnik where id_skladnik=?";
             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL1);
-            preparedStatement.setInt(1, id);
+            preparedStatement.setLong(1, id);
             ResultSet rs1 = preparedStatement.executeQuery();
 
             String selectSQL2 = "select * from przepis";
@@ -210,8 +210,6 @@ public class recipeDao {
         }
         return recipes;
     }
-    */
+
 }
-
-
 
