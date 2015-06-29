@@ -26,6 +26,7 @@ public class PDFGenerator {
                 this.document.open();
                 this.document.add(new Paragraph("Hello World, iText"));
                 this.document.close();
+                this.file.flush();
                 this.file.close();
 
             } catch (Exception e) {
