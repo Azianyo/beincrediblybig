@@ -143,15 +143,15 @@ public class recipeDao {
         List<Recipe> recipes = new ArrayList<Recipe>();
         try {
 
-            String selectSQL1 = "select id_przepis from przepis_skladnik where id_skladnik=?";
+           /* String selectSQL1 = "select id_przepis from przepis_skladnik where id_skladnik=?";
             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL1);
             preparedStatement.setLong(1, id);
-            ResultSet rs1 = preparedStatement.executeQuery();
+            ResultSet rs1 = preparedStatement.executeQuery(); */
 
             String selectSQL2 = "select * from przepis";
             PreparedStatement preparedStatement2 = connection.prepareStatement(selectSQL2);
             ResultSet rs2 = preparedStatement2.executeQuery();
-            if(id==0){
+            //if(id==0){
                 while (rs2.next()) {
                     Recipe przepis = new Recipe();
                     przepis.setId_przepis(rs2.getLong("id_przepis"));
@@ -162,8 +162,8 @@ public class recipeDao {
                     przepis.setZdjecie(rs2.getString("zdjecie"));
                     recipes.add(przepis);
                 }
-            }
-            else {
+
+            /*else {
                 while (rs2.next()) {
                     while (rs1.next()) {
                         if (rs2.getLong("id_przepis") == rs1.getLong("id_przepis")) {
@@ -180,7 +180,7 @@ public class recipeDao {
                         }
                     }
                 }
-            }
+            } */
         } catch (SQLException e) {
             e.printStackTrace();
         }
