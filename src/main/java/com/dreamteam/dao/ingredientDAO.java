@@ -99,5 +99,6 @@ public class ingredientDAO {
 
         return skladnik;
     }
+
 }
 

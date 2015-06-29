@@ -12,6 +12,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.dreamteam.model.Ingredient;
 import com.dreamteam.model.RecipeToIngredient;
 import com.dreamteam.util.DbUtil;
 public class RecipeIngedientDao {
@@ -128,7 +129,24 @@ public class RecipeIngedientDao {
 
         return RecipeIngredients;
     }
+    public int getAmountByID(long skladnikId) {
+        RecipeToIngredient skladnik = new RecipeToIngredient();
+        try {
+            PreparedStatement preparedStatement = connection.
+                    prepareStatement("select ilosc from skladnik where id_skladnik=?");
+            preparedStatement.setLong(1, skladnikId);
+            ResultSet rs = preparedStatement.executeQuery();
 
+            if (rs.next()) {
+                skladnik.setId_przepis_skladnik(rs.getLong("id_skladnik"));
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return skladnik.getIlosc();
+    }
     /*public przepis_skladnik getRecipeIngredientById_Skladnik(long id_skladnik) {
         przepis_skladnik recipeIngredient = new przepis_skladnik();
         try {

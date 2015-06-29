@@ -7,5 +7,5 @@ import java.util.List;
  */
 public class FullRecipe{
     public Recipe recipe;
-    public List<Ingredient> ingredients;
+    public List<IngredientWithAmount> ingredients;
 }
