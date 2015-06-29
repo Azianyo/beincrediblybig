@@ -19,58 +19,24 @@
     <thead>
     <tr>
         <tr>
-            <th colspan=5>Poniedzialek</th>
-            <th colspan=5>Wtorek</th>
+            <th colspan=4>Poniedzialek</th>
+            <th colspan=4>Wtorek</th>
         </tr>
     </tr>
     </thead>
   <tbody>
   <tr>
-      <th>8.00</th>
-        <c:forEach items="${firstmeal}" var="recipe">
+      $i = 8;
+        <c:forEach items="${poniedzialek}" var="recipe">
+            <th>$i</th>
              <tr>
                 <td><c:out value="${recipe.id_przepis}" /></td>
                 <td><c:out value="${recipe.nazwa}" /></td>
                 <td><c:out value="${recipe.opis}" /></td>
                 <td><c:out value="${recipe.typ}" /></td>
             </tr>
+            $i = $i+4;
         </c:forEach>
-      <th>11.00</th>
-      <c:forEach items="${secondmeal}" var="recipe">
-          <tr>
-              <td><c:out value="${recipe.id_przepis}" /></td>
-              <td><c:out value="${recipe.nazwa}" /></td>
-              <td><c:out value="${recipe.opis}" /></td>
-              <td><c:out value="${recipe.typ}" /></td>
-          </tr>
-      </c:forEach>
-      <th>15.00</th>
-      <c:forEach items="${secondmeal}" var="recipe">
-          <tr>
-              <td><c:out value="${recipe.id_przepis}" /></td>
-              <td><c:out value="${recipe.nazwa}" /></td>
-              <td><c:out value="${recipe.opis}" /></td>
-              <td><c:out value="${recipe.typ}" /></td>
-          </tr>
-      </c:forEach>
-      <th>18.00</th>
-      <c:forEach items="${secondmeal}" var="recipe">
-          <tr>
-              <td><c:out value="${recipe.id_przepis}" /></td>
-              <td><c:out value="${recipe.nazwa}" /></td>
-              <td><c:out value="${recipe.opis}" /></td>
-              <td><c:out value="${recipe.typ}" /></td>
-          </tr>
-      </c:forEach>
-      <th>12.00</th>
-      <c:forEach items="${secondmeal}" var="recipe">
-          <tr>
-              <td><c:out value="${recipe.id_przepis}" /></td>
-              <td><c:out value="${recipe.nazwa}" /></td>
-              <td><c:out value="${recipe.opis}" /></td>
-              <td><c:out value="${recipe.typ}" /></td>
-          </tr>
-      </c:forEach>
   </tr>
     </tbody>
 </table>

@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dreamteam.dao.recipeDao;
 import com.dreamteam.model.Recipe;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Random;
 import com.dreamteam.model.Ingredient;
 //import com.dreamteam.model.PDFGenerator;
 
@@ -49,7 +52,15 @@ public class RecipeController extends HttpServlet {
         } else if (action.equalsIgnoreCase("CreateDiet")) {
             forward = DIET_GENERATOR;
 
-           request.setAttribute("firstmeal", dao.getAllRecipes_byTyp(1));
+            Map<Integer, Integer> Poniedzialek = new HashMap<Integer, Integer>();
+            for(int counter =0; counter<5; counter ++) {
+                List<Recipe> meal = dao.getAllRecipes_byTyp(counter+1);
+                int list_size = meal.size();
+                Random rand = new Random();
+                int meal_position_in_list = rand.nextInt(list_size);
+                Poniedzialek.put(counter, (int) meal.get(meal_position_in_list).getId_przepis());
+            }
+            request.setAttribute("poniedzialek", Poniedzialek);
             request.setAttribute("secondmeal", dao.getAllRecipes_byTyp(2));
             request.setAttribute("beforetraining", dao.getAllRecipes_byTyp(3));
             request.setAttribute("aftertraining", dao.getAllRecipes_byTyp(4));
