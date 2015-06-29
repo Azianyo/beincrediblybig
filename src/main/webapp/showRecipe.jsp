@@ -12,13 +12,15 @@
   <table border=1>
     <thead>
     <tr>
-      <th>Przepis</th>
+      <th>Skladniki</th>
+        <th> Ilosc</th>
     </tr>
     </thead>
     <tbody>
     <c:forEach items="${skladniki}" var="skladnik">
       <tr>
         <td><c:out value="${skladnik.nazwa}" /></td>
+          <td><c:out value="${ilosc}" /></td>
       </tr>
     </c:forEach>
     </tbody>
@@ -26,6 +28,9 @@
   <br>
   <fieldset>
     <c:out value="${przepis.opis}"/>
+  </fieldset>
+  <fieldset>
+      Ilosc bickow: <c:out value="${przepis.ocena}"/>
   </fieldset>
   <br>
     <form method="POST" action='FullRecipeController'>
