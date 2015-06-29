@@ -12,7 +12,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.dreamteam.model.przepis_skladnik;
+import com.dreamteam.model.RecipeToIngredient;
 import com.dreamteam.util.DbUtil;
 public class RecipeIngedientDao {
     private Connection connection;
@@ -21,7 +21,7 @@ public class RecipeIngedientDao {
         connection = DbUtil.getConnection();
     }
 
-    public void addRecipeIngredient(przepis_skladnik recipeIngredient) {
+    public void addRecipeIngredient(RecipeToIngredient recipeIngredient) {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("insert into przepis_skladnik (id_przepis, id_skladnik, ilosc) values (?,?,?)");
             // Parameters start with 1
@@ -47,7 +47,7 @@ public class RecipeIngedientDao {
         }
     }
 
-    public void updateRecipeIngredient(przepis_skladnik recipeIngredient) {
+    public void updateRecipeIngredient(RecipeToIngredient recipeIngredient) {
         try {
             String command="update przepis_skladnik set id_przepis=?, id_skladnik=?, ilosc=? where id_przepis_skladnik=?";
             PreparedStatement preparedStatement = connection.prepareStatement(command);
@@ -63,13 +63,13 @@ public class RecipeIngedientDao {
         }
     }
 
-    public List<przepis_skladnik> getAllRecipeIngredients() {
-        List<przepis_skladnik> RecipeIngredients = new ArrayList<przepis_skladnik>();
+    public List<RecipeToIngredient> getAllRecipeIngredients() {
+        List<RecipeToIngredient> RecipeIngredients = new ArrayList<RecipeToIngredient>();
         try {
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery("select * from przepis_skladnik");
             while (rs.next()) {
-                przepis_skladnik skladnik = new przepis_skladnik();
+                RecipeToIngredient skladnik = new RecipeToIngredient();
                 skladnik.setId_przepis_skladnik(rs.getLong("id_przepis_skladnik"));
                 skladnik.setId_przepis(rs.getInt("id_przepis"));
                 skladnik.setId_skladnik(rs.getInt("id_skladnik"));
@@ -84,8 +84,8 @@ public class RecipeIngedientDao {
         return RecipeIngredients;
     }
 
-    public przepis_skladnik getRecipeIngredientById(long przepisSkladnikId) {
-        przepis_skladnik recipeIngredient = new przepis_skladnik();
+    public RecipeToIngredient getRecipeIngredientById(long przepisSkladnikId) {
+        RecipeToIngredient recipeIngredient = new RecipeToIngredient();
         try {
             PreparedStatement preparedStatement = connection.
                     prepareStatement("select * from przepis_skladnik where id_przepis_skladnik=?");
@@ -105,17 +105,16 @@ public class RecipeIngedientDao {
 
         return recipeIngredient;
     }
-    public List<przepis_skladnik> getRecipeIngredientsByIDRecipe(long recipeId) {
-        List<przepis_skladnik> RecipeIngredients = new ArrayList<przepis_skladnik>();
+    public List<RecipeToIngredient> getRecipeIngredientsByIDRecipe(long recipeId) {
+        List<RecipeToIngredient> RecipeIngredients = new ArrayList<RecipeToIngredient>();
         try {
             Statement statement = connection.createStatement();
-            PreparedStatement preparedStatement = connection.
-                    prepareStatement("select * from przepis_skladnik where id_przepis =?");
+            PreparedStatement preparedStatement = connection.prepareStatement("select * from przepis_skladnik where id_przepis =?");
             preparedStatement.setLong(1, recipeId);
             ResultSet rs = preparedStatement.executeQuery();
 
             while (rs.next()) {
-                przepis_skladnik skladnik = new przepis_skladnik();
+                RecipeToIngredient skladnik = new RecipeToIngredient();
                 skladnik.setId_przepis_skladnik(rs.getLong("id_przepis_skladnik"));
                 skladnik.setId_przepis(rs.getInt("id_przepis"));
                 skladnik.setId_skladnik(rs.getInt("id_skladnik"));

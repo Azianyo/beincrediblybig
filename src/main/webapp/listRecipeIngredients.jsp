@@ -21,7 +21,7 @@
   </tr>
   </thead>
   <tbody>
-  <c:forEach items="${przepis_skladnik}" var="przepis_skladnik">
+  <c:forEach items="${RecipeToIngredient}" var="przepis_skladnik">
     <tr>
       <td><c:out value="${przepis_skladnik.id_przepis_skladnik}" /></td>
       <td><c:out value="${przepis_skladnik.id_przepis}" /></td>
