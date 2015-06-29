@@ -10,6 +10,12 @@ witness true greatness
     .no-print { display: none; }
 </style>
 
+<form method="POST" action="FullRecipeController">
+    <input type="text" name="id_przepis" value="id_przepis">
+    <input type="Submit">
+</form>
+
+
 <h1 align="center">Przepisy</h1>
 <form method="POST" action="RecipeController">
   <input type="text" name="nazwa" value="nazwa przepisu">

@@ -28,10 +28,11 @@
     <c:out value="${przepis.opis}"/>
   </fieldset>
   <br>
-    <form method="POST" action='RecipeIngredientController'>
+    <form method="POST" action='FullRecipeController'>
+        <input type="hidden" name="id" value="<c:out value="${przepis.id_przepis}" />" />
       <input type="submit" value="Przyznaj bicka" name="giveBiceps" />
     </form>
-    <form method="POST" action='RecipeIngredientController'>
+    <form method="POST" action='FullRecipeController'>
       <input type="submit" value="Strona główna" name="mainPage" />
     </form>
   </body>

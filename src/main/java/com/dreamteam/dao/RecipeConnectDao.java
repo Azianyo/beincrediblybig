@@ -22,7 +22,7 @@ public class RecipeConnectDao {
     public RecipeConnectDao() {
         connection = DbUtil.getConnection();
     }
-    FullRecipe getFullRecipeByID(long recipeID){
+    public FullRecipe getFullRecipeByID(long recipeID){
         recipeDao recipeDao2read= new recipeDao();
         final Recipe recipe2read;
         recipe2read= recipeDao2read.getRecipeById(recipeID);
@@ -42,7 +42,7 @@ public class RecipeConnectDao {
         fullRecipe.ingredients=ingredients2read;
         return fullRecipe;
     }
-    void addBiceps(long idRecipe){
+    public void addBiceps(long idRecipe){
     try {
         String command="update przepis set ocena=ocena+1 where id_przepis=?";
         PreparedStatement preparedStatement = connection.prepareStatement(command);

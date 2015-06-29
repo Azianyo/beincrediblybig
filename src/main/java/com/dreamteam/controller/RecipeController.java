@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dreamteam.dao.recipeDao;
 import com.dreamteam.model.Recipe;
-import com.dreamteam.model.PDFGenerator;
 
 public class RecipeController extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -45,17 +44,12 @@ public class RecipeController extends HttpServlet {
         } else if (action.equalsIgnoreCase("listRecipes")) {
             forward = LIST_RECIPE;
             request.setAttribute("przepisy", dao.getAllRecipes());
-
         } else if (action.equalsIgnoreCase("CreateDiet")) {
             forward = DIET_GENERATOR;
-        } else if (action.equalsIgnoreCase("generate")) {
-            forward = "";
-            long recipeID = Long.parseLong(request.getParameter("id_przepis"));
-            Recipe recipe = dao.getRecipeById(recipeID);
-            new PDFGenerator(recipe);
-
-
-
+        } else if (action.equalsIgnoreCase("SearchRecipes")) {
+            forward = LIST_RECIPE;
+            long ingredient = Long.parseLong(request.getParameter("name_skladnik"));
+            request.setAttribute("przepisy", dao.getRecipeWithoutId(dao.getRecipeByIdIngredient(ingredient)));
         } else {
             forward = INSERT_OR_EDIT;
         }
@@ -63,7 +57,6 @@ public class RecipeController extends HttpServlet {
         RequestDispatcher view = request.getRequestDispatcher(forward);
         view.forward(request, response);
     }
-
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Recipe recipe = new Recipe();
