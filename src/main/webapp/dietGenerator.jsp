@@ -18,7 +18,9 @@
 <table border=1>
     <thead>
     <tr>
-        <th colspan=5>Poniedzialek</th>
+        <tr>
+            <th colspan=5>Poniedzialek</th>
+        </tr>
     </tr>
     </thead>
   <tbody>
