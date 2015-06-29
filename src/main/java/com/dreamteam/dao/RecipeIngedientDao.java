@@ -133,7 +133,7 @@ public class RecipeIngedientDao {
         RecipeToIngredient skladnik = new RecipeToIngredient();
         try {
             PreparedStatement preparedStatement = connection.
-                    prepareStatement("select ilosc from skladnik where id_skladnik=?");
+                    prepareStatement("select ilosc from przepis_skladnik where id_skladnik=?");
             preparedStatement.setLong(1, skladnikId);
             ResultSet rs = preparedStatement.executeQuery();
 
