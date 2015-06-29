@@ -158,10 +158,9 @@ public class recipeDao {
             String selectSQL = "select * from przepis where typ=?";
             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
             preparedStatement.setInt(1, typ);
-            ResultSet rs = preparedStatement.executeQuery("selectSQL");
+            ResultSet rs = preparedStatement.executeQuery();
 
             while (rs.next()) {
-                System.out.print("Jestem");
                 Recipe przepis = new Recipe();
                 przepis.setId_przepis(rs.getLong("id_przepis"));
                 przepis.setNazwa(rs.getString("nazwa"));
