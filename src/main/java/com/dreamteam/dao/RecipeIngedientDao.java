@@ -138,7 +138,7 @@ public class RecipeIngedientDao {
             ResultSet rs = preparedStatement.executeQuery();
 
             if (rs.next()) {
-                skladnik.setId_przepis_skladnik(rs.getLong("id_skladnik"));
+                skladnik.setIlosc(rs.getInt("ilosc"));
 
             }
         } catch (SQLException e) {
