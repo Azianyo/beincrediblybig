@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dreamteam.dao.recipeDao;
 import com.dreamteam.model.Recipe;
+//import com.dreamteam.model.PDFGenerator;
 
 public class RecipeController extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -54,6 +55,7 @@ public class RecipeController extends HttpServlet {
         RequestDispatcher view = request.getRequestDispatcher(forward);
         view.forward(request, response);
     }
+
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Recipe recipe = new Recipe();

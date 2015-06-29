@@ -134,7 +134,7 @@ public class recipeDao {
         return przepis;
     }
     public long getRecipeByIdIngredient(long SkladnikId) {
-        long id = 7; // 7 to szczęsliwa liczba
+        long id=666; //liczba z dupy zeby dalo sie skompilowac
         try {
             PreparedStatement preparedStatement = connection.
                     prepareStatement("select id_przepis from przepis_skladnik where id_skladnik=?");
