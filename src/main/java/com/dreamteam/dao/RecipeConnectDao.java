@@ -7,6 +7,8 @@ import com.dreamteam.model.FullRecipe;
 import com.dreamteam.util.DbUtil;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,11 +17,11 @@ import java.util.List;
  */
 
 public class RecipeConnectDao {
+    private Connection connection;
 
     public RecipeConnectDao() {
-        Connection connection = DbUtil.getConnection();
+        connection = DbUtil.getConnection();
     }
-
     FullRecipe getFullRecipeByID(long recipeID){
         recipeDao recipeDao2read= new recipeDao();
         final Recipe recipe2read;
@@ -39,5 +41,16 @@ public class RecipeConnectDao {
         fullRecipe.recipe=recipe2read;
         fullRecipe.ingredients=ingredients2read;
         return fullRecipe;
+    }
+    void addBiceps(long idRecipe){
+    try {
+        String command="update przepis set ocena=ocena+1 where id_przepis=?";
+        PreparedStatement preparedStatement = connection.prepareStatement(command);
+        // Parameters start with 1
+        preparedStatement.setLong(1, idRecipe);
+        preparedStatement.executeUpdate();
+     } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
