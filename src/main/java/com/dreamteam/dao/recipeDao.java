@@ -151,7 +151,7 @@ public class recipeDao {
             String selectSQL2 = "select * from przepis";
             PreparedStatement preparedStatement2 = connection.prepareStatement(selectSQL2);
             ResultSet rs2 = preparedStatement2.executeQuery();
-            if(id==0){
+            //if(id==0){
                 while (rs2.next()) {
                     Recipe przepis = new Recipe();
                     przepis.setId_przepis(rs2.getLong("id_przepis"));
