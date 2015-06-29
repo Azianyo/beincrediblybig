@@ -47,6 +47,36 @@
         </c:forEach>
   </tr>
 
+  <tr>
+      <c:forEach items="${sroda}" var="recipe">
+
+          <td><c:out value="${recipe.nazwa}" /></td>
+          <td><c:out value="${recipe.typ}" /></td>
+
+
+      </c:forEach>
+  </tr>
+
+  <tr>
+      <c:forEach items="${czwartek}" var="recipe">
+
+          <td><c:out value="${recipe.nazwa}" /></td>
+          <td><c:out value="${recipe.typ}" /></td>
+
+
+      </c:forEach>
+  </tr>
+
+  <tr>
+      <c:forEach items="${piatek}" var="recipe">
+
+          <td><c:out value="${recipe.nazwa}" /></td>
+          <td><c:out value="${recipe.typ}" /></td>
+
+
+      </c:forEach>
+  </tr>
+
     </tbody>
 </table>
 <p><a href="IngredientController?action=insert">Generuj PDF</a></p>

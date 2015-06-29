@@ -72,7 +72,7 @@ public class RecipeController extends HttpServlet {
                     Recipe recipe = meal.get(meal_position_in_list);
                     i.add(recipe);
                 }
-                j++;
+                j=j++;
             }
             request.setAttribute("poniedzialek", P);
             request.setAttribute("wtorek", D);
