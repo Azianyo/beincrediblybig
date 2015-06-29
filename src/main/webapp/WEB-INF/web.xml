@@ -58,7 +58,7 @@
     <description></description>
     <display-name>FullRecipeController</display-name>
     <servlet-name>FullRecipeController</servlet-name>
-    <servlet-class>com.dreamteam.controller.UserController</servlet-class>
+    <servlet-class>com.dreamteam.controller.FullRecipeController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>FullRecipeController</servlet-name>
