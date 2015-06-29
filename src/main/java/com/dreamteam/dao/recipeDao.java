@@ -156,7 +156,7 @@ public class recipeDao {
         List<Recipe> recipes = new ArrayList<Recipe>();
         try {
             PreparedStatement preparedStatement = connection.
-                    prepareStatement("select * from przepis where typ=typ");
+                    prepareStatement("select * from przepis where typ=?");
 
             ResultSet rs = preparedStatement.executeQuery();
 

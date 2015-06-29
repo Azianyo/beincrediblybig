@@ -28,8 +28,6 @@
     </tr>
     </thead>
   <tbody>
-
-
     <c:forEach items="${pierwszyposilek}" var="przepis">
          <tr>
             <td><c:out value="${przepis.id_przepis}" /></td>
@@ -38,11 +36,7 @@
             <td><c:out value="${przepis.typ}" /></td>
         </tr>
     </c:forEach>
-
-
-
     </tbody>
-
 </table>
 <p><a href="IngredientController?action=insert">Generuj PDF</a></p>
 </body>
