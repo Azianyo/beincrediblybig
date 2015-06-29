@@ -117,7 +117,7 @@ public class recipeDao {
         try {
             PreparedStatement preparedStatement = connection.
                     prepareStatement("select * from przepis where typ=typ");
-            preparedStatement.setLong(1, przepisId);
+
             ResultSet rs = preparedStatement.executeQuery();
 
             if (rs.next()) {
