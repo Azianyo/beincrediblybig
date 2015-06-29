@@ -112,7 +112,7 @@ public class recipeDao {
         return przepis;
     }
 
-    public Recipe getAllRecipes_byTyp(long typ) {
+    public Recipe getAllRecipes_byTyp(int typ) {
         Recipe przepis = new Recipe();
         try {
             PreparedStatement preparedStatement = connection.
