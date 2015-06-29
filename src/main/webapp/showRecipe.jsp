@@ -29,6 +29,7 @@
   </fieldset>
   <br>
     <form method="POST" action='RecipeIngredientController'>
+        <input type="hidden" name="id" value="<c:out value="${przepis.id_przepis}" />" />
       <input type="submit" value="Przyznaj bicka" name="giveBiceps" />
     </form>
     <form method="POST" action='RecipeIngredientController'>
