@@ -51,12 +51,6 @@ public class RecipeController extends HttpServlet {
             long sniadanie = 1;
             request.setAttribute("Posilki_pierwsze", dao.getAllRecipes_byTyp(sniadanie));
             forward = DIET_GENERATOR;
-        } else if (action.equalsIgnoreCase("generate")){
-            response.setContentType("application/pdf");
-            forward = MAIN;
-            long recipeID = Long.parseLong(request.getParameter("id_przepis"));
-            Recipe recipe = dao.getRecipeById(recipeID);
-            new PDFGenerator(recipe);
         } else {
             forward = INSERT_OR_EDIT;
         }
