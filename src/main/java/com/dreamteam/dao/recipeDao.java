@@ -51,7 +51,7 @@ public class recipeDao {
 
     public void updateRecipe(Recipe przepis) {
         try {
-            String command="update przepis set nazwa=? ,opis=? ,ocena=? , typ=?, zdjecie=? where id_przepis=?";
+            String command = "update przepis set nazwa=? ,opis=? ,ocena=? , typ=?, zdjecie=? where id_przepis=?";
             PreparedStatement preparedStatement = connection.prepareStatement(command);
             // Parameters start with 1
             preparedStatement.setString(1, przepis.getNazwa());
@@ -111,6 +111,7 @@ public class recipeDao {
 
         return przepis;
     }
+
     public Recipe getRecipeWithoutId(long przepisId) {
         Recipe przepis = new Recipe();
         try {
@@ -133,8 +134,9 @@ public class recipeDao {
 
         return przepis;
     }
+
     public long getRecipeByIdIngredient(long SkladnikId) {
-        long id=666; //liczba z dupy zeby dalo sie skompilowac
+        long id = 666; //liczba z dupy zeby dalo sie skompilowac
         try {
             PreparedStatement preparedStatement = connection.
                     prepareStatement("select id_przepis from przepis_skladnik where id_skladnik=?");
@@ -151,7 +153,7 @@ public class recipeDao {
         return id;
     }
 
-    public  List<Recipe> getAllRecipes_byTyp(int typ) {
+    public List<Recipe> getAllRecipes_byTyp(int typ) {
 
         List<Recipe> recipes = new ArrayList<Recipe>();
         try {
@@ -160,7 +162,7 @@ public class recipeDao {
             preparedStatement.setInt(1, typ);
             ResultSet rs = preparedStatement.executeQuery();
 
-            while(rs.next()) {
+            while (rs.next()) {
                 Recipe przepis = new Recipe();
                 przepis.setId_przepis(rs.getLong("id_przepis"));
                 przepis.setNazwa(rs.getString("nazwa"));
@@ -175,32 +177,35 @@ public class recipeDao {
         }
         return recipes;
     }
-    /*
-    public  List<Recipe> getRecipesWithoutIngredient(int id) {
+
+    public  List<Recipe> getRecipesWithoutIngredient(long id) {
 
         List<Recipe> recipes = new ArrayList<Recipe>();
         try {
 
             String selectSQL1 = "select id_przepis from przepis_skladnik where id_skladnik=?";
             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL1);
-            preparedStatement.setInt(1, id);
+            preparedStatement.setLong(1, id);
             ResultSet rs1 = preparedStatement.executeQuery();
 
             String selectSQL2 = "select * from przepis";
             PreparedStatement preparedStatement2 = connection.prepareStatement(selectSQL2);
             ResultSet rs2 = preparedStatement2.executeQuery();
 
-            while(rs2.next()) {
+            while (rs2.next()) {
                 Recipe przepis = new Recipe();
-                if(rs2.getLong("id_przepis")==rs1.getLong("id_przepis")){continue;}
-                else {
-                    przepis.setId_przepis(rs2.getLong("id_przepis"));
-                    przepis.setNazwa(rs2.getString("nazwa"));
-                    przepis.setOpis(rs2.getString("opis"));
-                    przepis.setOcena(rs2.getInt("ocena"));
-                    przepis.setTyp(rs2.getInt("typ"));
-                    przepis.setZdjecie(rs2.getString("zdjecie"));
-                    recipes.add(przepis);
+                while(rs1.next()) {
+                    if (rs2.getLong("id_przepis") == rs1.getLong("id_przepis")) {
+                        continue;
+                    } else {
+                        przepis.setId_przepis(rs2.getLong("id_przepis"));
+                        przepis.setNazwa(rs2.getString("nazwa"));
+                        przepis.setOpis(rs2.getString("opis"));
+                        przepis.setOcena(rs2.getInt("ocena"));
+                        przepis.setTyp(rs2.getInt("typ"));
+                        przepis.setZdjecie(rs2.getString("zdjecie"));
+                        recipes.add(przepis);
+                    }
                 }
             }
         } catch (SQLException e) {
@@ -208,8 +213,6 @@ public class recipeDao {
         }
         return recipes;
     }
-    */
+
 }
-
-
 
