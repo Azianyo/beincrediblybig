@@ -39,10 +39,7 @@
         </tr>
     </c:forEach>
 
-        <%--<tr>
-            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">I (8.00)</a></td>
 
-        </tr>--%>
 
     </tbody>
 

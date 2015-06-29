@@ -31,10 +31,10 @@ public class FullRecipeController extends HttpServlet {
         String forward = "";
         String isBicepsGiven = request.getParameter("giveBiceps");
         String isMainPageRequested = request.getParameter("mainPage");
-        long id = Long.parseLong(request.getParameter("id_przepis"));
-/*
+        long id =1; //Long.parseLong(request.getParameter("id_przepis"));
+
         if (isBicepsGiven != null) {
-            idRecipe = Long.parseLong(request.getParameter("id"));
+            idRecipe = 1 ; //Long.parseLong(request.getParameter("id"));
             dao.addBiceps(idRecipe);
             FullRecipe fullRecipe;
             fullRecipe = dao.getFullRecipeByID(idRecipe);
@@ -50,9 +50,8 @@ public class FullRecipeController extends HttpServlet {
             request.setAttribute("przepis", fullRecipe.recipe);
             forward = SHOW_OR_ADD_BICEPS;
         }
-*/
-       // RequestDispatcher view = request.getRequestDispatcher(forward);
-        RequestDispatcher view = request.getRequestDispatcher(MAIN_PAGE);
+
+        RequestDispatcher view = request.getRequestDispatcher(forward);
         view.forward(request, response);
     }
 }
