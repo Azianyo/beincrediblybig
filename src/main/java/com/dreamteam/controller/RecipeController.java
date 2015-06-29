@@ -51,21 +51,36 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("przepisy", dao.getAllRecipes());
         } else if (action.equalsIgnoreCase("CreateDiet")) {
             forward = DIET_GENERATOR;
-
             List<Recipe> Poniedzialek = new ArrayList<Recipe>();
-            for(int counter =0; counter<5; counter ++) {
-                List<Recipe> meal = dao.getAllRecipes_byTyp(counter + 1);
-                int list_size = meal.size();
-                Random rand = new Random();
-                int meal_position_in_list = rand.nextInt(list_size);
-                Recipe recipe = meal.get(meal_position_in_list);
-                Poniedzialek.add(recipe);
+            List<Recipe> Wtorek = new ArrayList<Recipe>();
+            List<Recipe> Sroda = new ArrayList<Recipe>();
+            List<Recipe> Czwartek = new ArrayList<Recipe>();
+            List<Recipe> Piatek = new ArrayList<Recipe>();
+            List<Recipe> Sobota = new ArrayList<Recipe>();
+            List<Recipe> Niedziela = new ArrayList<Recipe>();
+            List<List<Recipe>> Week = new ArrayList<List<Recipe>>();
+            Week.add(Poniedzialek);
+            Week.add(Wtorek);
+            Week.add(Sroda);
+            Week.add(Czwartek);
+            Week.add(Piatek);
+            Week.add(Sobota);
+            Week.add(Niedziela);
+            for(List<Recipe> i : Week) {
+                for (int counter = 0; counter < 5; counter++) {
+                    List<Recipe> meal = dao.getAllRecipes_byTyp(counter + 1);
+                    int list_size = meal.size();
+                    Random rand = new Random();
+                    int meal_position_in_list = rand.nextInt(list_size);
+                    Recipe recipe = meal.get(meal_position_in_list);
+                    i.add(recipe);
+                }
             }
             request.setAttribute("poniedzialek", Poniedzialek);
-            request.setAttribute("secondmeal", dao.getAllRecipes_byTyp(2));
-            request.setAttribute("beforetraining", dao.getAllRecipes_byTyp(3));
-            request.setAttribute("aftertraining", dao.getAllRecipes_byTyp(4));
-            request.setAttribute("beforesleep", dao.getAllRecipes_byTyp(5));
+            request.setAttribute("wtorek", Wtorek);
+            request.setAttribute("sroda", Sroda);
+            request.setAttribute("czwartek", Czwartek);
+            request.setAttribute("piatek", Piatek);
 
         } /*else if (action.equalsIgnoreCase("SearchRecipes")) {
             forward = LIST_RECIPE;

@@ -21,22 +21,62 @@
         <tr>
             <th colspan=4>Poniedzialek</th>
             <th colspan=4>Wtorek</th>
+            <th colspan=4>Sroda</th>
+            <th colspan=4>Czwartek</th>
+            <th colspan=4>Piatek</th>
         </tr>
     </tr>
     </thead>
   <tbody>
   <tr>
-
         <c:forEach items="${poniedzialek}" var="recipe">
             <th>$i</th>
              <tr>
-                <td><c:out value="${recipe.id_przepis}" /></td>
                 <td><c:out value="${recipe.nazwa}" /></td>
                 <td><c:out value="${recipe.opis}" /></td>
-                <td><c:out value="${recipe.typ}" /></td>
             </tr>
 
         </c:forEach>
+  </tr>
+  <tr>
+      <c:forEach items="${wtorek}" var="recipe">
+      <th>$i</th>
+  <tr>
+      <td><c:out value="${recipe.nazwa}" /></td>
+      <td><c:out value="${recipe.opis}" /></td>
+  </tr>
+
+  </c:forEach>
+  <tr>
+      <c:forEach items="${sroda}" var="recipe">
+      <th>$i</th>
+  <tr>
+      <td><c:out value="${recipe.nazwa}" /></td>
+      <td><c:out value="${recipe.opis}" /></td>
+  </tr>
+
+  </c:forEach>
+  <tr>
+      <c:forEach items="${czwartek}" var="recipe">
+      <th>$i</th>
+  <tr>
+      <td><c:out value="${recipe.nazwa}" /></td>
+      <td><c:out value="${recipe.opis}" /></td>
+  </tr>
+
+  </c:forEach>
+  <tr>
+      <c:forEach items="${piatek}" var="recipe">
+      <th>$i</th>
+  <tr>
+      <td><c:out value="${recipe.nazwa}" /></td>
+      <td><c:out value="${recipe.opis}" /></td>
+  </tr>
+
+  </c:forEach>
+  </tr>
+  </tr>
+  </tr>
   </tr>
     </tbody>
 </table>
