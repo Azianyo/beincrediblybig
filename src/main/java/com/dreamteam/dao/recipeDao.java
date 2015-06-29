@@ -148,7 +148,7 @@ public class recipeDao {
             preparedStatement.setLong(1, id);
             ResultSet rs1 = preparedStatement.executeQuery();
             while (rs1.next()){
-                String selectSQL2 = "select * from przepis where id_przepis!=rs1.getLong(\"id_przepis\")";
+                String selectSQL2 = "select * from przepis where id_przepis not like rs1.getLong(\"id_przepis\")";
                 PreparedStatement preparedStatement2 = connection.prepareStatement(selectSQL2);
                 ResultSet rs2 = preparedStatement2.executeQuery();
                 while (rs2.next()) {
