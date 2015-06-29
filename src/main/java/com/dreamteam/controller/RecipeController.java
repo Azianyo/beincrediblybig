@@ -20,7 +20,7 @@ public class RecipeController extends HttpServlet {
     private static String INSERT_OR_EDIT = "/Recipe.jsp";
     private static String LIST_RECIPE = "/listRecipes.jsp";
     private static String DIET_GENERATOR = "/dietGenerator.jsp";
-    private static String MAIN = "/index.jps";
+    private static String MAIN = "/index.jsp";
     private recipeDao dao;
 
     public RecipeController() {
@@ -29,7 +29,7 @@ public class RecipeController extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String forward="";
+        String forward = MAIN;
         String action = request.getParameter("action");
 
 
