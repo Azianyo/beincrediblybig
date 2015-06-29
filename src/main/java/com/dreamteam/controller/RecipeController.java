@@ -48,8 +48,8 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("przepisy", dao.getAllRecipes());
 
         } else if (action.equalsIgnoreCase("CreateDiet")){
-            long typ = 1;
-            request.setAttribute("Posilki_pierwsze", dao.getAllRecipes_byTyp(typ));
+            long sniadanie = 1;
+            request.setAttribute("Posilki_pierwsze", dao.getAllRecipes_byTyp(sniadanie));
             forward = DIET_GENERATOR;
         } else if (action.equalsIgnoreCase("generate")){
             response.setContentType("application/pdf");
