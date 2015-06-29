@@ -8,6 +8,7 @@
   <title>Przepis na bicka</title>
 </head>
   <body>
+  <td><img src="${przepis.zdjecie}" alt="" border=3 height=400 width=400></td>
   <table border=1>
     <thead>
     <tr>
