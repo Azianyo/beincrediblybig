@@ -11,18 +11,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+    <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+    <title>Show All Users</title>
 </head>
 <body>
+<table border=1>
+    <thead>
+    <tr>
+        <th>Poniedziałek</th>
+        <th>Wtorek</th>
+        <th>Sroda</th>
+        <th>Czwartek</th>
+        <th>Piatek</th>
+        <th>Sobota</th>
+        <th>Niedziela</th>
+        <%--<th colspan=2>Action</th>--%>
+    </tr>
+    </thead>
+ <%--   <tbody>
+    <c:forEach items="${skladniki}" var="skladnik">
+        <tr>
+            <td><c:out value="${skladnik.id_skladnik}" /></td>
+            <td><c:out value="${skladnik.nazwa}" /></td>
 
-<form method="POST" action='IngredientController' name="frmAddIngedients">
-  ID Skladnik : <input type="text" readonly="readonly" name="id_skladnik"
-                       value="<c:out value="${skladnik.id_skladnik}" />" /> <br />
-  Nazwa : <input
-        type="text" name="nazwa"
-        value="<c:out value="${skladnik.nazwa}" />" /> <br />
-
-  <input type="submit" value="Submit" />
-</form>
+            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Update</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Delete</a></td>
+        </tr>
+    </c:forEach>
+    </tbody>
+--%>
+</table>
+<p><a href="IngredientController?action=insert">Generuj PDF</a></p>
 </body>
 </html>
