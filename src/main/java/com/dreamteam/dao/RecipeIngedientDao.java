@@ -105,5 +105,29 @@ public class RecipeIngedientDao {
 
         return recipeIngredient;
     }
+    public List<przepis_skladnik> getRecipeIngredientsByIDRecipe(long recipeId) {
+        List<przepis_skladnik> RecipeIngredients = new ArrayList<przepis_skladnik>();
+        try {
+            Statement statement = connection.createStatement();
+            PreparedStatement preparedStatement = connection.
+                    prepareStatement("select * from przepis_skladnik where id_przepis =?");
+            preparedStatement.setLong(1, recipeId);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while (rs.next()) {
+                przepis_skladnik skladnik = new przepis_skladnik();
+                skladnik.setId_przepis_skladnik(rs.getLong("id_przepis_skladnik"));
+                skladnik.setId_przepis(rs.getInt("id_przepis"));
+                skladnik.setId_skladnik(rs.getInt("id_skladnik"));
+                skladnik.setIlosc(rs.getInt("ilosc"));
+
+                RecipeIngredients.add(skladnik);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return RecipeIngredients;
+    }
 
 }
