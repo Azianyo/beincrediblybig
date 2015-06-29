@@ -58,9 +58,6 @@ public class RecipeController extends HttpServlet {
                 int list_size = meal.size();
                 Random rand = new Random();
                 int meal_position_in_list = rand.nextInt(list_size);
-                if(meal_position_in_list == 0){
-                    meal_position_in_list =1;
-                }
                 Recipe recipe = meal.get(meal_position_in_list);
                 Poniedzialek.add(recipe);
             }
