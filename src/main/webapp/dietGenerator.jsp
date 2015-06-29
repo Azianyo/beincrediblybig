@@ -18,45 +18,34 @@
 <table border=1>
     <thead>
     <tr>
-        <th colspan=5>Poniedzia©©ek</th>
-        <th colspan=5>Wtorek</th>
-        <th colspan=5>Sroda</th>
-        <th colspan=5>Czwartek</th>
-        <th colspan=5>Piatek</th>
-        <th colspan=5>Sobota</th>
-        <th colspan=5>Niedziela</th>
+        <th colspan=5>id</th>
+        <th colspan=5>nazwa</th>
+        <th colspan=5>opis</th>
+        <th colspan=5>typ</th>
+
+
         <%--<th colspan=2>Action</th>--%>
     </tr>
     </thead>
   <tbody>
 
+
+    <c:forEach items="${Posilki_pierwsze}" var="przepis">
         <tr>
-            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">I (8.00)</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">III (14.00)</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>"> Przed Treningiem</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Po treningu</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">V (22.00)</a></td>
-            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">I (8.00)</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">III (14.00)</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>"> Przed Treningiem</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Po treningu</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">V (22.00)</a></td>
-            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">I (8.00)</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">III (14.00)</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>"> Przed Treningiem</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Po treningu</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">V (22.00)</a></td>
-            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">I (8.00)</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">III (14.00)</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>"> Przed Treningiem</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Po treningu</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">V (22.00)</a></td>
-            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">I (8.00)</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">III (14.00)</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>"> Przed Treningiem</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Po treningu</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">V (22.00)</a></td>
+            <td><c:out value="${przepis.id_przepis}" /></td>
+            <td><c:out value="${przepis.nazwa}" /></td>
+            <td><c:out value="${przepis.opis}" /></td>
+
+            <td><c:out value="${przepis.typ}" /></td>
+
+
         </tr>
+    </c:forEach>
+
+        <%--<tr>
+            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">I (8.00)</a></td>
+
+        </tr>--%>
 
     </tbody>
 
