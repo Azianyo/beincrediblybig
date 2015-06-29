@@ -50,6 +50,7 @@ public class RecipeController extends HttpServlet {
         } else if (action.equalsIgnoreCase("CreateDiet")){
             forward = DIET_GENERATOR;
         } else if (action.equalsIgnoreCase("generate")){
+            response.setContentType("application/pdf");
             forward = MAIN;
             long recipeID = Long.parseLong(request.getParameter("id_przepis"));
             Recipe recipe = dao.getRecipeById(recipeID);
