@@ -13,8 +13,8 @@ import java.io.OutputStream;
 
 public class PDFGenerator {
 
-    OutputStream file;
-    Document document;
+    private OutputStream file;
+    private Document document;
 
     public PDFGenerator(Recipe recipe) {
 
@@ -26,10 +26,12 @@ public class PDFGenerator {
                 this.document.open();
                 this.document.add(new Paragraph("Hello World, iText"));
                 this.document.close();
+                this.file.flush();
                 this.file.close();
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
+
 }
