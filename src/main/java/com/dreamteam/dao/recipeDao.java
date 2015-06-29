@@ -160,7 +160,7 @@ public class recipeDao {
             preparedStatement.setInt(1, typ);
             ResultSet rs = preparedStatement.executeQuery();
 
-            while (rs.next()) {
+            if(rs.next()) {
                 Recipe przepis = new Recipe();
                 przepis.setId_przepis(rs.getLong("id_przepis"));
                 przepis.setNazwa(rs.getString("nazwa"));
