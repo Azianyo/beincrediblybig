@@ -73,21 +73,4 @@ public class RecipeIngredientController extends HttpServlet {
         view.forward(request, response);
     }
 
-    protected void RecipeSearch(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        przepis_skladnik recipeIngredient = new przepis_skladnik();
-        recipeIngredient.setId_skladnik(Integer.parseInt(request.getParameter("id_skladnik")));
-        if(recipeIngredientId == null || recipeIngredientId.isEmpty())
-        {
-            dao.getAllRecipes();
-        }
-        else
-        {
-            getRecipeWithoutIngredientById("id_skladnik");
-        }
-
-        RequestDispatcher view = request.getRequestDispatcher(LIST_RECIPE_INGREDIENTS);
-        request.setAttribute("przepis_skladnik", dao.getAllRecipeIngredients());
-        view.forward(request, response);
-    }
-
 }

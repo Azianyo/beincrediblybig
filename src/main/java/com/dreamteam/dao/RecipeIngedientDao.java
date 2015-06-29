@@ -106,25 +106,4 @@ public class RecipeIngedientDao {
         return recipeIngredient;
     }
 
-    public przepis_skladnik getRecipeWithoutIngredientById(long przepisSkladnikId) {
-        przepis_skladnik recipeIngredient = new przepis_skladnik();
-        try {
-            PreparedStatement preparedStatement = connection.
-                    prepareStatement("select * from przepis_skladnik where id_przepis_skladnik!=?");
-            preparedStatement.setLong(1, przepisSkladnikId);
-            ResultSet rs = preparedStatement.executeQuery();
-
-            if (rs.next()) {
-                recipeIngredient.setId_przepis_skladnik(rs.getLong("id_przepis_skladnik"));
-                recipeIngredient.setId_przepis(rs.getInt("id_przepis"));
-                recipeIngredient.setId_skladnik(rs.getInt("id_skladnik"));
-                recipeIngredient.setIlosc(rs.getInt("ilosc"));
-
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return recipeIngredient;
-    }
 }
