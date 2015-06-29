@@ -129,12 +129,12 @@ public class RecipeIngedientDao {
 
         return RecipeIngredients;
     }
-    public int getAmountByID(long skladnikId) {
+    public int getAmountByID(long skladnikId, long recipeId) {
         RecipeToIngredient skladnik = new RecipeToIngredient();
         try {
-            PreparedStatement preparedStatement = connection.
-                    prepareStatement("select ilosc from przepis_skladnik where id_skladnik=?");
+            PreparedStatement preparedStatement = connection.prepareStatement("select ilosc from przepis_skladnik where id_skladnik=? and id_przepis=?");
             preparedStatement.setLong(1, skladnikId);
+            preparedStatement.setLong(2, recipeId);
             ResultSet rs = preparedStatement.executeQuery();
 
             if (rs.next()) {
