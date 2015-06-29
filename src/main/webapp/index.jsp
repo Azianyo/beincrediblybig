@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>kurwa mać</title>
+  <title>W chuj wyjebane</title>
   <meta charset="UTF-8">
 </head>
 <body>
@@ -19,12 +19,30 @@ witness true greatness
   <input type="Submit">
 </form>
 
-
 <h1 align="center">przepis</h1>
 <form method="GET" action="RecipeController">
     <input type="text" name="id_przepis">
     <input type="hidden" name="action" value="delete">
     <input type="Submit" value="Usun">
+</form>
+
+<h1 align="center">Uloz Diete</h1>
+<form method="GET" action="RecipeController">
+    Czego nie trawisz:
+    <input type="text" name="nazwa" value="nazwa skladnika">
+    <input type="text" name="nazwa1" value="nazwa skladnika">
+    <input type="text" name="nazwa2" value="nazwa skladnika">
+    <input type="text" name="nazwa3" value="nazwa skladnika">
+    <input type="text" name="nazwa4" value="nazwa skladnika">
+    <input type="hidden" name="action" value="CreateDiet">
+    <input type="Submit" value = "Uloz Diete">
+</form>
+
+<h1 align="center">Generuj PDF</h1>
+<form method="GET" action="RecipeController">
+    <input type="text" name="id_przepis">
+    <input type="hidden" name="action" value="generate">
+    <input type="Submit" value="Generuj">
 </form>
 
 <h1 align="center">Skladnik</h1>
