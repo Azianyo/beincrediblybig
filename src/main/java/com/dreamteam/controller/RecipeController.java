@@ -53,10 +53,7 @@ public class RecipeController extends HttpServlet {
             long recipeID = Long.parseLong(request.getParameter("id_przepis"));
             Recipe recipe = dao.getRecipeById(recipeID);
             new PDFGenerator(recipe);
-        } else if (action.equalsIgnoreCase("SearchRecipes")) {
-            forward = LIST_RECIPE;
-            long ingredient = Long.parseLong(request.getParameter("name_skladnik"));
-            request.setAttribute("przepisy", dao.getRecipeWithoutId(dao.getRecipeByIdIngredient(ingredient)));
+
 
 
         } else {
