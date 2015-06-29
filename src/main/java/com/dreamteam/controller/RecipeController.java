@@ -49,7 +49,7 @@ public class RecipeController extends HttpServlet {
         } else if (action.equalsIgnoreCase("CreateDiet")){
             forward = DIET_GENERATOR;
         } else if (action.equalsIgnoreCase("generate")){
-            forward = INSERT_OR_EDIT;
+            forward = "";
             long recipeID = Long.parseLong(request.getParameter("id_przepis"));
             Recipe recipe = dao.getRecipeById(recipeID);
             new PDFGenerator(recipe);
