@@ -54,10 +54,13 @@ public class RecipeController extends HttpServlet {
 
             List<Recipe> Poniedzialek = new ArrayList<Recipe>();
             for(int counter =0; counter<5; counter ++) {
-                List<Recipe> meal = dao.getAllRecipes_byTyp(counter+1);
+                List<Recipe> meal = dao.getAllRecipes_byTyp(counter + 1);
                 int list_size = meal.size();
                 Random rand = new Random();
                 int meal_position_in_list = rand.nextInt(list_size);
+                if(meal_position_in_list == 0){
+                    meal_position_in_list =1;
+                }
                 Poniedzialek.get(meal_position_in_list);
             }
             request.setAttribute("poniedzialek", Poniedzialek);
