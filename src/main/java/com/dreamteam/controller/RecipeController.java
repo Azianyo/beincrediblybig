@@ -64,7 +64,6 @@ public class RecipeController extends HttpServlet {
             Week.add(Piate);
             int j=1;
             for(List<Recipe> i : Week) {
-
                 List<Recipe> meal = dao.getAllRecipes_byTyp(j);
                 for (int counter = 0; counter < 5; counter++) {
                     int list_size = meal.size();
@@ -73,7 +72,7 @@ public class RecipeController extends HttpServlet {
                     Recipe recipe = meal.get(meal_position_in_list);
                     i.add(recipe);
                 }
-                j=j++;
+                j=j+1;
             }
             request.setAttribute("poniedzialek", P);
             request.setAttribute("wtorek", D);
