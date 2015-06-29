@@ -28,12 +28,12 @@ witness true greatness
 
 <h1 align="center">Uloz Diete</h1>
 <form method="POST" action="IngredientController">
-    Czego nie lubisz:
+    Czego nie trawisz:
     <input type="text" name="nazwa" value="nazwa skladnika">
-    <input type="text" name="nazwa" value="nazwa skladnika">
-    <input type="text" name="nazwa" value="nazwa skladnika">
-    <input type="text" name="nazwa" value="nazwa skladnika">
-    <input type="text" name="nazwa" value="nazwa skladnika">
+    <input type="text" name="nazwa1" value="nazwa skladnika">
+    <input type="text" name="nazwa2" value="nazwa skladnika">
+    <input type="text" name="nazwa3" value="nazwa skladnika">
+    <input type="text" name="nazwa4" value="nazwa skladnika">
 
     <input type="Submit">
 </form>
