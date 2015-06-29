@@ -26,7 +26,17 @@ witness true greatness
     <input type="Submit" value="Usun">
 </form>
 
-
+<h1 align="center">Uloz Diete</h1>
+<form method="POST" action="RecipeController">
+    Czego nie trawisz:
+    <input type="text" name="nazwa" value="nazwa skladnika">
+    <input type="text" name="nazwa1" value="nazwa skladnika">
+    <input type="text" name="nazwa2" value="nazwa skladnika">
+    <input type="text" name="nazwa3" value="nazwa skladnika">
+    <input type="text" name="nazwa4" value="nazwa skladnika">
+    <input type="hidden" name="action" value="CreateDiet">
+    <input type="Submit" value = "Uloz Diete">
+</form>
 
 <h1 align="center">Generuj PDF</h1>
 <form method="GET" action="RecipeController">
