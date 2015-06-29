@@ -1,8 +1,7 @@
 package com.dreamteam.controller;
 
 import com.dreamteam.dao.RecipeIngedientDao;
-import com.dreamteam.dao.recipeDao;
-import com.dreamteam.model.przepis_skladnik;
+import com.dreamteam.model.RecipeToIngredient;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -35,15 +34,15 @@ public class RecipeIngredientController extends HttpServlet {
             long recipeIngredientID = Long.parseLong(request.getParameter("id_przepis_skladnik"));
             dao.deleteRecipeIngredient(recipeIngredientID);
             forward = LIST_RECIPE_INGREDIENTS;
-            request.setAttribute("przepis_skladnik", dao.getAllRecipeIngredients());
+            request.setAttribute("RecipeToIngredient", dao.getAllRecipeIngredients());
         } else if (action.equalsIgnoreCase("edit")){
             forward = INSERT_OR_EDIT;
             long recipeIngredientID = Long.parseLong(request.getParameter("id_przepis_skladnik"));
-            przepis_skladnik recipeIngredient = dao.getRecipeIngredientById(recipeIngredientID);
-            request.setAttribute("przepis_skladnik", recipeIngredient );
+            RecipeToIngredient recipeIngredient = dao.getRecipeIngredientById(recipeIngredientID);
+            request.setAttribute("RecipeToIngredient", recipeIngredient );
         } else if (action.equalsIgnoreCase("listRecipesIngredients")){
             forward = LIST_RECIPE_INGREDIENTS;
-            request.setAttribute("przepis_skladnik", dao.getAllRecipeIngredients());
+            request.setAttribute("RecipeToIngredient", dao.getAllRecipeIngredients());
         } else {
             forward = INSERT_OR_EDIT;
         }
@@ -53,7 +52,7 @@ public class RecipeIngredientController extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        przepis_skladnik recipeIngredient = new przepis_skladnik();
+        RecipeToIngredient recipeIngredient = new RecipeToIngredient();
         recipeIngredient.setId_przepis(Integer.parseInt(request.getParameter("id_przepis")));
         recipeIngredient.setId_skladnik(Integer.parseInt(request.getParameter("id_skladnik")));
         recipeIngredient.setIlosc(Integer.parseInt(request.getParameter("ilosc")));
@@ -69,7 +68,7 @@ public class RecipeIngredientController extends HttpServlet {
         }
 
         RequestDispatcher view = request.getRequestDispatcher(LIST_RECIPE_INGREDIENTS);
-        request.setAttribute("przepis_skladnik", dao.getAllRecipeIngredients());
+        request.setAttribute("RecipeToIngredient", dao.getAllRecipeIngredients());
         view.forward(request, response);
     }
 
