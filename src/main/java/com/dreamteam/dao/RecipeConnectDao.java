@@ -1,9 +1,6 @@
 package com.dreamteam.dao;
 
-import com.dreamteam.model.Ingredient;
-import com.dreamteam.model.Recipe;
-import com.dreamteam.model.RecipeToIngredient;
-import com.dreamteam.model.FullRecipe;
+import com.dreamteam.model.*;
 import com.dreamteam.util.DbUtil;
 
 import java.sql.Connection;
@@ -29,17 +26,21 @@ public class RecipeConnectDao {
 
         RecipeIngedientDao recipeIngredient2readDao = new RecipeIngedientDao();
         List<RecipeToIngredient> recipeIngredients= recipeIngredient2readDao.getRecipeIngredientsByIDRecipe(recipeID);
-        List<Ingredient> ingredients2read =new ArrayList<Ingredient>();
-
+        List<IngredientWithAmount> ingredientsWithAmount2read =new ArrayList<IngredientWithAmount>();
         ingredientDAO ingredient2read= new ingredientDAO();
 
+
+
         for(int i=0; i< recipeIngredients.size(); i++){
-            long idIngredient=recipeIngredients.get(i).getId_skladnik();
-            ingredients2read.add(ingredient2read.getIngredientById(idIngredient));
+            IngredientWithAmount IWA =  new IngredientWithAmount();
+            long idIngredient = recipeIngredients.get(i).getId_skladnik();
+            IWA.setIngredient(ingredient2read.getIngredientById(idIngredient));
+            IWA.setAmount(recipeIngredient2readDao.getAmountByID(idIngredient, recipeID));
+            ingredientsWithAmount2read.add(IWA);
         }
         FullRecipe fullRecipe = new FullRecipe();
-        fullRecipe.recipe=recipe2read;
-        fullRecipe.ingredients=ingredients2read;
+        fullRecipe.recipe = recipe2read;
+        fullRecipe.ingredients = ingredientsWithAmount2read;
         return fullRecipe;
     }
     public void addBiceps(long idRecipe){
