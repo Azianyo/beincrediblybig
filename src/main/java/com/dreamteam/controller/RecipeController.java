@@ -61,7 +61,8 @@ public class RecipeController extends HttpServlet {
                 if(meal_position_in_list == 0){
                     meal_position_in_list =1;
                 }
-                Poniedzialek.get(meal_position_in_list);
+                Recipe recipe = meal.get(meal_position_in_list);
+                Poniedzialek.add(recipe);
             }
             request.setAttribute("poniedzialek", Poniedzialek);
             request.setAttribute("secondmeal", dao.getAllRecipes_byTyp(2));
