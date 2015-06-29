@@ -34,7 +34,7 @@ public class FullRecipeController extends HttpServlet {
         long id =1; //Long.parseLong(request.getParameter("id_przepis"));
 
         if (isBicepsGiven != null) {
-            idRecipe = Long.parseLong(request.getParameter("id"));
+            idRecipe = 1 ; //Long.parseLong(request.getParameter("id"));
             dao.addBiceps(idRecipe);
             FullRecipe fullRecipe;
             fullRecipe = dao.getFullRecipeByID(idRecipe);
