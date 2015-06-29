@@ -43,7 +43,7 @@ public class RecipeController extends HttpServlet {
             forward = LIST_RECIPE;
             request.setAttribute("przepisy", dao.getAllRecipes());
         } else if (action.equalsIgnoreCase("CreateDiet")){
-            int sniadanie = 1;
+            int sniadanie = 2;
             request.setAttribute("Posilki_pierwsze", dao.getAllRecipes_byTyp(sniadanie));
             forward = DIET_GENERATOR;
         } else {
