@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>kurwa mać</title>
+  <title>W chuj wyjebane</title>
   <meta charset="UTF-8">
 </head>
 <body>
@@ -19,7 +19,6 @@ witness true greatness
   <input type="Submit">
 </form>
 
-
 <h1 align="center">przepis</h1>
 <form method="GET" action="RecipeController">
     <input type="text" name="id_przepis">
@@ -27,13 +26,11 @@ witness true greatness
     <input type="Submit" value="Usun">
 </form>
 
-
-<h1 align="center">Ułóż dietę</h1>
-<form method="POST" action="IngredientController">
-    <input type="text" name="nazwa" value="nazwa skladnika">
-    <input type="text" name="id_skladnik">
-
-    <input type="Submit">
+<h1 align="center">Generuj PDF</h1>
+<form method="GET" action="RecipeController">
+    <input type="text" name="id_przepis">
+    <input type="hidden" name="action" value="generate">
+    <input type="Submit" value="Generuj">
 </form>
 
 <h1 align="center">Skladnik</h1>
