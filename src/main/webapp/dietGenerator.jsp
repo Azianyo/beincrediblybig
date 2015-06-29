@@ -18,10 +18,10 @@
 <table border=1>
     <thead>
     <tr>
-        <th colspan=5>id</th>
-        <th colspan=5>nazwa</th>
-        <th colspan=5>opis</th>
-        <th colspan=5>typ</th>
+        <th>id</th>
+        <th>nazwa</th>
+        <th>opis</th>
+        <th>typ</th>
 
 
         <%--<th colspan=2>Action</th>--%>
@@ -30,15 +30,12 @@
   <tbody>
 
 
-    <c:forEach items="${Posilki_pierwsze}" var="przepis">
-        <tr>
+    <c:forEach items="${Posilkipierwsze}" var="przepis">
+         <tr>
             <td><c:out value="${przepis.id_przepis}" /></td>
             <td><c:out value="${przepis.nazwa}" /></td>
             <td><c:out value="${przepis.opis}" /></td>
-
             <td><c:out value="${przepis.typ}" /></td>
-
-
         </tr>
     </c:forEach>
 
