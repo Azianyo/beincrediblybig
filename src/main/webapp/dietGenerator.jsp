@@ -28,18 +28,15 @@
         <%--<th colspan=2>Action</th>--%>
     </tr>
     </thead>
- <%--   <tbody>
-    <c:forEach items="${skladniki}" var="skladnik">
-        <tr>
-            <td><c:out value="${skladnik.id_skladnik}" /></td>
-            <td><c:out value="${skladnik.nazwa}" /></td>
+  <tbody>
 
-            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Update</a></td>
-            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Delete</a></td>
+        <tr>
+            <td><a href="IngredientController?action=edit&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Sniadanie</a></td>
+            <td><a href="IngredientController?action=delete&id_skladnik=<c:out value="${skladnik.id_skladnik}"/>">Po Sniadaniu</a></td>
         </tr>
-    </c:forEach>
+
     </tbody>
---%>
+
 </table>
 <p><a href="IngredientController?action=insert">Generuj PDF</a></p>
 </body>
