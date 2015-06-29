@@ -148,14 +148,11 @@ public class recipeDao {
             preparedStatement.setLong(1, id);
             ResultSet rs1 = preparedStatement.executeQuery();
 
-            String selectSQL2 = "select * from przepis";
+            String selectSQL2 = "select * from przepis where id_przepis!=rs1";
             PreparedStatement preparedStatement2 = connection.prepareStatement(selectSQL2);
             ResultSet rs2 = preparedStatement2.executeQuery();
                 while (rs2.next()) {
-                    while (rs1.next()) {
-                        if (rs2.getLong("id_przepis") == rs1.getLong("id_przepis")) {
-                           break;
-                        } else {
+
                             Recipe przepis = new Recipe();
                             przepis.setId_przepis(rs2.getLong("id_przepis"));
                             przepis.setNazwa(rs2.getString("nazwa"));
@@ -164,8 +161,8 @@ public class recipeDao {
                             przepis.setTyp(rs2.getInt("typ"));
                             przepis.setZdjecie(rs2.getString("zdjecie"));
                             recipes.add(przepis);
-                        }
-                    }
+
+
                 }
         } catch (SQLException e) {
             e.printStackTrace();
