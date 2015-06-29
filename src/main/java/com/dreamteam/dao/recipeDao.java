@@ -51,7 +51,7 @@ public class recipeDao {
 
     public void updateRecipe(Recipe przepis) {
         try {
-            String command="update przepis set nazwa=? ,opis=? ,ocena=? , typ=?, zdjecie=? where id_przepis=?";
+            String command = "update przepis set nazwa=? ,opis=? ,ocena=? , typ=?, zdjecie=? where id_przepis=?";
             PreparedStatement preparedStatement = connection.prepareStatement(command);
             // Parameters start with 1
             preparedStatement.setString(1, przepis.getNazwa());
@@ -111,6 +111,7 @@ public class recipeDao {
 
         return przepis;
     }
+
     public Recipe getRecipeWithoutId(long przepisId) {
         Recipe przepis = new Recipe();
         try {
@@ -133,8 +134,9 @@ public class recipeDao {
 
         return przepis;
     }
+
     public long getRecipeByIdIngredient(long SkladnikId) {
-        long id=666; //liczba z dupy zeby dalo sie skompilowac
+        long id = 666; //liczba z dupy zeby dalo sie skompilowac
         try {
             PreparedStatement preparedStatement = connection.
                     prepareStatement("select id_przepis from przepis_skladnik where id_skladnik=?");
@@ -151,7 +153,7 @@ public class recipeDao {
         return id;
     }
 
-    public  List<Recipe> getAllRecipes_byTyp(int typ) {
+    public List<Recipe> getAllRecipes_byTyp(int typ) {
 
         List<Recipe> recipes = new ArrayList<Recipe>();
         try {
@@ -160,7 +162,7 @@ public class recipeDao {
             preparedStatement.setInt(1, typ);
             ResultSet rs = preparedStatement.executeQuery();
 
-            while(rs.next()) {
+            while (rs.next()) {
                 Recipe przepis = new Recipe();
                 przepis.setId_przepis(rs.getLong("id_przepis"));
                 przepis.setNazwa(rs.getString("nazwa"));

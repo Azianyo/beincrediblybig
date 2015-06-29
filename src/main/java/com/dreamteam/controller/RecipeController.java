@@ -55,11 +55,11 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("aftertraining", dao.getAllRecipes_byTyp(4));
             request.setAttribute("beforesleep", dao.getAllRecipes_byTyp(5));
 
-        } else if (action.equalsIgnoreCase("SearchRecipes")) {
+        } /*else if (action.equalsIgnoreCase("SearchRecipes")) {
             forward = LIST_RECIPE;
-           //int ingredient = Int.parseInt(request.getParameter("name_skladnik"));
-           //request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(ingredient));
-        } else {
+           int ingredient = Int.parseInt(request.getParameter("name_skladnik"));
+           request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(ingredient));
+        } */else {
             forward = INSERT_OR_EDIT;
         }
 
