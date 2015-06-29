@@ -52,13 +52,13 @@ public class RecipeController extends HttpServlet {
         } else if (action.equalsIgnoreCase("CreateDiet")) {
             forward = DIET_GENERATOR;
 
-            Map<Integer, Integer> Poniedzialek = new HashMap<Integer, Integer>();
+            List<Recipe> Poniedzialek = new ArrayList<Recipe>();
             for(int counter =0; counter<5; counter ++) {
                 List<Recipe> meal = dao.getAllRecipes_byTyp(counter+1);
                 int list_size = meal.size();
                 Random rand = new Random();
                 int meal_position_in_list = rand.nextInt(list_size);
-                Poniedzialek.put(counter, (int) meal.get(meal_position_in_list).getId_przepis());
+                Poniedzialek.get(meal_position_in_list);
             }
             request.setAttribute("poniedzialek", Poniedzialek);
             request.setAttribute("secondmeal", dao.getAllRecipes_byTyp(2));
