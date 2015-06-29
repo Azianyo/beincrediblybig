@@ -28,29 +28,14 @@
 
     </thead>
   <tbody>
-  <tr>
+
         <c:forEach items="${poniedzialek}" var="recipe">
-
+            <tr>
                 <td><c:out value="${recipe.nazwa}" /></td>
-                <td><c:out value="${recipe.opis}" /></td>
-
+                <td><c:out value="${recipe.typ}" /></td>
+             </tr>
 
         </c:forEach>
-  </tr>
-
-  <tr>
-          <c:forEach items="${wtorek}" var="recipe">
-
-          <td><c:out value="${recipe.nazwa}" /></td>
-          <td><c:out value="${recipe.opis}" /></td>
-
-
-  </c:forEach>
-
-  </tr>
-  </tr>
-  </tr>
-  </tr>
     </tbody>
 </table>
 <p><a href="IngredientController?action=insert">Generuj PDF</a></p>
