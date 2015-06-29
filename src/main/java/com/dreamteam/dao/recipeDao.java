@@ -194,16 +194,18 @@ public class recipeDao {
 
             while (rs2.next()) {
                 Recipe przepis = new Recipe();
-                if (rs2.getLong("id_przepis") == rs1.getLong("id_przepis")) {
-                    continue;
-                } else {
-                    przepis.setId_przepis(rs2.getLong("id_przepis"));
-                    przepis.setNazwa(rs2.getString("nazwa"));
-                    przepis.setOpis(rs2.getString("opis"));
-                    przepis.setOcena(rs2.getInt("ocena"));
-                    przepis.setTyp(rs2.getInt("typ"));
-                    przepis.setZdjecie(rs2.getString("zdjecie"));
-                    recipes.add(przepis);
+                while(rs1.next()) {
+                    if (rs2.getLong("id_przepis") == rs1.getLong("id_przepis")) {
+                        continue;
+                    } else {
+                        przepis.setId_przepis(rs2.getLong("id_przepis"));
+                        przepis.setNazwa(rs2.getString("nazwa"));
+                        przepis.setOpis(rs2.getString("opis"));
+                        przepis.setOcena(rs2.getInt("ocena"));
+                        przepis.setTyp(rs2.getInt("typ"));
+                        przepis.setZdjecie(rs2.getString("zdjecie"));
+                        recipes.add(przepis);
+                    }
                 }
             }
         } catch (SQLException e) {
