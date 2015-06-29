@@ -19,8 +19,8 @@
     <tbody>
     <c:forEach items="${skladniki}" var="skladnik">
       <tr>
-        <td><c:out value="${skladnik.nazwa}" /></td>
-          <td><c:out value="${ilosc}" /></td>
+        <td><c:out value="${skladnik.ingredient.nazwa}" /></td>
+          <td><c:out value="${skladnik.amount}" /></td>
       </tr>
     </c:forEach>
     </tbody>
