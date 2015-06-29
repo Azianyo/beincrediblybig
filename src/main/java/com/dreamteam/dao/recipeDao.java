@@ -168,6 +168,7 @@ public class recipeDao {
                 przepis.setOcena(rs.getInt("ocena"));
                 przepis.setTyp(rs.getInt("typ"));
                 przepis.setZdjecie(rs.getString("zdjecie"));
+                recipes.add(przepis);
             }
         } catch (SQLException e) {
             e.printStackTrace();
