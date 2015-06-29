@@ -177,7 +177,7 @@ public class recipeDao {
         }
         return recipes;
     }
-/*
+
     public  List<Recipe> getRecipesWithoutIngredient(long id) {
 
         List<Recipe> recipes = new ArrayList<Recipe>();
@@ -209,7 +209,7 @@ public class recipeDao {
             e.printStackTrace();
         }
         return recipes;
-    }*/
+
 
 }
 
