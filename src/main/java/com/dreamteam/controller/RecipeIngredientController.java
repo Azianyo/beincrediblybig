@@ -72,4 +72,5 @@ public class RecipeIngredientController extends HttpServlet {
         request.setAttribute("przepis_skladnik", dao.getAllRecipeIngredients());
         view.forward(request, response);
     }
+
 }
