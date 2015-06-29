@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dreamteam.dao.recipeDao;
 import com.dreamteam.model.Recipe;
+import com.dreamteam.model.Ingredient;
 //import com.dreamteam.model.PDFGenerator;
 
 public class RecipeController extends HttpServlet {
@@ -47,11 +48,12 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("przepisy", dao.getAllRecipes());
         } else if (action.equalsIgnoreCase("CreateDiet")) {
             forward = DIET_GENERATOR;
-            request.setAttribute("firstmeal", dao.getAllRecipes_byTyp(1));
+
+           request.setAttribute("firstmeal", dao.getAllRecipes_byTyp(1));
             request.setAttribute("secondmeal", dao.getAllRecipes_byTyp(2));
             request.setAttribute("beforetraining", dao.getAllRecipes_byTyp(3));
             request.setAttribute("aftertraining", dao.getAllRecipes_byTyp(4));
-            request.setAttribute("beforeleep", dao.getAllRecipes_byTyp(5));
+            request.setAttribute("beforesleep", dao.getAllRecipes_byTyp(5));
 
         } else if (action.equalsIgnoreCase("SearchRecipes")) {
             forward = LIST_RECIPE;

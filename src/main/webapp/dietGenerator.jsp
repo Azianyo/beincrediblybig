@@ -24,14 +24,26 @@
     </tr>
     </thead>
   <tbody>
-    <c:forEach items="${firstmeal}" var="recipe">
-         <tr>
-            <td><c:out value="${recipe.id_przepis}" /></td>
-            <td><c:out value="${recipe.nazwa}" /></td>
-            <td><c:out value="${recipe.opis}" /></td>
-            <td><c:out value="${recipe.typ}" /></td>
-        </tr>
-    </c:forEach>
+  <tr>
+      <th>8.00</th>
+        <c:forEach items="${firstmeal}" var="recipe">
+             <tr>
+                <td><c:out value="${recipe.id_przepis}" /></td>
+                <td><c:out value="${recipe.nazwa}" /></td>
+                <td><c:out value="${recipe.opis}" /></td>
+                <td><c:out value="${recipe.typ}" /></td>
+            </tr>
+        </c:forEach>
+      <c:forEach items="${secondmeal}" var="recipe">
+          <th>8.00</th>
+          <tr>
+              <td><c:out value="${recipe.id_przepis}" /></td>
+              <td><c:out value="${recipe.nazwa}" /></td>
+              <td><c:out value="${recipe.opis}" /></td>
+              <td><c:out value="${recipe.typ}" /></td>
+          </tr>
+      </c:forEach>
+  </tr>
     </tbody>
 </table>
 <p><a href="IngredientController?action=insert">Generuj PDF</a></p>

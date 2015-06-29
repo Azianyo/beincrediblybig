@@ -37,11 +37,11 @@ witness true greatness
 <h1 align="center">Uloz Diete</h1>
 <form method="GET" action="RecipeController">
     Czego nie trawisz:
-    <input type="text" name="nazwa" value="nazwa skladnika">
-    <input type="text" name="nazwa1" value="nazwa skladnika">
-    <input type="text" name="nazwa2" value="nazwa skladnika">
-    <input type="text" name="nazwa3" value="nazwa skladnika">
-    <input type="text" name="nazwa4" value="nazwa skladnika">
+    <input type="checkbox" name="1" value=1>
+    <input type="checkbox" name="2" value=1>
+    <input type="checkbox" name="3" value=1>
+    <input type="checkbox" name="4" value=1>
+    <input type="checkbox" name="5" value=1>
     <input type="hidden" name="action" value="CreateDiet">
     <input type="Submit" value = "Uloz Diete">
 </form>
