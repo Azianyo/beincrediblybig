@@ -30,50 +30,23 @@
   <tbody>
   <tr>
         <c:forEach items="${poniedzialek}" var="recipe">
-            <th>$i</th>
-             <tr>
+
                 <td><c:out value="${recipe.nazwa}" /></td>
                 <td><c:out value="${recipe.opis}" /></td>
-            </tr>
+
 
         </c:forEach>
   </tr>
+
   <tr>
           <c:forEach items="${wtorek}" var="recipe">
-          <th>$i</th>
-      <tr>
+
           <td><c:out value="${recipe.nazwa}" /></td>
           <td><c:out value="${recipe.opis}" /></td>
-      </tr>
+
 
   </c:forEach>
-  <tr>
-      <c:forEach items="${sroda}" var="recipe">
-      <th>$i</th>
-  <tr>
-      <td><c:out value="${recipe.nazwa}" /></td>
-      <td><c:out value="${recipe.opis}" /></td>
-  </tr>
 
-  </c:forEach>
-  <tr>
-      <c:forEach items="${czwartek}" var="recipe">
-      <th>$i</th>
-  <tr>
-      <td><c:out value="${recipe.nazwa}" /></td>
-      <td><c:out value="${recipe.opis}" /></td>
-  </tr>
-
-  </c:forEach>
-  <tr>
-      <c:forEach items="${piatek}" var="recipe">
-      <th>$i</th>
-  <tr>
-      <td><c:out value="${recipe.nazwa}" /></td>
-      <td><c:out value="${recipe.opis}" /></td>
-  </tr>
-
-  </c:forEach>
   </tr>
   </tr>
   </tr>
