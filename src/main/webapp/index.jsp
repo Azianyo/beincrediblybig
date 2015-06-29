@@ -113,8 +113,8 @@ witness true greatness
 
 <h1 align="center">Skladnik przepisu, ktorego nie chcesz</h1>
 <form method="POST" action="RecipeIngredientController">
-    <input type="text" name="id_skladnik">
-    <input type="Submit">
+    <input type="text" name="id_skladnik" value="nazwa skladnika">
+    <input type="Submit"value="Znajdz przepisy">
 </form>
 
 </body>
