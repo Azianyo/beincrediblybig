@@ -35,7 +35,7 @@ public class RecipeConnectDao {
             IngredientWithAmount IWA =  new IngredientWithAmount();
             long idIngredient = recipeIngredients.get(i).getId_skladnik();
             IWA.setIngredient(ingredient2read.getIngredientById(idIngredient));
-            IWA.setAmount(recipeIngredient2readDao.getAmountByID(idIngredient));
+            IWA.setAmount(recipeIngredient2readDao.getAmountByID(idIngredient, recipeID));
             ingredientsWithAmount2read.add(IWA);
         }
         FullRecipe fullRecipe = new FullRecipe();
