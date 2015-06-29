@@ -157,7 +157,7 @@ public class recipeDao {
         try {
             PreparedStatement preparedStatement = connection.
                     prepareStatement("select * from przepis where typ=?");
-
+            preparedStatement.setLong(1, typ);
             ResultSet rs = preparedStatement.executeQuery();
 
             while (rs.next()) {
@@ -172,7 +172,6 @@ public class recipeDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return recipes;
     }
 
