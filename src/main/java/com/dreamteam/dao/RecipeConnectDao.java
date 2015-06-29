@@ -32,15 +32,15 @@ public class RecipeConnectDao {
 
 
         for(int i=0; i< recipeIngredients.size(); i++){
-            IngredientWithAmount IWA=  new IngredientWithAmount();
-            long idIngredient=recipeIngredients.get(i).getId_skladnik();
-            IWA.ingredient=ingredient2read.getIngredientById(idIngredient);
-            IWA.amount=recipeIngredient2readDao.getAmountByID(idIngredient);
+            IngredientWithAmount IWA =  new IngredientWithAmount();
+            long idIngredient = recipeIngredients.get(i).getId_skladnik();
+            IWA.setIngredient(ingredient2read.getIngredientById(idIngredient));
+            IWA.setAmount(recipeIngredient2readDao.getAmountByID(idIngredient));
             ingredientsWithAmount2read.add(IWA);
         }
         FullRecipe fullRecipe = new FullRecipe();
-        fullRecipe.recipe=recipe2read;
-        fullRecipe.ingredients=ingredientsWithAmount2read;
+        fullRecipe.recipe = recipe2read;
+        fullRecipe.ingredients = ingredientsWithAmount2read;
         return fullRecipe;
     }
     public void addBiceps(long idRecipe){
