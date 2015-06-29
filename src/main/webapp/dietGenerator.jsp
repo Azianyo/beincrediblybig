@@ -18,13 +18,13 @@
 <table border=1>
     <thead>
     <tr>
-        <th>Poniedzia©©ek</th>
-        <th>Wtorek</th>
-        <th>Sroda</th>
-        <th>Czwartek</th>
-        <th>Piatek</th>
-        <th>Sobota</th>
-        <th>Niedziela</th>
+        <th colspan=5>Poniedzia©©ek</th>
+        <th colspan=5>Wtorek</th>
+        <th colspan=5>Sroda</th>
+        <th colspan=5>Czwartek</th>
+        <th colspan=5>Piatek</th>
+        <th colspan=5>Sobota</th>
+        <th colspan=5>Niedziela</th>
         <%--<th colspan=2>Action</th>--%>
     </tr>
     </thead>
