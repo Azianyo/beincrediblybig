@@ -62,8 +62,9 @@ public class RecipeController extends HttpServlet {
             Week.add(T);
             Week.add(C);
             Week.add(Piate);
+            int j=1;
             for(List<Recipe> i : Week) {
-                int j=1;
+
                 List<Recipe> meal = dao.getAllRecipes_byTyp(j);
                 for (int counter = 0; counter < 5; counter++) {
                     int list_size = meal.size();
