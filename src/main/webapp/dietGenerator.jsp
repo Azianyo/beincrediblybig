@@ -30,14 +30,12 @@
   <tbody>
 
 
-    <c:forEach items="${Posilkipierwsze}" var="przepis
+    <c:forEach items="${Posilkipierwsze}" var="przepis">
+         <tr>
             <td><c:out value="${przepis.id_przepis}" /></td>
             <td><c:out value="${przepis.nazwa}" /></td>
             <td><c:out value="${przepis.opis}" /></td>
-
             <td><c:out value="${przepis.typ}" /></td>
-
-
         </tr>
     </c:forEach>
 
