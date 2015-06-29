@@ -26,7 +26,7 @@
     </thead>
   <tbody>
   <tr>
-      $i = 8;
+
         <c:forEach items="${poniedzialek}" var="recipe">
             <th>$i</th>
              <tr>
@@ -35,7 +35,7 @@
                 <td><c:out value="${recipe.opis}" /></td>
                 <td><c:out value="${recipe.typ}" /></td>
             </tr>
-            $i = $i+4;
+
         </c:forEach>
   </tr>
     </tbody>
