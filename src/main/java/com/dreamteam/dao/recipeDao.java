@@ -154,7 +154,7 @@ public class recipeDao {
                 while (rs2.next()) {
                     while (rs1.next()) {
                         if (rs2.getLong("id_przepis") == rs1.getLong("id_przepis")) {
-                            continue;
+                           break;
                         } else {
                             Recipe przepis = new Recipe();
                             przepis.setId_przepis(rs2.getLong("id_przepis"));
