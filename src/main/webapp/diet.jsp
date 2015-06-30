@@ -272,7 +272,7 @@
 		</div>
 		<img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="ale foka" class="img-rounded"><br><br>
 		<form>
-			<input type="button" onClick="window.print()" class="no-print" value="Wydrukuj lub ściągnij wypis w PDF">
+			<input type="button" onClick="window.print()" class="btn btn-default btn-lg no-print" value="Wydrukuj lub ściągnij wypis w PDF">
 		</form>
 		<nav>
 			<ul class="pager">
