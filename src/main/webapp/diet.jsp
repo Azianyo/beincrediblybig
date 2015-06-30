@@ -64,8 +64,8 @@
 				<div class="col-md-10">
 					<div class="media">
 						<div class="media-left">
-							<a href="#">
-								<img class="img-thumbnail" src="<%=request.getContextPath()%>/images/wt.jpg" alt="wt">
+							<a class="media-left" href="#">
+								<img src="<%=request.getContextPath()%>/images/wt.jpg" alt="wt">
 							</a>
 						</div>
 						<div class="media-body">
@@ -99,8 +99,8 @@
 				<div class="col-md-10">
 					<div class="media">
 						<div class="media-left">
-							<a href="#">
-								<img class="img-thumbnail" src="<%=request.getContextPath()%>/images/sr.jpg" alt="sr">
+							<a class="media-left" href="#">
+								<img src="<%=request.getContextPath()%>/images/sr.jpg" alt="sr">
 							</a>
 						</div>
 						<div class="media-body">
@@ -134,8 +134,8 @@
 				<div class="col-md-10">
 					<div class="media">
 						<div class="media-left">
-							<a href="#">
-								<img class="img-thumbnail" src="<%=request.getContextPath()%>/images/czw.jpg" alt="czw">
+							<a class="media-left" href="#">
+								<img src="<%=request.getContextPath()%>/images/czw.jpg" alt="czw">
 							</a>
 						</div>
 						<div class="media-body">
@@ -169,8 +169,8 @@
 				<div class="col-md-10">
 					<div class="media">
 						<div class="media-left">
-							<a href="#">
-								<img class="img-thumbnail" src="<%=request.getContextPath()%>/images/pt.jpg" alt="pt">
+							<a class="media-left" href="#">
+								<img src="<%=request.getContextPath()%>/images/pt.jpg" alt="pt">
 							</a>
 						</div>
 						<div class="media-body">
@@ -204,8 +204,8 @@
 				<div class="col-md-10">
 					<div class="media">
 						<div class="media-left">
-							<a href="#">
-								<img class="img-thumbnail" src="<%=request.getContextPath()%>/images/so.jpg" alt="so">
+							<a class="media-left" href="#">
+								<img src="<%=request.getContextPath()%>/images/so.jpg" alt="so">
 							</a>
 						</div>
 						<div class="media-body">
@@ -239,8 +239,8 @@
 				<div class="col-md-10">
 					<div class="media">
 						<div class="media-left">
-							<a href="#">
-								<img class="img-thumbnail" src="<%=request.getContextPath()%>/images/nd.jpg" alt="nd">
+							<a class="media-left" href="#">
+								<img src="<%=request.getContextPath()%>/images/nd.jpg" alt="nd">
 							</a>
 						</div>
 						<div class="media-body">
