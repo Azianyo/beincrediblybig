@@ -15,6 +15,8 @@ public class Diet {
     private List<Recipe> ThirdMeal;
     private List<Recipe> FourthMeal;
     private List<Recipe> FifthMeal;
+    private List<Recipe> SixthMeal;
+    private List<Recipe> SeventhMeal;
     private List<List<Recipe>> Days;
 
     public void set_Days(List<List<Recipe>> Days){
@@ -36,6 +38,12 @@ public class Diet {
     public void set_FifthMeal(List<Recipe> Meal){
         this.FifthMeal = Meal;
     }
+    public void set_SixthMeal(List<Recipe> Meal){
+        this.SixthMeal = Meal;
+    }
+    public void set_SeventhMeal(List<Recipe> Meal){
+        this.SeventhMeal = Meal;
+    }
     public List<Recipe> get_FirstMeal(){
         return this.FirstMeal;
     }
@@ -51,6 +59,12 @@ public class Diet {
     public List<Recipe> get_FifthMeal(){
         return this.FifthMeal;
     }
+    public List<Recipe> get_SixthMeal(){
+        return this.SixthMeal;
+    }
+    public List<Recipe> get_SeventhMeal(){
+        return this.SeventhMeal;
+    }
     public List<List<Recipe>> get_Days() {
        return this.Days;
     }
@@ -61,12 +75,16 @@ public class Diet {
         set_ThirdMeal(new ArrayList<Recipe>());
         set_FourthMeal(new ArrayList<Recipe>());
         set_FifthMeal(new ArrayList<Recipe>());
+        set_SixthMeal(new ArrayList<Recipe>());
+        set_SeventhMeal(new ArrayList<Recipe>());
         set_Days(new ArrayList<List<Recipe>>());
         this.Days.add(this.FirstMeal);
         this.Days.add(this.SecondMeal);
         this.Days.add(this.ThirdMeal);
         this.Days.add(this.FourthMeal);
         this.Days.add(this.FifthMeal);
+        this.Days.add(this.SixthMeal);
+        this.Days.add(this.SeventhMeal);
 
     }
 
