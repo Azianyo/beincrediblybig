@@ -1,6 +1,7 @@
 package com.dreamteam.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -10,9 +11,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.dreamteam.dao.ingredientDAO;
 import com.dreamteam.dao.recipeDao;
 import com.dreamteam.model.Diet;
 import com.dreamteam.model.Recipe;
+import com.dreamteam.model.Ingredient;
 import java.util.Random;
 //import com.dreamteam.model.PDFGenerator;
 
@@ -26,8 +29,8 @@ public class RecipeController extends HttpServlet {
     public RecipeController() {
         super();
         dao = new recipeDao();
-    }
 
+    }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String forward = "";
         String action = request.getParameter("action");
@@ -46,9 +49,13 @@ public class RecipeController extends HttpServlet {
             forward = LIST_RECIPE;
             request.setAttribute("przepisy", dao.getAllRecipes());
         } else if (action.equalsIgnoreCase("CreateDiet")) {
+            ingredientDAO ingredient_dao = new ingredientDAO();
             forward = DIET_GENERATOR;
+            String [] dislikes_ingredient_name = request.getParameterValues("ingredientname");
+            List<Ingredient> dislikes = ingredient_dao.dislikes(dislikes_ingredient_name);
+
             Diet Diet = new Diet();
-            dao.generateDiet(Diet);
+            dao.generateDiet(Diet, dislikes);
             request.setAttribute("poniedzialek", Diet.get_FirstMeal());
             request.setAttribute("wtorek", Diet.get_SecondMeal());
             request.setAttribute("sroda", Diet.get_ThirdMeal());

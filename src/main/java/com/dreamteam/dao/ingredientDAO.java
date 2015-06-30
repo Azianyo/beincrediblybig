@@ -100,5 +100,32 @@ public class ingredientDAO {
         return skladnik;
     }
 
+    public Ingredient getIngredientByName(String name) {
+        Ingredient skladnik = new Ingredient();
+        try {
+            PreparedStatement preparedStatement = connection.
+                    prepareStatement("select * from skladnik where nazwa=?");
+            preparedStatement.setString(1, name);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            if (rs.next()) {
+                skladnik.setId_skladnik(rs.getLong("id_skladnik"));
+                skladnik.setNazwa(rs.getString("nazwa"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return skladnik;
+    }
+
+    public List<Ingredient> dislikes(String [] dislikes_ingredient_name){
+        List<Ingredient> dislikes = new ArrayList<Ingredient>();
+        if(dislikes_ingredient_name != null){
+            for (int i = 0; i < dislikes_ingredient_name.length; i++)
+                dislikes.add(this.getIngredientByName(dislikes_ingredient_name[i]));
+        }
+        return dislikes;
+    }
 }
 

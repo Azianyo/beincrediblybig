@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Random;
 
 import com.dreamteam.model.Diet;
+import com.dreamteam.model.Ingredient;
 import com.dreamteam.model.Recipe;
 import com.dreamteam.util.DbUtil;
 
@@ -116,9 +117,14 @@ public class recipeDao {
     }
 
 
-    public List<Recipe> getAllRecipes_byTyp(int typ) {
+    public List<Recipe> getAllRecipes_byTyp(int typ, List<Ingredient> dislikes) {
 
         List<Recipe> recipes = new ArrayList<Recipe>();
+        List<List<Recipe>> recipesWithoutIngredient = new ArrayList<List<Recipe>>();
+        for(Ingredient i:dislikes) {
+            recipesWithoutIngredient.add(getRecipesWithoutIngredient(i.getId_skladnik()));
+        }
+        boolean Information = false;
         try {
             String selectSQL = "select * from przepis where typ=?";
             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
@@ -133,7 +139,16 @@ public class recipeDao {
                 przepis.setOcena(rs.getInt("ocena"));
                 przepis.setTyp(rs.getInt("typ"));
                 przepis.setZdjecie(rs.getString("zdjecie"));
-                recipes.add(przepis);
+                for(List<Recipe> list :recipesWithoutIngredient) {
+                    for (Recipe r : list) {
+                        if (r.getId_przepis() == przepis.getId_przepis()) {
+                            Information = true;
+                        }
+                    }
+                }
+                if(Information == false) {
+                    recipes.add(przepis);
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -141,11 +156,11 @@ public class recipeDao {
         return recipes;
     }
 
-    public List<Recipe> generateDiet(Diet diet){
+    public List<Recipe> generateDiet(Diet diet,  List<Ingredient> dislikes){
         int type=1;
         List<Recipe> recipes = new ArrayList<Recipe>();
         for(List<Recipe> i : diet.get_Days()) {
-            List<Recipe> meal = this.getAllRecipes_byTyp(type);
+            List<Recipe> meal = this.getAllRecipes_byTyp(type, dislikes);
             for (int counter = 0; counter < 5; counter++) {
                 int list_size = meal.size();
                 Random rand = new Random();
