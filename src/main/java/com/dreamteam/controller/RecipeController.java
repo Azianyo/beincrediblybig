@@ -47,19 +47,7 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("przepisy", dao.getAllRecipes());
         } else if (action.equalsIgnoreCase("CreateDiet")) {
             forward = DIET_GENERATOR;
-            Diet Diet = new Diet();
-            int type=1;
-            for(List<Recipe> i : Diet.get_Days()) {
-                List<Recipe> meal = dao.getAllRecipes_byTyp(type);
-                for (int counter = 0; counter < 5; counter++) {
-                    int list_size = meal.size();
-                    Random rand = new Random();
-                    int meal_position_in_list = rand.nextInt(list_size);
-                    Recipe recipe = meal.get(meal_position_in_list);
-                    i.add(recipe);
-                }
-                type=type+1;
-            }
+            Diet Diet = new Diet(dao);
             request.setAttribute("poniedzialek", Diet.get_FirstMeal());
             request.setAttribute("wtorek", Diet.get_SecondMeal());
             request.setAttribute("sroda", Diet.get_ThirdMeal());

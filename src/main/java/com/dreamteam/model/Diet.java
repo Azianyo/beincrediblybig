@@ -55,7 +55,7 @@ public class Diet {
        return this.Days;
     }
 
-    public Diet(){
+    public Diet(recipeDao dao){
         set_FirstMeal(new ArrayList<Recipe>());
         set_SecondMeal(new ArrayList<Recipe>());
         set_ThirdMeal(new ArrayList<Recipe>());
@@ -67,6 +67,18 @@ public class Diet {
         this.Days.add(this.ThirdMeal);
         this.Days.add(this.FourthMeal);
         this.Days.add(this.FifthMeal);
+        int type=1;
+        for(List<Recipe> i : this.get_Days()) {
+            List<Recipe> meal = dao.getAllRecipes_byTyp(type);
+            for (int counter = 0; counter < 5; counter++) {
+                int list_size = meal.size();
+                Random rand = new Random();
+                int meal_position_in_list = rand.nextInt(list_size);
+                Recipe recipe = meal.get(meal_position_in_list);
+                i.add(recipe);
+            }
+            type=type+1;
+        }
     }
 
 }
