@@ -121,8 +121,9 @@ public class recipeDao {
 
         List<Recipe> recipes = new ArrayList<Recipe>();
         List<List<Recipe>> recipesWithoutIngredient = new ArrayList<List<Recipe>>();
-            recipesWithoutIngredient.add(getRecipesWithoutIngredient(dislikes));
-
+        for(Ingredient i:dislikes) {
+            recipesWithoutIngredient.add(getRecipesWithoutIngredient(i.getId_skladnik()));
+        }
         boolean Information = false;
         try {
             String selectSQL = "select * from przepis where typ=?";
@@ -163,7 +164,13 @@ public class recipeDao {
             for (int counter = 0; counter < 5; counter++) {
                 int list_size = meal.size();
                 Random rand = new Random();
-                int meal_position_in_list = rand.nextInt(list_size);
+                int meal_position_in_list = 0;
+                if (list_size>0) {
+                    meal_position_in_list = rand.nextInt(list_size);
+                }
+                else {
+                    meal_position_in_list = 0;
+                }
                 Recipe recipe = meal.get(meal_position_in_list);
                 i.add(recipe);
             }
