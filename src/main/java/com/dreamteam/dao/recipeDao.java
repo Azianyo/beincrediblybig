@@ -174,13 +174,13 @@ public class recipeDao {
                 przepis.setTyp(rs.getInt("typ"));
                 przepis.setZdjecie(rs.getString("zdjecie"));
                 boolean Information = false;
-                for(List<Recipe> list :recipesWithoutIngredient) {
+               /* for(List<Recipe> list :recipesWithoutIngredient) {
                     for (Recipe r : list) {
                         if (r.getId_przepis() == przepis.getId_przepis()) {
                             Information = true;
                         }
                     }
-                }
+                }*/
                 if(Information == false) {
                     recipes.add(przepis);
                 }
