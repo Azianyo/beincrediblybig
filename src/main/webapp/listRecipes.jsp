@@ -32,7 +32,7 @@
       <td><c:out value="${przepis.ocena}" /></td>
         <td><c:out value="${przepis.typ}" /></td>
         <td><img src="${przepis.zdjecie}" alt="" border=3 height=100 width=100></td>
-      <td><input type="submit"  name="action" id_przepis=<c:out value="${user.id_uzytkownik}" value="Zobacz Przepis"/>
+      <td><input type="submit"  value="Zobacz Przepis"/>
     </tr>
   </c:forEach>
     </form>
