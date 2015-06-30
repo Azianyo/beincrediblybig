@@ -64,10 +64,8 @@ public class RecipeController extends HttpServlet {
 
         } else if (action.equalsIgnoreCase("SearchRecipes")) {
             forward = LIST_RECIPE;
-            String [] dislikes_ingredient_name = request.getParameterValues("ingredientname");
-            List<Ingredient> dislikes = ingredient_dao.dislikes(dislikes_ingredient_name);
-
-          request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(dislikes));
+            long ingredient = Long.parseLong(request.getParameter("name_skladnik"));
+            request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(ingredient));
         } else {
             forward = INSERT_OR_EDIT;
         }

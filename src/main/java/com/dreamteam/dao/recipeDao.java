@@ -164,13 +164,7 @@ public class recipeDao {
             for (int counter = 0; counter < 5; counter++) {
                 int list_size = meal.size();
                 Random rand = new Random();
-                int meal_position_in_list = 0;
-                if (list_size>0) {
-                    meal_position_in_list = rand.nextInt(list_size);
-                }
-                else {
-                    meal_position_in_list = 1;
-                }
+                int meal_position_in_list = rand.nextInt(list_size);
                 Recipe recipe = meal.get(meal_position_in_list);
                 i.add(recipe);
             }
@@ -207,7 +201,6 @@ public class recipeDao {
                     przepis.setZdjecie(rs2.getString("zdjecie"));
                     recipes.add(przepis);
                 }
-
 
 
         } catch (SQLException e) {
