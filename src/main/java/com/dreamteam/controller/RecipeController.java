@@ -81,7 +81,6 @@ public class RecipeController extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Recipe recipe = new Recipe();
-        String action = request.getParameter("action");
         recipe.setNazwa(request.getParameter("nazwa"));
         recipe.setOpis(request.getParameter("opis"));
         recipe.setOcena(Integer.parseInt(request.getParameter("ocena")));
@@ -101,26 +100,5 @@ public class RecipeController extends HttpServlet {
         RequestDispatcher view = request.getRequestDispatcher(LIST_RECIPE);
         request.setAttribute("przepisy", dao.getAllRecipes());
         view.forward(request, response);
-        if (action.equalsIgnoreCase("CreateDiet")) {
-            ingredientDAO ingredient_dao = new ingredientDAO();
-            forward = DIET_GENERATOR;
-            String [] dislikes_ingredient_name = request.getParameterValues("ingredientname");
-            List<Ingredient> dislikes = ingredient_dao.dislikes(dislikes_ingredient_name);
-
-            Diet Diet = new Diet();
-            dao.generateDiet(Diet, dislikes);
-            request.setAttribute("poniedzialek", Diet.get_FirstMeal());
-            request.setAttribute("wtorek", Diet.get_SecondMeal());
-            request.setAttribute("sroda", Diet.get_ThirdMeal());
-            request.setAttribute("czwartek", Diet.get_FourthMeal());
-            request.setAttribute("piatek", Diet.get_FifthMeal());
-
-        } else if (action.equalsIgnoreCase("SearchRecipes")) {
-            ingredientDAO ingredient_dao = new ingredientDAO();
-            forward = LIST_RECIPE;
-            String [] dislikes_ingredient_name = request.getParameterValues("ingredientname");
-            List<Ingredient> dislikes = ingredient_dao.dislikes(dislikes_ingredient_name);
-            request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(dislikes));
-        }
     }
 }
