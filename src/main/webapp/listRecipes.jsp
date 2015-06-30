@@ -32,8 +32,8 @@
         <td><c:out value="${przepis.typ}" /></td>
         <td><img src="${przepis.zdjecie}" alt="" border=3 height=100 width=100></td>
       <td><form method="POST" action="FullRecipeController">
-        <input type="text" name="id_przepis" value="<c:out value="${przepis.id_przepis}"/>">
-        <input type="Pokaz przepis">
+        <input type="hidden" name="id_przepis" value="<c:out value="${przepis.id_przepis}"/>">
+        <input type="Submit" value="Pokaz przepis">
       </form></td>
     </tr>
   </c:forEach>
