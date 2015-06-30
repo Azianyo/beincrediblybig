@@ -86,20 +86,20 @@
 								</div>
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
-									<c:out value="${wtorek[0].nazwa}" /><br>
-									<c:out value="${wtorek[0].opis}" /><br>
+									<c:out value="${sniadanie[1].nazwa}" /><br>
+									<c:out value="${sniadanie[1].opis}" /><br>
 									<H2>Obiad</H2><br>
-									<c:out value="${wtorek[1].nazwa}" /><br>
-									<c:out value="${wtorek[1].opis}" /><br>
+									<c:out value="${drugie_sniadanie[1].nazwa}" /><br>
+									<c:out value="${drugie_sniadanie[1].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
-									<c:out value="${wtorek[2].nazwa}" /><br>
-									<c:out value="${wtorek[2].opis}" /><br>
+									<c:out value="${przed_treningiem[1].nazwa}" /><br>
+									<c:out value="${przed_treningiem[1].opis}" /><br>
 									<H2>Po treningu</H2><br>
-									<c:out value="${wtorek[3].nazwa}" /><br>
-									<c:out value="${wtorek[3].opis}" /><br>
+									<c:out value="${po_treningu[1].nazwa}" /><br>
+									<c:out value="${po_treningu[1].opis}" /><br>
 									<H2>Kolacja</H2><br>
-									<c:out value="${wtorek[4].nazwa}" /><br>
-									<c:out value="${wtorek[4].opis}" /><br>
+									<c:out value="${kolacja[1].nazwa}" /><br>
+									<c:out value="${kolacja[1].opis}" /><br>
 								</div>
 							</div>
 						</div>
@@ -126,20 +126,20 @@
 								</div>
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
-									<c:out value="${sroda[0].nazwa}" /><br>
-									<c:out value="${sroda[0].opis}" /><br>
+									<c:out value="${sniadanie[2].nazwa}" /><br>
+									<c:out value="${sniadanie[2].opis}" /><br>
 									<H2>Obiad</H2><br>
-									<c:out value="${sroda[1].nazwa}" /><br>
-									<c:out value="${sroda[1].opis}" /><br>
+									<c:out value="${drugie_sniadanie[2].nazwa}" /><br>
+									<c:out value="${drugie_sniadanie[2].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
-									<c:out value="${sroda[2].nazwa}" /><br>
-									<c:out value="${sroda[2].opis}" /><br>
+									<c:out value="${przed_treningiem[2].nazwa}" /><br>
+									<c:out value="${przed_treningiem[2].opis}" /><br>
 									<H2>Po treningu</H2><br>
-									<c:out value="${sroda[3].nazwa}" /><br>
-									<c:out value="${sroda[3].opis}" /><br>
+									<c:out value="${po_treningu[2].nazwa}" /><br>
+									<c:out value="${po_treningu[2].opis}" /><br>
 									<H2>Kolacja</H2><br>
-									<c:out value="${sroda[4].nazwa}" /><br>
-									<c:out value="${sroda[4].opis}" /><br>
+									<c:out value="${kolacja[2].nazwa}" /><br>
+									<c:out value="${kolacja[2].opis}" /><br>
 								</div>
 							</div>
 						</div>
@@ -166,20 +166,20 @@
 								</div>
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
-									<c:out value="${czwartek[0].nazwa}" /><br>
-									<c:out value="${czwartek[0].opis}" /><br>
+									<c:out value="${sniadanie[3].nazwa}" /><br>
+									<c:out value="${sniadanie[3].opis}" /><br>
 									<H2>Obiad</H2><br>
-									<c:out value="${czwartek[1].nazwa}" /><br>
-									<c:out value="${czwartek[1].opis}" /><br>
+									<c:out value="${drugie_sniadanie[3].nazwa}" /><br>
+									<c:out value="${drugie_sniadanie[3].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
-									<c:out value="${czwartek[2].nazwa}" /><br>
-									<c:out value="${czwartek[2].opis}" /><br>
+									<c:out value="${przed_treningiem[3].nazwa}" /><br>
+									<c:out value="${przed_treningiem[3].opis}" /><br>
 									<H2>Po treningu</H2><br>
-									<c:out value="${czwartek[3].nazwa}" /><br>
-									<c:out value="${czwartek[3].opis}" /><br>
+									<c:out value="${po_treningu[3].nazwa}" /><br>
+									<c:out value="${po_treningu[3].opis}" /><br>
 									<H2>Kolacja</H2><br>
-									<c:out value="${czwartek[4].nazwa}" /><br>
-									<c:out value="${czwartek[4].opis}" /><br>
+									<c:out value="${kolacja[3].nazwa}" /><br>
+									<c:out value="${kolacja[3].opis}" /><br>
 								</div>
 							</div>
 						</div>
@@ -206,20 +206,20 @@
 								</div>
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
-									<c:out value="${piatek[0].nazwa}" /><br>
-									<c:out value="${piatek[0].opis}" /><br>
+									<c:out value="${sniadanie[4].nazwa}" /><br>
+									<c:out value="${sniadanie[4].opis}" /><br>
 									<H2>Obiad</H2><br>
-									<c:out value="${piatek[1].nazwa}" /><br>
-									<c:out value="${piatek[1].opis}" /><br>
+									<c:out value="${drugie_sniadanie[4].nazwa}" /><br>
+									<c:out value="${drugie_sniadanie[4].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
-									<c:out value="${piatek[2].nazwa}" /><br>
-									<c:out value="${piatek[2].opis}" /><br>
+									<c:out value="${przed_treningiem[4].nazwa}" /><br>
+									<c:out value="${przed_treningiem[4].opis}" /><br>
 									<H2>Po treningu</H2><br>
-									<c:out value="${piatek[3].nazwa}" /><br>
-									<c:out value="${piatek[3].opis}" /><br>
+									<c:out value="${po_treningu[4].nazwa}" /><br>
+									<c:out value="${po_treningu[4].opis}" /><br>
 									<H2>Kolacja</H2><br>
-									<c:out value="${piatek[4].nazwa}" /><br>
-									<c:out value="${piatek[4].opis}" /><br>
+									<c:out value="${kolacja[4].nazwa}" /><br>
+									<c:out value="${kolacja[4].opis}" /><br>
 								</div>
 							</div>
 						</div>
@@ -228,86 +228,7 @@
 				<div class="col-md-1"></div>
 			</div>
 		</div>
-		<a name="SO"></a>
-		<div class="jumbotron">
-			<div class="row">
-				<div class="col-md-1"></div>
-				<div class="col-md-10">
-					<div class="media">
-						<div class="media-left">
-							<a class="media-left" href="#">
-								<img src="<%=request.getContextPath()%>/images/so.jpg" alt="so">
-							</a>
-						</div>
-						<div class="media-body">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<H1 class="panel-title">Sobota</H1>
-								</div>
-								<div class="panel-body">
-									<H2>Sniadanie</H2><br>
-									<c:out value="${sobota[0].nazwa}" /><br>
-									<c:out value="${sobota[0].opis}" /><br>
-									<H2>Obiad</H2><br>
-									<c:out value="${sobota[1].nazwa}" /><br>
-									<c:out value="${sobota[1].opis}" /><br>
-									<H2>Przed treningiem</H2><br>
-									<c:out value="${sobota[2].nazwa}" /><br>
-									<c:out value="${sobota[2].opis}" /><br>
-									<H2>Po treningu</H2><br>
-									<c:out value="${sobota[3].nazwa}" /><br>
-									<c:out value="${sobota[3].opis}" /><br>
-									<H2>Kolacja</H2><br>
-									<c:out value="${sobota[4].nazwa}" /><br>
-									<c:out value="${sobota[4].opis}" /><br>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-1"></div>
-			</div>
-		</div>
-		<a name="ND"></a>
-		<div class="jumbotron">
-			<div class="row">
-				<div class="col-md-1"></div>
-				<div class="col-md-10">
-					<div class="media">
-						<div class="media-left">
-							<a class="media-left" href="#">
-								<img src="<%=request.getContextPath()%>/images/nd.jpg" alt="nd">
-							</a>
-						</div>
-						<div class="media-body">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<H1 class="panel-title">Niedziela</H1>
-								</div>
-								<div class="panel-body">
-									<H2>Sniadanie</H2><br>
-									<c:out value="${niedziela[0].nazwa}" /><br>
-									<c:out value="${niedziela[0].opis}" /><br>
-									<H2>Obiad</H2><br>
-									<c:out value="${niedziela[1].nazwa}" /><br>
-									<c:out value="${niedziela[1].opis}" /><br>
-									<H2>Przed treningiem</H2><br>
-									<c:out value="${niedziela[2].nazwa}" /><br>
-									<c:out value="${niedziela[2].opis}" /><br>
-									<H2>Po treningu</H2><br>
-									<c:out value="${niedziela[3].nazwa}" /><br>
-									<c:out value="${niedziela[3].opis}" /><br>
-									<H2>Kolacja</H2><br>
-									<c:out value="${niedziela[4].nazwa}" /><br>
-									<c:out value="${niedziela[4].opis}" /><br>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-1"></div>
-			</div>
-		</div>
+
 		<img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="ale foka" class="img-rounded"><br><br>
 		<form>
 			<input type="button" onClick="window.print()" class="btn btn-default btn-lg no-print" value="Jadlospis w PDF">
