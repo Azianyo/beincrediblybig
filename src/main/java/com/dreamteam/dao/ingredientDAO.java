@@ -107,12 +107,14 @@ public class ingredientDAO {
                     prepareStatement("select * from skladnik where nazwa=?");
             preparedStatement.setString(1, name);
             ResultSet rs = preparedStatement.executeQuery();
+
+            if (rs.next()) {
                 skladnik.setId_skladnik(rs.getLong("id_skladnik"));
                 skladnik.setNazwa(rs.getString("nazwa"));
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return skladnik;
     }
 
