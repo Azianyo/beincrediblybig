@@ -203,9 +203,6 @@ public class recipeDao {
             for (int counter = 0; counter < 5; counter++) {
                 int list_size = meal.size();
                 Random rand = new Random();
-                if(list_size==0) {
-                    list_size = 1;
-                }
                 int meal_position_in_list = rand.nextInt(list_size);
                 Recipe recipe = meal.get(meal_position_in_list);
                 i.add(recipe);
