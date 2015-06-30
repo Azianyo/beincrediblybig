@@ -15,6 +15,9 @@
 			<div class="alert alert-success" role="alert"><img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="nagl" class="img-thumbnail"><h1>Twoj jadlospis na tydzien! Nic tylko przybierac na masie!</h1></div>
 		</head>
 		<body>
+		<style type="text/css" media="print">
+			.no-print { display: none; }
+		</style>
 		<ul class="nav nav-pills" role="tablist">
 			<a href="#PON"><button type="button" class="btn btn-default navbar-btn">Poniedzialek</button></a>
 			<a href="#WT"><button type="button" class="btn btn-default navbar-btn">Wtorek</button></a>
@@ -268,7 +271,9 @@
 			</div>
 		</div>
 		<img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="ale foka" class="img-rounded"><br><br>
-		<button type="button" class="btn btn-default btn-lg">Drukuj</button><br><br>
+		<form>
+			<input type="button" onClick="window.print()" class="no-print" value="Wydrukuj lub ściągnij wypis w PDF">
+		</form>
 		<nav>
 			<ul class="pager">
 				<li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Wczorajsza wyżerka (w sumie te przyciski sa bez sensu...)</a></li>
