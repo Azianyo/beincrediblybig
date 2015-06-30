@@ -47,23 +47,23 @@
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
 									<b><c:out value="${sniadanie[0].nazwa}" /></b><br>
-									<img src="<c:out value="${sniadanie[0].zdjecie}" />" alt="">
+									<img src="<c:out value="${sniadanie[0].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${sniadanie[0].opis}" /><br>
 									<H2>Obiad</H2><br>
 									<b><c:out value="${drugie_sniadanie[0].nazwa}" /></b><br>
-									<img src="<c:out value="${drugie_sniadanie[0].zdjecie}" />" alt="">
+									<img src="<c:out value="${drugie_sniadanie[0].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${drugie_sniadanie[0].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
 									<b><c:out value="${przed_treningiem[0].nazwa}" /></b><br>
-									<img src="<c:out value="${przed_treningiem[0].zdjecie}" />" alt="">
+									<img src="<c:out value="${przed_treningiem[0].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${przed_treningiem[0].opis}" /><br>
 									<H2>Po treningu</H2><br>
 									<b><c:out value="${po_treningu[0].nazwa}" /></b><br>
-									<img src="<c:out value="${po_treningu[0].zdjecie}" />" alt="">
+									<img src="<c:out value="${po_treningu[0].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${po_treningu[0].opis}" /><br>
   									<H2>Kolacja</H2><br>
 									<b><c:out value="${kolacja[0].nazwa}" /></b><br>
-									<img src="<c:out value="${kolacja[0].zdjecie}" />" alt="">
+									<img src="<c:out value="${kolacja[0].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${kolacja[0].opis}" /><br>
 								</div>
 							</div>
@@ -92,23 +92,23 @@
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
 									<b><c:out value="${sniadanie[1].nazwa}" /></b><br>
-									<img src="<c:out value="${sniadanie[1].zdjecie}" />" alt="">
+									<img src="<c:out value="${sniadanie[1].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${sniadanie[1].opis}" /><br>
 									<H2>Obiad</H2><br>
 									<b><c:out value="${drugie_sniadanie[1].nazwa}" /></b><br>
-									<img src="<c:out value="${drugie_sniadanie[1].zdjecie}" />" alt="">
+									<img src="<c:out value="${drugie_sniadanie[1].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${drugie_sniadanie[1].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
 									<b><c:out value="${przed_treningiem[1].nazwa}" /></b><br>
-									<img src="<c:out value="${przed_treningiem[1].zdjecie}" />" alt="">
+									<img src="<c:out value="${przed_treningiem[1].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${przed_treningiem[1].opis}" /><br>
 									<H2>Po treningu</H2><br>
 									<b><c:out value="${po_treningu[1].nazwa}" /></b><br>
-									<img src="<c:out value="${po_treningu[1].zdjecie}" />" alt="">
+									<img src="<c:out value="${po_treningu[1].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${po_treningu[1].opis}" /><br>
 									<H2>Kolacja</H2><br>
 									<b><c:out value="${kolacja[1].nazwa}" /></b><br>
-									<img src="<c:out value="${kolacja[1].zdjecie}" />" alt="">
+									<img src="<c:out value="${kolacja[1].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${kolacja[1].opis}" /><br>
 								</div>
 							</div>
@@ -137,23 +137,23 @@
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
 									<b><c:out value="${sniadanie[2].nazwa}" /></b><br>
-									<img src="<c:out value="${sniadanie[2].zdjecie}" />" alt="">
+									<img src="<c:out value="${sniadanie[2].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${sniadanie[2].opis}" /><br>
 									<H2>Obiad</H2><br>
 									<b><c:out value="${drugie_sniadanie[2].nazwa}" /></b><br>
-									<img src="<c:out value="${drugie_sniadanie[2].zdjecie}" />" alt="">
+									<img src="<c:out value="${drugie_sniadanie[2].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${drugie_sniadanie[2].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
 									<b><c:out value="${przed_treningiem[2].nazwa}" /></b><br>
-									<img src="<c:out value="${przed_treningiem[2].zdjecie}" />" alt="">
+									<img src="<c:out value="${przed_treningiem[2].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${przed_treningiem[2].opis}" /><br>
 									<H2>Po treningu</H2><br>
 									<b><c:out value="${po_treningu[2].nazwa}" /></b><br>
-									<img src="<c:out value="${po_treningu[2].zdjecie}" />" alt="">
+									<img src="<c:out value="${po_treningu[2].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${po_treningu[2].opis}" /><br>
 									<H2>Kolacja</H2><br>
 									<b><c:out value="${kolacja[2].nazwa}" /></b><br>
-									<img src="<c:out value="${kolacja[2].zdjecie}" />" alt="">
+									<img src="<c:out value="${kolacja[2].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${kolacja[2].opis}" /><br>
 								</div>
 							</div>
@@ -182,23 +182,23 @@
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
 									<b><c:out value="${sniadanie[3].nazwa}" /></b><br>
-									<img src="<c:out value="${sniadanie[3].zdjecie}" />" alt="">
+									<img src="<c:out value="${sniadanie[3].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${sniadanie[3].opis}" /><br>
 									<H2>Obiad</H2><br>
 									<b><c:out value="${drugie_sniadanie[3].nazwa}" /></b><br>
-									<img src="<c:out value="${drugie_sniadanie[3].zdjecie}" />" alt="">
+									<img src="<c:out value="${drugie_sniadanie[3].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${drugie_sniadanie[3].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
 									<b><c:out value="${przed_treningiem[3].nazwa}" /></b><br>
-									<img src="<c:out value="${przed_treningiem[3].zdjecie}" />" alt="">
+									<img src="<c:out value="${przed_treningiem[3].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${przed_treningiem[3].opis}" /><br>
 									<H2>Po treningu</H2><br>
 									<b><c:out value="${po_treningu[3].nazwa}" /></b><br>
-									<img src="<c:out value="${po_treningu[3].zdjecie}" />" alt="">
+									<img src="<c:out value="${po_treningu[3].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${po_treningu[3].opis}" /><br>
 									<H2>Kolacja</H2><br>
 									<b><c:out value="${kolacja[3].nazwa}" /></b><br>
-									<img src="<c:out value="${kolacja[3].zdjecie}" />" alt="">
+									<img src="<c:out value="${kolacja[3].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${kolacja[3].opis}" /><br>
 								</div>
 							</div>
@@ -227,23 +227,23 @@
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
 									<b><c:out value="${sniadanie[4].nazwa}" /></b><br>
-									<img src="<c:out value="${sniadanie[4].zdjecie}" />" alt="">
+									<img src="<c:out value="${sniadanie[4].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${sniadanie[4].opis}" /><br>
 									<H2>Obiad</H2><br>
 									<b><c:out value="${drugie_sniadanie[4].nazwa}" /></b><br>
-									<img src="<c:out value="${drugie_sniadanie[4].zdjecie}" />" alt="">
+									<img src="<c:out value="${drugie_sniadanie[4].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${drugie_sniadanie[4].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
 									<b><c:out value="${przed_treningiem[4].nazwa}" /></b><br>
-									<img src="<c:out value="${przed_treningiem[4].zdjecie}" />" alt="">
+									<img src="<c:out value="${przed_treningiem[4].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${przed_treningiem[4].opis}" /><br>
 									<H2>Po treningu</H2><br>
 									<b><c:out value="${po_treningu[4].nazwa}" /></b><br>
-									<img src="<c:out value="${po_treningu[4].zdjecie}" />" alt="">
+									<img src="<c:out value="${po_treningu[4].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${po_treningu[4].opis}" /><br>
 									<H2>Kolacja</H2><br>
 									<b><c:out value="${kolacja[4].nazwa}" /></b><br>
-									<img src="<c:out value="${kolacja[4].zdjecie}" />" alt="">
+									<img src="<c:out value="${kolacja[4].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${kolacja[4].opis}" /><br>
 								</div>
 							</div>
@@ -272,23 +272,23 @@
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
 									<b><c:out value="${sniadanie[5].nazwa}" /></b><br>
-									<img src="<c:out value="${sniadanie[5].zdjecie}" />" alt="">
+									<img src="<c:out value="${sniadanie[5].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${sniadanie[5].opis}" /><br>
 									<H2>Obiad</H2><br>
 									<b><c:out value="${drugie_sniadanie[5].nazwa}" /></b><br>
-									<img src="<c:out value="${drugie_sniadanie[5].zdjecie}" />" alt="">
+									<img src="<c:out value="${drugie_sniadanie[5].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${drugie_sniadanie[5].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
 									<b><c:out value="${przed_treningiem[5].nazwa}" /></b><br>
-									<img src="<c:out value="${przed_treningiem[5].zdjecie}" />" alt="">
+									<img src="<c:out value="${przed_treningiem[5].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${przed_treningiem[5].opis}" /><br>
 									<H2>Po treningu</H2><br>
 									<b><c:out value="${po_treningu[5].nazwa}" /></b><br>
-									<img src="<c:out value="${po_treningu[5].zdjecie}" />" alt="">
+									<img src="<c:out value="${po_treningu[5].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${po_treningu[5].opis}" /><br>
 									<H2>Kolacja</H2><br>
 									<b><c:out value="${kolacja[5].nazwa}" /></b><br>
-									<img src="<c:out value="${kolacja[5].zdjecie}" />" alt="">
+									<img src="<c:out value="${kolacja[5].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${kolacja[5].opis}" /><br>
 								</div>
 							</div>
@@ -317,23 +317,23 @@
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
 									<b><c:out value="${sniadanie[6].nazwa}" /></b><br>
-									<img src="<c:out value="${sniadanie[6].zdjecie}" />" alt="">
+									<img src="<c:out value="${sniadanie[6].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${sniadanie[6].opis}" /><br>
 									<H2>Obiad</H2><br>
 									<b><c:out value="${drugie_sniadanie[6].nazwa}" /></b><br>
-									<img src="<c:out value="${drugie_sniadanie[6].zdjecie}" />" alt="">
+									<img src="<c:out value="${drugie_sniadanie[6].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${drugie_sniadanie[6].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
 									<b><c:out value="${przed_treningiem[6].nazwa}" /></b><br>
-									<img src="<c:out value="${przed_treningiem[6].zdjecie}" />" alt="">
+									<img src="<c:out value="${przed_treningiem[6].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${przed_treningiem[6].opis}" /><br>
 									<H2>Po treningu</H2><br>
 									<b><c:out value="${po_treningu[6].nazwa}" /></b><br>
-									<img src="<c:out value="${po_treningu[6].zdjecie}" />" alt="">
+									<img src="<c:out value="${po_treningu[6].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${po_treningu[6].opis}" /><br>
 									<H2>Kolacja</H2><br>
 									<b><c:out value="${kolacja[6].nazwa}" /></b><br>
-									<img src="<c:out value="${kolacja[6].zdjecie}" />" alt="">
+									<img src="<c:out value="${kolacja[6].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${kolacja[6].opis}" /><br>
 								</div>
 							</div>
