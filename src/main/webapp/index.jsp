@@ -19,7 +19,7 @@
       <li><a href="https://www.youtube.com/watch?v=jyjuUHNwWD4" title="Krzysiu...">Jak żyć?</a></li>
       <li><a href="https://www.youtube.com/watch?v=ThyaLgEH3k0" title="Bruneika">Hyper Pump</a></li>
       <li><a href="https://www.youtube.com/watch?v=bTHFjLYE6MA" title="Spejson">Jak pić?</a></li>
-      <li><a href="lhttps://www.youtube.com/watch?v=oEXSLWH36xA" title="Kobiety">Panie</a></li>
+      <li><a href="https://www.youtube.com/watch?v=oEXSLWH36xA" title="Kobiety">Panie</a></li>
  
      </ul>
     </nav>
