@@ -24,6 +24,8 @@
             <th colspan=2>Sroda</th>
             <th colspan=2>Czwartek</th>
             <th colspan=2>Piatek</th>
+            <th colspan=2>Sobota</th>
+            <th colspan=2>Niedziela</th>
         </tr>
 
     </thead>
@@ -32,7 +34,7 @@
         <c:forEach items="${poniedzialek}" var="recipe">
 
                 <td><c:out value="${recipe.nazwa}" /></td>
-                <td><c:out value="${recipe.typ}" /></td>
+                <td><c:out value="${recipe.opis}" /></td>
 
 
         </c:forEach>
@@ -41,7 +43,7 @@
         <c:forEach items="${wtorek}" var="recipe">
 
                 <td><c:out value="${recipe.nazwa}" /></td>
-                <td><c:out value="${recipe.typ}" /></td>
+                <td><c:out value="${recipe.opis}" /></td>
 
 
         </c:forEach>
@@ -51,7 +53,7 @@
       <c:forEach items="${sroda}" var="recipe">
 
           <td><c:out value="${recipe.nazwa}" /></td>
-          <td><c:out value="${recipe.typ}" /></td>
+          <td><c:out value="${recipe.opis}" /></td>
 
 
       </c:forEach>
@@ -61,7 +63,7 @@
       <c:forEach items="${czwartek}" var="recipe">
 
           <td><c:out value="${recipe.nazwa}" /></td>
-          <td><c:out value="${recipe.typ}" /></td>
+          <td><c:out value="${recipe.opis}" /></td>
 
 
       </c:forEach>
@@ -71,11 +73,12 @@
       <c:forEach items="${piatek}" var="recipe">
 
           <td><c:out value="${recipe.nazwa}" /></td>
-          <td><c:out value="${recipe.typ}" /></td>
+          <td><c:out value="${recipe.opis}" /></td>
 
 
       </c:forEach>
   </tr>
+
 
     </tbody>
 </table>
