@@ -75,8 +75,8 @@
 			<input type="checkbox" name="ingredientname" value="Ryz" id="inne4">Ryz<br>
 		</div>
 		<div id="wybor">
-			<input type="submit" name="ingredientname" name="action" id="wyszukaj" value="Wyszukaj przepis"/>
-			<input type="submit" name="ingredientname" name="action" id="uloz" value="Stworz diete"/>
+			<input type="submit"  name="action" id="wyszukaj" value="Wyszukaj przepis"/>
+			<input type="submit"  name="action" id="uloz" value="Stworz diete"/>
 		</div>
 	</form>
 </div>
