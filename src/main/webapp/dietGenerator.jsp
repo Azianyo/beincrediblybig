@@ -31,7 +31,7 @@
     </thead>
   <tbody>
   <tr>
-        <c:forEach items="${poniedzialek}" var="recipe">
+        <c:forEach items="${sniadanie}" var="recipe">
 
                 <td><c:out value="${recipe.nazwa}" /></td>
                 <td><c:out value="${recipe.opis}" /></td>
@@ -40,7 +40,7 @@
         </c:forEach>
   </tr>
   <tr>
-        <c:forEach items="${wtorek}" var="recipe">
+        <c:forEach items="${drugie_sniadanie}" var="recipe">
 
                 <td><c:out value="${recipe.nazwa}" /></td>
                 <td><c:out value="${recipe.opis}" /></td>
@@ -50,7 +50,7 @@
   </tr>
 
   <tr>
-      <c:forEach items="${sroda}" var="recipe">
+      <c:forEach items="${przed_treningiem}" var="recipe">
 
           <td><c:out value="${recipe.nazwa}" /></td>
           <td><c:out value="${recipe.opis}" /></td>
@@ -60,7 +60,7 @@
   </tr>
 
   <tr>
-      <c:forEach items="${czwartek}" var="recipe">
+      <c:forEach items="${po_treningu}" var="recipe">
 
           <td><c:out value="${recipe.nazwa}" /></td>
           <td><c:out value="${recipe.opis}" /></td>
@@ -70,7 +70,7 @@
   </tr>
 
   <tr>
-      <c:forEach items="${piatek}" var="recipe">
+      <c:forEach items="${kolacja}" var="recipe">
 
           <td><c:out value="${recipe.nazwa}" /></td>
           <td><c:out value="${recipe.opis}" /></td>
