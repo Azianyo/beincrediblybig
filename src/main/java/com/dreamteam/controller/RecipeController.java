@@ -62,17 +62,13 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("czwartek", Diet.get_FourthMeal());
             request.setAttribute("piatek", Diet.get_FifthMeal());
 
-        } else {
-            forward = INSERT_OR_EDIT;
-        }
-         if (action2.equalsIgnoreCase("SearchRecipes")) {
+        } else if (action2.equalsIgnoreCase("SearchRecipes")) {
             forward = LIST_RECIPE;
             long ingredient = Long.parseLong(request.getParameter("name_skladnik"));
             request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(ingredient));
+        } else {
+            forward = INSERT_OR_EDIT;
         }
-         else {
-             forward = INSERT_OR_EDIT;
-         }
 
         RequestDispatcher view = request.getRequestDispatcher(forward);
         view.forward(request, response);
