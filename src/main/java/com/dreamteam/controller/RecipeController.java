@@ -1,7 +1,6 @@
 package com.dreamteam.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -12,11 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dreamteam.dao.recipeDao;
+import com.dreamteam.model.Diet;
 import com.dreamteam.model.Recipe;
-import java.util.Map;
-import java.util.HashMap;
 import java.util.Random;
-import com.dreamteam.model.Ingredient;
 //import com.dreamteam.model.PDFGenerator;
 
 public class RecipeController extends HttpServlet {
@@ -35,7 +32,6 @@ public class RecipeController extends HttpServlet {
         String forward = "";
         String action = request.getParameter("action");
 
-
         if (action.equalsIgnoreCase("delete")) {
             long recipeID = Long.parseLong(request.getParameter("id_przepis"));
             dao.deleteRecipe(recipeID);
@@ -51,20 +47,10 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("przepisy", dao.getAllRecipes());
         } else if (action.equalsIgnoreCase("CreateDiet")) {
             forward = DIET_GENERATOR;
-            List<Recipe> P = new ArrayList<Recipe>();
-            List<Recipe> D = new ArrayList<Recipe>();
-            List<Recipe> T = new ArrayList<Recipe>();
-            List<Recipe> C = new ArrayList<Recipe>();
-            List<Recipe> Piate = new ArrayList<Recipe>();
-            List<List<Recipe>> Week = new ArrayList<List<Recipe>>();
-            Week.add(P);
-            Week.add(D);
-            Week.add(T);
-            Week.add(C);
-            Week.add(Piate);
-            int j=1;
-            for(List<Recipe> i : Week) {
-                List<Recipe> meal = dao.getAllRecipes_byTyp(j);
+            Diet Diet = new Diet();
+            int type=1;
+            for(List<Recipe> i : Diet.get_Days()) {
+                List<Recipe> meal = dao.getAllRecipes_byTyp(type);
                 for (int counter = 0; counter < 5; counter++) {
                     int list_size = meal.size();
                     Random rand = new Random();
@@ -72,13 +58,13 @@ public class RecipeController extends HttpServlet {
                     Recipe recipe = meal.get(meal_position_in_list);
                     i.add(recipe);
                 }
-                j=j+1;
+                type=type+1;
             }
-            request.setAttribute("poniedzialek", P);
-            request.setAttribute("wtorek", D);
-            request.setAttribute("sroda", T);
-            request.setAttribute("czwartek", C);
-            request.setAttribute("piatek", Piate);
+            request.setAttribute("poniedzialek", Diet.get_FirstMeal());
+            request.setAttribute("wtorek", Diet.get_SecondMeal());
+            request.setAttribute("sroda", Diet.get_ThirdMeal());
+            request.setAttribute("czwartek", Diet.get_FourthMeal());
+            request.setAttribute("piatek", Diet.get_FifthMeal());
 
         } else if (action.equalsIgnoreCase("SearchRecipes")) {
             forward = LIST_RECIPE;
