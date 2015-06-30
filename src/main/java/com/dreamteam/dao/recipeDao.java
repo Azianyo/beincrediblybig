@@ -150,6 +150,42 @@ public class recipeDao {
         return recipes;
     }
 
+    public  List<Recipe> getRecipesWithoutIngredient2(List<Ingredient> dislikes) {
+
+        List<Recipe> recipes = new ArrayList<Recipe>();
+        try {
+            String selectSQL1 = "select id_przepis from przepis_skladnik where 0";
+            for(Ingredient i:dislikes){
+                String q = Long.toString(i.getId_skladnik());
+                selectSQL1 = selectSQL1 + " or " + "id_skladnik="+q;
+            }
+            PreparedStatement preparedStatement = connection.prepareStatement(selectSQL1);
+            ResultSet rs1 = preparedStatement.executeQuery();
+            String selectSQL2 = "select * from przepis where 1";
+            while (rs1.next()){
+                String q = rs1.getString("id_przepis");
+                selectSQL2 = selectSQL2 +" and "+ "id_przepis!="+q;
+            }
+            PreparedStatement preparedStatement2 = connection.prepareStatement(selectSQL2);
+            ResultSet rs2 = preparedStatement2.executeQuery();
+            while (rs2.next()) {
+
+                Recipe przepis = new Recipe();
+                przepis.setId_przepis(rs2.getLong("id_przepis"));
+                przepis.setNazwa(rs2.getString("nazwa"));
+                przepis.setOpis(rs2.getString("opis"));
+                przepis.setOcena(rs2.getInt("ocena"));
+                przepis.setTyp(rs2.getInt("typ"));
+                przepis.setZdjecie(rs2.getString("zdjecie"));
+                recipes.add(przepis);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return recipes;
+    }
+
     public List<Recipe> getAllRecipes_byTyp(int typ, List<Ingredient> dislikes) {
 
         List<Recipe> recipes = new ArrayList<Recipe>();
