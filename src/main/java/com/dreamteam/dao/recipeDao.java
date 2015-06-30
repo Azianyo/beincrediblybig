@@ -117,9 +117,13 @@ public class recipeDao {
     }
 
 
-    public List<Recipe> getAllRecipes_byTyp(int typ) {
+    public List<Recipe> getAllRecipes_byTyp(int typ, List<Ingredient> dislikes) {
 
         List<Recipe> recipes = new ArrayList<Recipe>();
+        List<List<Recipe>> recipesWithoutIngredient = new ArrayList<List<Recipe>>();
+            recipesWithoutIngredient.add(getRecipesWithoutIngredient(dislikes));
+
+        boolean Information = false;
         try {
             String selectSQL = "select * from przepis where typ=?";
             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
@@ -134,7 +138,16 @@ public class recipeDao {
                 przepis.setOcena(rs.getInt("ocena"));
                 przepis.setTyp(rs.getInt("typ"));
                 przepis.setZdjecie(rs.getString("zdjecie"));
-                recipes.add(przepis);
+                for(List<Recipe> list :recipesWithoutIngredient) {
+                    for (Recipe r : list) {
+                        if (r.getId_przepis() == przepis.getId_przepis()) {
+                            Information = true;
+                        }
+                    }
+                }
+                if(Information == false) {
+                    recipes.add(przepis);
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -142,11 +155,11 @@ public class recipeDao {
         return recipes;
     }
 
-    public List<Recipe> generateDiet(Diet diet){
+    public List<Recipe> generateDiet(Diet diet,  List<Ingredient> dislikes){
         int type=1;
         List<Recipe> recipes = new ArrayList<Recipe>();
         for(List<Recipe> i : diet.get_Days()) {
-            List<Recipe> meal = this.getAllRecipes_byTyp(type);
+            List<Recipe> meal = this.getAllRecipes_byTyp(type, dislikes);
             for (int counter = 0; counter < 5; counter++) {
                 int list_size = meal.size();
                 Random rand = new Random();
@@ -160,15 +173,12 @@ public class recipeDao {
         return recipes;
     }
 
-    public  List<Recipe> getRecipesWithoutIngredient(List<Ingredient> dislikes) {
+    public  List<Recipe> getRecipesWithoutIngredient(long id) {
 
         List<Recipe> recipes = new ArrayList<Recipe>();
         try {
-            String selectSQL1 = "select id_przepis from przepis_skladnik where id_skladnik=0";
-            while (dislikes.next()){
-                String q = dislikes.getString("id_skladnik");
-                selectSQL1 = selectSQL1 +" and "+ "id_skladnik="+q;
-            }
+
+            String selectSQL1 = "select id_przepis from przepis_skladnik where id_skladnik=?";
             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL1);
             preparedStatement.setLong(1, id);
             ResultSet rs1 = preparedStatement.executeQuery();
