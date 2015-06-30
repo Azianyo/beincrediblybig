@@ -1,0 +1,171 @@
+*
+{
+margin: 0 auto;
+padding: auto;
+}
+ 
+a:link
+{
+text-decoration:none;
+}
+ 
+a:visited
+{
+text-decoration:none;
+}
+ 
+html
+{
+background-color:#FFCCCC;
+}
+ 
+#header
+{
+height:170px;
+background-color:grey;
+background-image: url("images/miesnie.jpeg");
+text-align:center;
+}
+ 
+h1 a{
+padding-left:50px;
+padding-top:40px;
+letter-spacing:4px;
+font-style:italic;
+color:#FFCCCC;
+line-height:80px;
+}
+ 
+#menu ul
+{
+list-style-type:none;
+}
+ 
+#menu li
+{
+display:inline-block;
+padding-top:10px;
+}
+ 
+#menu a
+{
+border:1px solid #FFCCCC;
+padding:10px;
+color:#FFCCCC;
+}
+ 
+#menu a:hover
+{
+background-color:#FFCCCC;
+color: black;
+}
+
+#footer
+{
+height:100px;
+background:grey;
+}
+ 
+#footer p
+{
+text-align:center;
+line-height:10px;
+padding-top: 30px;
+}
+
+body{
+background:#fff;
+margin:0;
+padding:0;
+min-height: 1000px;
+border: 1px solid #808080;
+min-width: 900px;
+max-width: 1000px;
+margin:auto;
+}
+
+h2{
+padding-top: 30px;
+text-align: center;
+}
+img{
+margin-left:105px;
+}
+
+h4{
+margin-top:20px;
+margin-left:45%;}
+
+form#warz div#warzywa{
+position:absolute;
+top:500px;
+width:15%;
+left:25%;
+}
+form#owoc div#owoce{
+position:absolute;
+top:500px;
+width:15%;
+left:35%;
+}
+form#mieso div#mieso{
+position:absolute;
+top:500px;
+width:15%;
+left:45%;
+}
+form#nab div#nabial{
+ position:absolute;
+ top:500px;
+ width:15%;
+ left:55%;
+}
+form#inne div#inne{
+ position:absolute;
+ top:500px;
+ width:15%;
+ left:65%;
+}
+
+label > input{ /* HIDE RADIO */
+ display:none;
+}
+label > input + img{ /* IMAGE STYLES */
+ cursor:pointer;
+ border:2px solid transparent;
+}
+label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
+ border:2px solid #15ff2c;
+}
+
+div#wybor{
+margin-left:345px;
+margin-top:180px;
+margin-bottom:250px;
+ }
+ div#wybor input#wyszukaj,
+ div#wybor input#uloz{
+
+border: 2px solid #000000;
+width: 150px;
+height: 35px;
+border: 0;
+ }
+ 
+#koks
+{ 
+border:1px solid #FFCCCC;
+color:#FFCCCC;
+}
+ 
+#maxi
+{ 
+border:1px solid #FFCCCC;
+color:#FFCCCC;
+}
+
+#ultra
+{ 
+border:1px solid #FFCCCC;
+color:#FFCCCC;
+}
