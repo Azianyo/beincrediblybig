@@ -23,7 +23,7 @@
 </header>
 <h2>Kim bedziesz jak dorosniesz?</h2>
 <div id="Container">
-	<form id="jadlospis" method="GET" action="RecipeController">
+	<form id="jadlospis" method="POST" action="RecipeController">
 		<div id="koksImg">
 			<label>
 				<input type="radio" name="koks" id="koks" value="koks" />

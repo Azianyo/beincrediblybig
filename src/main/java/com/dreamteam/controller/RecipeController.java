@@ -24,17 +24,17 @@ public class RecipeController extends HttpServlet {
     private static String INSERT_OR_EDIT = "/Recipe.jsp";
     private static String LIST_RECIPE = "/listRecipes.jsp";
     private static String DIET_GENERATOR = "/dietGenerator.jsp";
+    private static String MAIN = "/index.jsp";
     private recipeDao dao;
+    private String forward = "";
 
     public RecipeController() {
         super();
         dao = new recipeDao();
-
     }
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String forward = "";
         String action = request.getParameter("action");
-        String action2 = request.getParameter("action2");
         if (action.equalsIgnoreCase("delete")) {
             long recipeID = Long.parseLong(request.getParameter("id_przepis"));
             dao.deleteRecipe(recipeID);
@@ -53,7 +53,6 @@ public class RecipeController extends HttpServlet {
             forward = DIET_GENERATOR;
             String [] dislikes_ingredient_name = request.getParameterValues("ingredientname");
             List<Ingredient> dislikes = ingredient_dao.dislikes(dislikes_ingredient_name);
-
             Diet Diet = new Diet();
             dao.generateDiet(Diet, dislikes);
             request.setAttribute("poniedzialek", Diet.get_FirstMeal());
@@ -61,7 +60,6 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("sroda", Diet.get_ThirdMeal());
             request.setAttribute("czwartek", Diet.get_FourthMeal());
             request.setAttribute("piatek", Diet.get_FifthMeal());
-
         } else if (action.equalsIgnoreCase("Wyszukaj przepis")) {
             ingredientDAO ingredient_dao = new ingredientDAO();
             forward = LIST_RECIPE;
@@ -69,17 +67,17 @@ public class RecipeController extends HttpServlet {
             List<Ingredient> dislikes = ingredient_dao.dislikes(dislikes_ingredient_name);
             request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(dislikes));
         }else{
-            forward = INSERT_OR_EDIT;
+            forward = MAIN;
         }
-
-
-
         RequestDispatcher view = request.getRequestDispatcher(forward);
         view.forward(request, response);
     }
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+
+        /*
         Recipe recipe = new Recipe();
         recipe.setNazwa(request.getParameter("nazwa"));
         recipe.setOpis(request.getParameter("opis"));
@@ -99,6 +97,32 @@ public class RecipeController extends HttpServlet {
 
         RequestDispatcher view = request.getRequestDispatcher(LIST_RECIPE);
         request.setAttribute("przepisy", dao.getAllRecipes());
+        view.forward(request, response);
+        */
+
+        if (action.equalsIgnoreCase("Stworz diete")) {
+            ingredientDAO ingredient_dao = new ingredientDAO();
+            forward = DIET_GENERATOR;
+            String [] dislikes_ingredient_name = request.getParameterValues("ingredientname");
+            List<Ingredient> dislikes = ingredient_dao.dislikes(dislikes_ingredient_name);
+
+            Diet Diet = new Diet();
+            dao.generateDiet(Diet, dislikes);
+            request.setAttribute("poniedzialek", Diet.get_FirstMeal());
+            request.setAttribute("wtorek", Diet.get_SecondMeal());
+            request.setAttribute("sroda", Diet.get_ThirdMeal());
+            request.setAttribute("czwartek", Diet.get_FourthMeal());
+            request.setAttribute("piatek", Diet.get_FifthMeal());
+        } else if (action.equalsIgnoreCase("Wyszukaj przepis")) {
+            ingredientDAO ingredient_dao = new ingredientDAO();
+            forward = LIST_RECIPE;
+            String [] dislikes_ingredient_name = request.getParameterValues("ingredientname");
+            List<Ingredient> dislikes = ingredient_dao.dislikes(dislikes_ingredient_name);
+            request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(dislikes));
+        }else{
+            forward = MAIN;
+        }
+        RequestDispatcher view = request.getRequestDispatcher(forward);
         view.forward(request, response);
     }
 }
