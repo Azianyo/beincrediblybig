@@ -34,7 +34,7 @@ public class RecipeController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String forward = "";
         String action = request.getParameter("action");
-
+        String action2 = request.getParameter("action2");
         if (action.equalsIgnoreCase("delete")) {
             long recipeID = Long.parseLong(request.getParameter("id_przepis"));
             dao.deleteRecipe(recipeID);
@@ -62,7 +62,7 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("czwartek", Diet.get_FourthMeal());
             request.setAttribute("piatek", Diet.get_FifthMeal());
 
-        } else if (action.equalsIgnoreCase("SearchRecipes")) {
+        } else if (action2.equalsIgnoreCase("SearchRecipes")) {
             forward = LIST_RECIPE;
             long ingredient = Long.parseLong(request.getParameter("name_skladnik"));
             request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(ingredient));
