@@ -113,6 +113,8 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("sroda", Diet.get_ThirdMeal());
             request.setAttribute("czwartek", Diet.get_FourthMeal());
             request.setAttribute("piatek", Diet.get_FifthMeal());
+            request.setAttribute("sobota", Diet.get_SixthMeal());
+            request.setAttribute("niedziela", Diet.get_SeventhMeal());
         } else if (action.equalsIgnoreCase("Wyszukaj przepis")) {
             ingredientDAO ingredient_dao = new ingredientDAO();
             forward = LIST_RECIPE;

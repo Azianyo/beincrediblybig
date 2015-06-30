@@ -47,14 +47,19 @@
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
 									<c:out value="${poniedzialek[0].nazwa}" /><br>
+									<c:out value="${poniedzialek[0].opis}" /><br>
 									<H2>Obiad</H2><br>
-									...przepis<br>
+									<c:out value="${poniedzialek[1].nazwa}" /><br>
+									<c:out value="${poniedzialek[1].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
-									...przepis<br>
+									<c:out value="${poniedzialek[2].nazwa}" /><br>
+									<c:out value="${poniedzialek[2].opis}" /><br>
 									<H2>Po treningu</H2><br>
-									...przepis<br>
+									<c:out value="${poniedzialek[3].nazwa}" /><br>
+									<c:out value="${poniedzialek[3].opis}" /><br>
   									<H2>Kolacja</H2><br>
-									...przepis<br>
+									<c:out value="${poniedzialek[4].nazwa}" /><br>
+									<c:out value="${poniedzialek[4].opis}" /><br>
 								</div>
 							</div>
 						</div>
@@ -81,15 +86,20 @@
 								</div>
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
-									...przepis<br>
+									<c:out value="${wtorek[0].nazwa}" /><br>
+									<c:out value="${wtorek[0].opis}" /><br>
 									<H2>Obiad</H2><br>
-									...przepis<br>
+									<c:out value="${wtorek[1].nazwa}" /><br>
+									<c:out value="${wtorek[1].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
-									...przepis<br>
+									<c:out value="${wtorek[2].nazwa}" /><br>
+									<c:out value="${wtorek[2].opis}" /><br>
 									<H2>Po treningu</H2><br>
-									...przepis<br>
+									<c:out value="${wtorek[3].nazwa}" /><br>
+									<c:out value="${wtorek[3].opis}" /><br>
 									<H2>Kolacja</H2><br>
-									...przepis<br>
+									<c:out value="${wtorek[4].nazwa}" /><br>
+									<c:out value="${wtorek[4].opis}" /><br>
 								</div>
 							</div>
 						</div>
@@ -116,15 +126,20 @@
 								</div>
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
-									...przepis<br>
+									<c:out value="${sroda[0].nazwa}" /><br>
+									<c:out value="${sroda[0].opis}" /><br>
 									<H2>Obiad</H2><br>
-									...przepis<br>
+									<c:out value="${sroda[1].nazwa}" /><br>
+									<c:out value="${sroda[1].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
-									...przepis<br>
+									<c:out value="${sroda[2].nazwa}" /><br>
+									<c:out value="${sroda[2].opis}" /><br>
 									<H2>Po treningu</H2><br>
-									...przepis<br>
+									<c:out value="${sroda[3].nazwa}" /><br>
+									<c:out value="${sroda[3].opis}" /><br>
 									<H2>Kolacja</H2><br>
-									...przepis<br>
+									<c:out value="${sroda[4].nazwa}" /><br>
+									<c:out value="${sroda[4].opis}" /><br>
 								</div>
 							</div>
 						</div>
@@ -151,15 +166,20 @@
 								</div>
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
-									...przepis<br>
+									<c:out value="${czwartek[0].nazwa}" /><br>
+									<c:out value="${czwartek[0].opis}" /><br>
 									<H2>Obiad</H2><br>
-									...przepis<br>
+									<c:out value="${czwartek[1].nazwa}" /><br>
+									<c:out value="${czwartek[1].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
-									...przepis<br>
+									<c:out value="${czwartek[2].nazwa}" /><br>
+									<c:out value="${czwartek[2].opis}" /><br>
 									<H2>Po treningu</H2><br>
-									...przepis<br>
+									<c:out value="${czwartek[3].nazwa}" /><br>
+									<c:out value="${czwartek[3].opis}" /><br>
 									<H2>Kolacja</H2><br>
-									...przepis<br>
+									<c:out value="${czwartek[4].nazwa}" /><br>
+									<c:out value="${czwartek[4].opis}" /><br>
 								</div>
 							</div>
 						</div>
@@ -186,15 +206,20 @@
 								</div>
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
-									...przepis<br>
+									<c:out value="${piatek[0].nazwa}" /><br>
+									<c:out value="${piatek[0].opis}" /><br>
 									<H2>Obiad</H2><br>
-									...przepis<br>
+									<c:out value="${piatek[1].nazwa}" /><br>
+									<c:out value="${piatek[1].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
-									...przepis<br>
+									<c:out value="${piatek[2].nazwa}" /><br>
+									<c:out value="${piatek[2].opis}" /><br>
 									<H2>Po treningu</H2><br>
-									...przepis<br>
+									<c:out value="${piatek[3].nazwa}" /><br>
+									<c:out value="${piatek[3].opis}" /><br>
 									<H2>Kolacja</H2><br>
-									...przepis<br>
+									<c:out value="${piatek[4].nazwa}" /><br>
+									<c:out value="${piatek[4].opis}" /><br>
 								</div>
 							</div>
 						</div>
@@ -221,15 +246,20 @@
 								</div>
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
-									...przepis<br>
+									<c:out value="${sobota[0].nazwa}" /><br>
+									<c:out value="${sobota[0].opis}" /><br>
 									<H2>Obiad</H2><br>
-									...przepis<br>
+									<c:out value="${sobota[1].nazwa}" /><br>
+									<c:out value="${sobota[1].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
-									...przepis<br>
+									<c:out value="${sobota[2].nazwa}" /><br>
+									<c:out value="${sobota[2].opis}" /><br>
 									<H2>Po treningu</H2><br>
-									...przepis<br>
+									<c:out value="${sobota[3].nazwa}" /><br>
+									<c:out value="${sobota[3].opis}" /><br>
 									<H2>Kolacja</H2><br>
-									...przepis<br>
+									<c:out value="${sobota[4].nazwa}" /><br>
+									<c:out value="${sobota[4].opis}" /><br>
 								</div>
 							</div>
 						</div>
@@ -256,15 +286,20 @@
 								</div>
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
-									...przepis<br>
+									<c:out value="${niedziela[0].nazwa}" /><br>
+									<c:out value="${niedziela[0].opis}" /><br>
 									<H2>Obiad</H2><br>
-									...przepis<br>
+									<c:out value="${niedziela[1].nazwa}" /><br>
+									<c:out value="${niedziela[1].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
-									...przepis<br>
+									<c:out value="${niedziela[2].nazwa}" /><br>
+									<c:out value="${niedziela[2].opis}" /><br>
 									<H2>Po treningu</H2><br>
-									...przepis<br>
+									<c:out value="${niedziela[3].nazwa}" /><br>
+									<c:out value="${niedziela[3].opis}" /><br>
 									<H2>Kolacja</H2><br>
-									...przepis<br>
+									<c:out value="${niedziela[4].nazwa}" /><br>
+									<c:out value="${niedziela[4].opis}" /><br>
 								</div>
 							</div>
 						</div>
