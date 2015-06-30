@@ -351,8 +351,8 @@
 					<input type="button" onClick="window.print()" class="btn btn-default btn-lg no-print" value="Jadlospis w PDF">
 				</form>
 				<form method="POST" action='FullRecipeController'>
-				<input type="submit" value="Strona główna" class="btn btn-default btn-lg no-print" name="mainPage" />
-			</form>
+					<input type="submit" value="Strona główna" class="btn btn-default btn-lg no-print" name="mainPage" />
+				</form>
 			</ul>
 		</nav>
 		</body>
