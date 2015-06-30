@@ -31,8 +31,7 @@
       <td><c:out value="${przepis.ocena}" /></td>
         <td><c:out value="${przepis.typ}" /></td>
         <td><img src="${przepis.zdjecie}" alt="" border=3 height=100 width=100></td>
-      <td><a href="RecipeController?action=edit&id_przepis=<c:out value="${przepis.id_przepis}"/>">Update</a></td>
-      <td><a href="RecipeController?action=delete&id_przepis=<c:out value="${przepis.id_przepis}"/>">Delete</a></td>
+      <td><a href="RecipeController?action=edit&id_przepis=<c:out value="${przepis.id_przepis}"/>">Zobacz Przepis</a></td>
     </tr>
   </c:forEach>
   </tbody>
