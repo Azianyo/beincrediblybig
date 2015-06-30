@@ -272,12 +272,10 @@
 		</div>
 		<img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="ale foka" class="img-rounded"><br><br>
 		<form>
-			<input type="button" onClick="window.print()" class="btn btn-default btn-lg no-print" value="Wydrukuj lub ściągnij wypis w PDF">
+			<input type="button" onClick="window.print()" class="btn btn-default btn-lg no-print" value="Jadlospis w PDF">
 		</form>
 		<nav>
 			<ul class="pager">
-				<li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Wczorajsza wyżerka (w sumie te przyciski sa bez sensu...)</a></li>
-				<li class="next"><a href="#"> Jutrzejsza wyżerka<span aria-hidden="true">&rarr;</span></a></li>
 				// Tu by trzeba zrobic powrot do strony glownej
 			</ul>
 		</nav>
