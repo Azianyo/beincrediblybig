@@ -37,10 +37,10 @@ witness true greatness
 <h1 align="center">Uloz Diete</h1>
 <form method="GET" action="RecipeController">
     Czego nie trawisz:
-    <input TYPE=checkbox name=ingredientname VALUE=apples> Apples
-    <input TYPE=checkbox name=ingredientname VALUE=grapes> Grapes
-    <input TYPE=checkbox name=ingredientname VALUE=oranges> Oranges
-    <input TYPE=checkbox name=ingredientname VALUE=melons> Melons
+    <input TYPE=checkbox name=ingredientname VALUE=mleko> Mleko
+    <input TYPE=checkbox name=ingredientname VALUE=woda> Woda
+    <input TYPE=checkbox name=ingredientname VALUE=suchar> Suchar
+    <input TYPE=checkbox name=ingredientname VALUE=banan> Banan
     <input type="hidden" name="action" value="CreateDiet">
     <input type="Submit" value = "Uloz Diete">
 </form>
