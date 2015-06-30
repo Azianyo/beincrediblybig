@@ -10,7 +10,7 @@
 </head>
 <body>
 <header id="header">
-	<h1><a href="index.html" title="Strona głowna">Koksownia</a></h1>
+	<h1><a href="index.jsp" title="Strona głowna">Koksownia</a></h1>
 	<nav>
 		<ul id="menu">
 			<li><a href="http://www.menshealth.pl/dieta/8-rzeczy-ktore-buduja-miesnie,3341,1" title="8 rzeczy które budują mieśnie">Cos o zarciu</a></li>
