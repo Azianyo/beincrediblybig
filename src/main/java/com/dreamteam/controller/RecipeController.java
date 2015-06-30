@@ -62,15 +62,21 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("czwartek", Diet.get_FourthMeal());
             request.setAttribute("piatek", Diet.get_FifthMeal());
 
-        } else if (action2.equalsIgnoreCase("SearchRecipes")) {
+        } else if (action.equalsIgnoreCase("SearchRecipes")) {
             ingredientDAO ingredient_dao = new ingredientDAO();
             forward = LIST_RECIPE;
             String [] dislikes_ingredient_name = request.getParameterValues("ingredientname");
             List<Ingredient> dislikes = ingredient_dao.dislikes(dislikes_ingredient_name);
             request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(dislikes));
-        } else {
-            forward = INSERT_OR_EDIT;
         }
+        if (action2.equalsIgnoreCase("SearchRecipes")) {
+            ingredientDAO ingredient_dao = new ingredientDAO();
+            forward = LIST_RECIPE;
+            String[] dislikes_ingredient_name = request.getParameterValues("ingredientname");
+            List<Ingredient> dislikes = ingredient_dao.dislikes(dislikes_ingredient_name);
+            request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(dislikes));
+        }
+
 
         RequestDispatcher view = request.getRequestDispatcher(forward);
         view.forward(request, response);
