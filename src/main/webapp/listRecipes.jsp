@@ -23,7 +23,6 @@
   </tr>
   </thead>
   <tbody>
-  <form id="show" method="POST" action="RecipeController">
   <c:forEach items="${przepisy}" var="przepis">
     <tr>
       <td><c:out value="${przepis.id_przepis}" /></td>
@@ -32,10 +31,9 @@
       <td><c:out value="${przepis.ocena}" /></td>
         <td><c:out value="${przepis.typ}" /></td>
         <td><img src="${przepis.zdjecie}" alt="" border=3 height=100 width=100></td>
-      <td><input type="submit"  value="Zobacz Przepis"/>
+      <td><a href="UserController?action=show&id_przepis=<c:out value="${przepis.id_uzytkownik}"/>&nazwa=<c:out value="${przepis.nazwa}"/>&opis=<c:out value="${przepis.opis}"/>&ocena=<c:out value="${przepis.ocena}"/>&zdjecie=<c:out value="${przepis.zdjecie}"/>&typ=<c:out value="${przepis.typ}"/>">Pokaz przepis</a></td>
     </tr>
   </c:forEach>
-    </form>
   </tbody>
 </table>
 <p><a href="RecipeController?action=insert">Add User</a></p>
