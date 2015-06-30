@@ -158,7 +158,7 @@ public class recipeDao {
         for(Ingredient i:dislikes) {
             recipesWithoutIngredient.add(getRecipesWithoutIngredient(i.getId_skladnik()));
         }
-        boolean Information = false;
+
         try {
             String selectSQL = "select * from przepis where typ=?";
             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
@@ -173,6 +173,7 @@ public class recipeDao {
                 przepis.setOcena(rs.getInt("ocena"));
                 przepis.setTyp(rs.getInt("typ"));
                 przepis.setZdjecie(rs.getString("zdjecie"));
+                boolean Information = false;
                 for(List<Recipe> list :recipesWithoutIngredient) {
                     for (Recipe r : list) {
                         if (r.getId_przepis() == przepis.getId_przepis()) {
