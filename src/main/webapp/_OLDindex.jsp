@@ -54,7 +54,7 @@ witness true greatness
     <input TYPE=checkbox name=ingredientname VALUE=woda> Woda
     <input TYPE=checkbox name=ingredientname VALUE=suchar> Suchar
     <input TYPE=checkbox name=ingredientname VALUE=banan> Banan
-    <input type="hidden" name="action" value="SearchRecipes">
+    <input type="hidden" name="action" value="CreateDiet">
     <input type="Submit"value="Znajdz przepisy">
 
 </form>

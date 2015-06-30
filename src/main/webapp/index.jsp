@@ -23,7 +23,7 @@
 </header>
 <h2>Kim bedziesz jak dorosniesz?</h2>
 <div id="Container">
-	<form id="jadlospis" method="POST" action="RecipeController">
+	<form id="jadlospis" method="GET" action="RecipeController">
 		<div id="koksImg">
 			<label>
 				<input type="radio" name="koks" id="koks" value="koks" />
@@ -75,8 +75,8 @@
 			<input type="checkbox" name="Ryz" id="inne4">Ryz<br>
 		</div>
 		<div id="wybor">
-			<input type="submit" name="wyszukaj" id="wyszukaj" value="Wyszukaj przepis"/>
-			<input type="submit" name="uloz" id="uloz" value="Stworz diete"/>
+			<input type="submit" name="action" id="wyszukaj" value="Wyszukaj przepis"/>
+			<input type="submit" name="action" id="uloz" value="Stworz diete"/>
 		</div>
 	</form>
 </div>
