@@ -144,7 +144,6 @@ public class recipeDao {
                 recipes.add(przepis);
             }
 
-
         } catch (SQLException e) {
             e.printStackTrace();
         }

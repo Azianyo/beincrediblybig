@@ -45,6 +45,7 @@ witness true greatness
     <input type="Submit" value = "Uloz Diete">
     <input type="hidden" name="action" value="SearchRecipes">
     <input type="Submit"value="Znajdz przepisy">
+
 </form>
 
 <form>
@@ -117,12 +118,7 @@ witness true greatness
     <input type="Submit" value="Usun">
 </form>
 
-<h1 align="center">Skladnik przepisu, ktorego nie chcesz</h1>
-<form method="GET" action="RecipeController">
-    <input type="text" name="name_skladnik" >
-    <input type="hidden" name="action" value="SearchRecipes">
-    <input type="Submit"value="Znajdz przepisy">
-</form>
+
 
 </body>
 </html>
