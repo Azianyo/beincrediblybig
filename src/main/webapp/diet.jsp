@@ -345,12 +345,14 @@
 		</div>
 
 		<img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="ale foka" class="img-rounded"><br><br>
-		<form>
-			<input type="button" onClick="window.print()" class="btn btn-default btn-lg no-print" value="Jadlospis w PDF">
-		</form>
 		<nav>
 			<ul class="pager">
-				// Tu by trzeba zrobic powrot do strony glownej
+				<form>
+					<input type="button" onClick="window.print()" class="btn btn-default btn-lg no-print" value="Jadlospis w PDF">
+				</form>
+				<form method="POST" action='FullRecipeController'>
+				<input type="submit" value="Strona główna" class="btn btn-default btn-lg no-print" name="mainPage" />
+			</form>
 			</ul>
 		</nav>
 		</body>
