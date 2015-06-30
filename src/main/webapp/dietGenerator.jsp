@@ -24,6 +24,8 @@
             <th colspan=2>Sroda</th>
             <th colspan=2>Czwartek</th>
             <th colspan=2>Piatek</th>
+            <th colspan=2>Sobota</th>
+            <th colspan=2>Niedziela</th>
         </tr>
 
     </thead>
@@ -76,6 +78,7 @@
 
       </c:forEach>
   </tr>
+
 
     </tbody>
 </table>
