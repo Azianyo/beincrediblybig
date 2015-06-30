@@ -11,7 +11,7 @@
   
  <body>
   <header id="header">
-    <h1><a href="index.html" title="Strona główna">Koksownia</a></h1>
+    <h1><a href="index.html" title="Strona głowna">Koksownia</a></h1>
  
     <nav>
      <ul id="menu">
@@ -25,22 +25,22 @@
     </nav>
   </header>
   
-  <h2>Kim będziesz jak dorośniesz?</h2>
+  <h2>Kim bedziesz jak dorosniesz?</h2>
 
 	<div id="Container">
 		<form id="koksImg">
 			<div id="koksImg">
 				<label>
 					<input type="radio" name="koks" id="koks" value="koks" />
-					<img src="images/koks.jpg" alt="Koks">
+					<img src="file://$MODULE_DIR$/src/main/webapp/images/koks.jpg" alt="Koks">
 				</label>
 				<label>
 					<input type="radio" name="koks" id="maxi" value="maxi"/>
-					<img src="images/maxiKoks.jpg" alt="Koks">
+					<img src="file://$MODULE_DIR$/src/main/webapp/images/maxiKoks.jpg" alt="Koks">
 				</label>
 				<label>
 					<input type="radio" name="koks" id="ultra" value="ultra" checked>
-					<img src="images/ultraKoks.jpg" alt="Koks">
+					<img src="file://$MODULE_DIR$/src/main/webapp/images/ultraKoks.jpg" alt="Koks">
 				</label>
 			</div>
 		</form>
