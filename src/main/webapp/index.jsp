@@ -32,7 +32,7 @@
 			<div id="koksImg">
 				<label>
 					<input type="radio" name="koks" id="koks" value="koks" />
-					<img src="file://$MODULE_DIR$/src/main/webapp/images/koks.jpeg" alt="Koks">
+					<img src="<%=request.getContextPath()%>/images/koks.jpeg" alt="Koks">
 				</label>
 				<label>
 					<input type="radio" name="koks" id="maxi" value="maxi"/>
@@ -40,7 +40,7 @@
 				</label>
 				<label>
 					<input type="radio" name="koks" id="ultra" value="ultra" checked>
-					<img src="file://$MODULE_DIR$/src/main/webapp/images/ultraKoks.jpeg" alt="Koks">
+					<img src=<%=request.getContextPath()%>/images/ultraKoks.jpeg" alt="Koks">
 				</label>
 			</div>
 		</form>
