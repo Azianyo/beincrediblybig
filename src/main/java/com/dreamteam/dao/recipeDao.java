@@ -8,6 +8,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+
+import com.dreamteam.model.Diet;
 import com.dreamteam.model.Recipe;
 import com.dreamteam.util.DbUtil;
 
@@ -134,6 +137,24 @@ public class recipeDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+        return recipes;
+    }
+
+    public List<Recipe> generateDiet(Diet diet){
+        int type=1;
+        List<Recipe> recipes = new ArrayList<Recipe>();
+        for(List<Recipe> i : diet.get_Days()) {
+            List<Recipe> meal = this.getAllRecipes_byTyp(type);
+            for (int counter = 0; counter < 5; counter++) {
+                int list_size = meal.size();
+                Random rand = new Random();
+                int meal_position_in_list = rand.nextInt(list_size);
+                Recipe recipe = meal.get(meal_position_in_list);
+                i.add(recipe);
+            }
+            recipes = i;
+            type=type+1;
         }
         return recipes;
     }
