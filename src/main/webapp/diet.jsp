@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="styleDiet.css" >
@@ -43,7 +46,7 @@
 								</div>
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
-									...przepis<br>
+									<c:out value="${poniedzialek[0].nazwa}" /><br>
 									<H2>Obiad</H2><br>
 									...przepis<br>
 									<H2>Przed treningiem</H2><br>
