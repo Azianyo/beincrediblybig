@@ -43,8 +43,6 @@ witness true greatness
     <input TYPE=checkbox name=ingredientname VALUE=banan> Banan
     <input type="hidden" name="action" value="CreateDiet">
     <input type="Submit" value = "Uloz Diete">
-    <input type="hidden" name="action2" value="SearchRecipes">
-    <input type="Submit"value="Znajdz przepisy">
 
 </form>
 

@@ -68,14 +68,10 @@ public class RecipeController extends HttpServlet {
             String [] dislikes_ingredient_name = request.getParameterValues("ingredientname");
             List<Ingredient> dislikes = ingredient_dao.dislikes(dislikes_ingredient_name);
             request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(dislikes));
+        }else{
+            forward = INSERT_OR_EDIT;
         }
-        if (action2.equalsIgnoreCase("SearchRecipes")) {
-            ingredientDAO ingredient_dao = new ingredientDAO();
-            forward = LIST_RECIPE;
-            String[] dislikes_ingredient_name = request.getParameterValues("ingredientname");
-            List<Ingredient> dislikes = ingredient_dao.dislikes(dislikes_ingredient_name);
-            request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(dislikes));
-        }
+
 
 
         RequestDispatcher view = request.getRequestDispatcher(forward);
