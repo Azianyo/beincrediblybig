@@ -143,7 +143,7 @@ public class recipeDao {
         List<Recipe> recipes = new ArrayList<Recipe>();
         try {
 
-            String selectSQL1 = "select id_przepis from przepis_skladnik where id_skladnik=?";
+            String selectSQL1 = "select * from przepis_skladnik where id_skladnik=?";
             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL1);
             preparedStatement.setLong(1, id);
             ResultSet rs1 = preparedStatement.executeQuery();
