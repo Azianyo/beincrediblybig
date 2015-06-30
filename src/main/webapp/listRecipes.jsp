@@ -31,7 +31,10 @@
       <td><c:out value="${przepis.ocena}" /></td>
         <td><c:out value="${przepis.typ}" /></td>
         <td><img src="${przepis.zdjecie}" alt="" border=3 height=100 width=100></td>
-      <td><a href="RecipeController?action=show&id_przepis=<c:out value="${przepis.id_przepis}"/>&nazwa=<c:out value="${przepis.nazwa}"/>&opis=<c:out value="${przepis.opis}"/>&ocena=<c:out value="${przepis.ocena}"/>&zdjecie=<c:out value="${przepis.zdjecie}"/>&typ=<c:out value="${przepis.typ}"/>">Pokaz przepis</a></td>
+      <td><form method="POST" action="FullRecipeController">
+        <input type="text" name="id_przepis" value="<c:out value="${przepis.id_przepis}"/>">
+        <input type="Pokaz przepis">
+      </form></td>
     </tr>
   </c:forEach>
   </tbody>
