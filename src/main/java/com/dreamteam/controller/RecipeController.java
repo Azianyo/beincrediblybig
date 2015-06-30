@@ -63,9 +63,13 @@ public class RecipeController extends HttpServlet {
             request.setAttribute("piatek", Diet.get_FifthMeal());
 
         } else if (action.equalsIgnoreCase("SearchRecipes")) {
-        forward = LIST_RECIPE;
-        long ingredient = Long.parseLong(request.getParameter("name_skladnik"));
-        request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(ingredient));
+            ingredientDAO ingredient_dao = new ingredientDAO();
+            forward = LIST_RECIPE;
+            String [] dislikes_ingredient_name = request.getParameterValues("ingredientname");
+            List<Ingredient> dislikes = ingredient_dao.dislikes(dislikes_ingredient_name);
+            for (Ingredient i : dislikes) {
+                request.setAttribute("przepisy", dao.getRecipesWithoutIngredient(i.getId_skladnik()));
+            }
         } else {
             forward = INSERT_OR_EDIT;
         }
