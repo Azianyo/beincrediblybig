@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-   <meta charset="UTF-8" >
-   <link rel="Stylesheet" href="styleIndex.css">
-   <script src="skrypt.js"></script>	
-   <title>Koksownia</title>
-   <meta name="Description" content="Strona najlepszych koksiarzy" >
-      <meta name="author" content="Wielki Koks">
-  </head>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="Stylesheet" href="styleIndex.css">
+	<script src="skrypt.js"></script>
+	<title>Koksownia</title>
+	<meta name="Description" content="Strona najlepszych koksiarzy" >
+	<meta name="author" content="Wielki Koks">
+</head>
   
  <body>
   <header id="header">
