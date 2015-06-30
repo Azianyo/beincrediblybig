@@ -11,8 +11,8 @@
 	<div class="col-md-8">
 		<head>
 			<title>Wygenerowany jadlospis</title>
-			<link rel="stylesheet" href="./style.css" type="text/css">
-			<div class="alert alert-success" role="alert"><img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="" class="img-thumbnail"><h1>Twoj jadlospis na tydzien! Nic tylko przybierac na masie!</h1></div>
+			<link rel="stylesheet" href="styleDiet.css" type="text/css">
+			<div class="alert alert-success" role="alert"><img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="nagl" class="img-thumbnail"><h1>Twoj jadlospis na tydzien! Nic tylko przybierac na masie!</h1></div>
 		</head>
 		<body>
 		<ul class="nav nav-pills" role="tablist">
@@ -31,9 +31,7 @@
 				<div class="col-md-10">
 					<div class="media">
 						<div class="media-left">
-							<a href="#">
-								<img class="img-thumbnail" src="<%=request.getContextPath()%>/images/pon.jpg" alt="pon">
-							</a>
+							<img class="img-thumbnail" src="<%=request.getContextPath()%>/images/pon.jpg" alt="pon">
 						</div>
 						<div class="media-body">
 							<div class="panel panel-default">
