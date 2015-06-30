@@ -48,27 +48,6 @@ public class RecipeController extends HttpServlet {
         } else if (action.equalsIgnoreCase("listRecipes")) {
             forward = LIST_RECIPE;
             request.setAttribute("przepisy", dao.getAllRecipes());
-        } else if (action.equalsIgnoreCase("show")) {
-            Recipe recipe = new Recipe();
-            recipe.setNazwa(request.getParameter("nazwa"));
-            recipe.setOpis(request.getParameter("opis"));
-            recipe.setOcena(Integer.parseInt(request.getParameter("ocena")));
-            recipe.setTyp(Integer.parseInt(request.getParameter("typ")));
-            recipe.setZdjecie(request.getParameter("zdjecie"));
-            String recipeId = request.getParameter("id_przepis");
-            if(recipeId == null || recipeId.isEmpty())
-            {
-                dao.addRecipe(recipe);
-            }
-            else
-            {
-                recipe.setId_przepis(Long.parseLong(recipeId));
-                dao.updateRecipe(recipe);
-            }
-
-            RequestDispatcher view = request.getRequestDispatcher(LIST_RECIPE);
-            request.setAttribute("przepisy", dao.getAllRecipes());
-            view.forward(request, response);
         } else if (action.equalsIgnoreCase("Stworz diete")) {
             ingredientDAO ingredient_dao = new ingredientDAO();
             forward = DIET_GENERATOR;
@@ -98,28 +77,25 @@ public class RecipeController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
 
-        /*
-        Recipe recipe = new Recipe();
-        recipe.setNazwa(request.getParameter("nazwa"));
-        recipe.setOpis(request.getParameter("opis"));
-        recipe.setOcena(Integer.parseInt(request.getParameter("ocena")));
-        recipe.setTyp(Integer.parseInt(request.getParameter("typ")));
-        recipe.setZdjecie(request.getParameter("zdjecie"));
-        String recipeId = request.getParameter("id_przepis");
-        if(recipeId == null || recipeId.isEmpty())
-        {
-            dao.addRecipe(recipe);
-        }
-        else
-        {
-            recipe.setId_przepis(Long.parseLong(recipeId));
-            dao.updateRecipe(recipe);
-        }
+        if (action.equalsIgnoreCase("show")) {
+            Recipe recipe = new Recipe();
+            recipe.setNazwa(request.getParameter("nazwa"));
+            recipe.setOpis(request.getParameter("opis"));
+            recipe.setOcena(Integer.parseInt(request.getParameter("ocena")));
+            recipe.setTyp(Integer.parseInt(request.getParameter("typ")));
+            recipe.setZdjecie(request.getParameter("zdjecie"));
+            String recipeId = request.getParameter("id_przepis");
+            if (recipeId == null || recipeId.isEmpty()) {
+                dao.addRecipe(recipe);
+            } else {
+                recipe.setId_przepis(Long.parseLong(recipeId));
+                dao.updateRecipe(recipe);
+            }
 
-        RequestDispatcher view = request.getRequestDispatcher(LIST_RECIPE);
-        request.setAttribute("przepisy", dao.getAllRecipes());
-        view.forward(request, response);
-        */
+            RequestDispatcher view = request.getRequestDispatcher(LIST_RECIPE);
+            request.setAttribute("przepisy", dao.getAllRecipes());
+            view.forward(request, response);
+        }
 
         if (action.equalsIgnoreCase("Stworz diete")) {
             ingredientDAO ingredient_dao = new ingredientDAO();
