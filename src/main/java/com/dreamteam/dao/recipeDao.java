@@ -169,7 +169,7 @@ public class recipeDao {
                     meal_position_in_list = rand.nextInt(list_size);
                 }
                 else {
-                    meal_position_in_list = 0;
+                    meal_position_in_list = 1;
                 }
                 Recipe recipe = meal.get(meal_position_in_list);
                 i.add(recipe);
