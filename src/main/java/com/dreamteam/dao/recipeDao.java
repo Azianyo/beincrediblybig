@@ -151,7 +151,6 @@ public class recipeDao {
     }
 
     public  List<Recipe> getRecipesWithoutIngredient2(List<Ingredient> dislikes) {
-
         List<Recipe> recipes = new ArrayList<Recipe>();
         try {
             String selectSQL1 = "select id_przepis from przepis_skladnik where 0";
