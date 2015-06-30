@@ -147,6 +147,7 @@ public class recipeDao {
             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL1);
             preparedStatement.setLong(1, id);
             ResultSet rs1 = preparedStatement.executeQuery();
+            while (rs1.next()) {
             long rs3=rs1.getLong("id_przepis");
             String selectSQL2 = "select * from przepis where id_przepis=rs3)";
                 PreparedStatement preparedStatement2 = connection.prepareStatement(selectSQL2);
@@ -161,7 +162,7 @@ public class recipeDao {
                     przepis.setTyp(rs2.getInt("typ"));
                     przepis.setZdjecie(rs2.getString("zdjecie"));
                     recipes.add(przepis);
-
+                }
                 }
 
 
