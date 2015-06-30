@@ -97,31 +97,35 @@ h4{
 margin-top:20px;
 margin-left:45%;}
 
-form#warz div#warzywa{
+div#warzywa{
 position:absolute;
 top:500px;
 width:15%;
 left:25%;
 }
-form#owoc div#owoce{
+
+div#owoce{
 position:absolute;
 top:500px;
 width:15%;
 left:35%;
 }
-form#mieso div#mieso{
+
+div#mieso{
 position:absolute;
 top:500px;
 width:15%;
 left:45%;
 }
-form#nab div#nabial{
+
+div#nabial{
  position:absolute;
  top:500px;
  width:15%;
  left:55%;
 }
-form#inne div#inne{
+
+div#inne{
  position:absolute;
  top:500px;
  width:15%;
