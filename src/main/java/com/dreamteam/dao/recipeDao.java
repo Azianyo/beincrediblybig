@@ -143,13 +143,12 @@ public class recipeDao {
         List<Recipe> recipes = new ArrayList<Recipe>();
         try {
 
-            String selectSQL1 = "select * from przepis_skladnik where id_skladnik=?";
+            String selectSQL1 = "select id_przepis from przepis_skladnik where id_skladnik=?";
             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL1);
             preparedStatement.setLong(1, id);
             ResultSet rs1 = preparedStatement.executeQuery();
-            while (rs1.next()) {
-            long rs3=rs1.getLong("id_przepis");
-            String selectSQL2 = "select * from przepis where id_przepis=\"rs3\")";
+
+            String selectSQL2 = "select * from przepis where id_przepis!=\"rs1\")";
                 PreparedStatement preparedStatement2 = connection.prepareStatement(selectSQL2);
                 ResultSet rs2 = preparedStatement2.executeQuery();
                 while (rs2.next()) {
@@ -163,7 +162,7 @@ public class recipeDao {
                     przepis.setZdjecie(rs2.getString("zdjecie"));
                     recipes.add(przepis);
                 }
-                }
+
 
 
         } catch (SQLException e) {
