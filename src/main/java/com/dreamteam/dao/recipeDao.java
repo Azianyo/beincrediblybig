@@ -194,7 +194,7 @@ public class recipeDao {
     }
 
     public List<Recipe> generateDiet(Diet diet,  List<Ingredient> dislikes){
-        int type=1;
+        int type = 1;
         List<Recipe> recipes = new ArrayList<Recipe>();
         for(List<Recipe> i : diet.get_Days()) {
             List<Recipe> meal = this.getAllRecipes_byTyp(type, dislikes);
@@ -206,7 +206,7 @@ public class recipeDao {
                 i.add(recipe);
             }
             recipes = i;
-            type=type+1;
+            type = type + 1;
         }
         return recipes;
     }

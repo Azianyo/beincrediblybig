@@ -10,18 +10,18 @@ import java.util.Random;
  * Created by Mateusz on 2015-06-30.
  */
 public class Diet {
-   private List<Recipe> FirstMeal;
-   private List<Recipe> SecondMeal;
-   private List<Recipe> ThirdMeal;
-   private List<Recipe> FourthMeal;
-   private List<Recipe> FifthMeal;
-   private List<List<Recipe>> Days;
+    private List<Recipe> FirstMeal;
+    private List<Recipe> SecondMeal;
+    private List<Recipe> ThirdMeal;
+    private List<Recipe> FourthMeal;
+    private List<Recipe> FifthMeal;
+    private List<List<Recipe>> Days;
 
     public void set_Days(List<List<Recipe>> Days){
         this.Days = Days;
     }
 
-   public void set_FirstMeal(List<Recipe> Meal){
+    public void set_FirstMeal(List<Recipe> Meal){
        this.FirstMeal = Meal;
    }
     public void set_SecondMeal(List<Recipe> Meal){
