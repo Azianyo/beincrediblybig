@@ -46,20 +46,20 @@
 								</div>
 								<div class="panel-body">
 									<H2>Sniadanie</H2><br>
-									<c:out value="${poniedzialek[0].nazwa}" /><br>
-									<c:out value="${poniedzialek[0].opis}" /><br>
+									<c:out value="${sniadanie[0].nazwa}" /><br>
+									<c:out value="${sniadanie[0].opis}" /><br>
 									<H2>Obiad</H2><br>
-									<c:out value="${poniedzialek[1].nazwa}" /><br>
-									<c:out value="${poniedzialek[1].opis}" /><br>
+									<c:out value="${drugie_sniadanie[0].nazwa}" /><br>
+									<c:out value="${drugie_sniadanie[0].opis}" /><br>
 									<H2>Przed treningiem</H2><br>
-									<c:out value="${poniedzialek[2].nazwa}" /><br>
-									<c:out value="${poniedzialek[2].opis}" /><br>
+									<c:out value="${przed_treningiem[0].nazwa}" /><br>
+									<c:out value="${przed_treningiem[0].opis}" /><br>
 									<H2>Po treningu</H2><br>
-									<c:out value="${poniedzialek[3].nazwa}" /><br>
-									<c:out value="${poniedzialek[3].opis}" /><br>
+									<c:out value="${po_treningu[0].nazwa}" /><br>
+									<c:out value="${po_treningu[0].opis}" /><br>
   									<H2>Kolacja</H2><br>
-									<c:out value="${poniedzialek[4].nazwa}" /><br>
-									<c:out value="${poniedzialek[4].opis}" /><br>
+									<c:out value="${kolacja[0].nazwa}" /><br>
+									<c:out value="${kolacja[0].opis}" /><br>
 								</div>
 							</div>
 						</div>
