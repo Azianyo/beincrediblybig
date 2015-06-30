@@ -228,6 +228,86 @@
 				<div class="col-md-1"></div>
 			</div>
 		</div>
+		<a name="PT"></a>
+		<div class="jumbotron">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<div class="media">
+						<div class="media-left">
+							<a class="media-left" href="#">
+								<img src="<%=request.getContextPath()%>/images/pt.jpg" alt="pt">
+							</a>
+						</div>
+						<div class="media-body">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<H1 class="panel-title">Sobota</H1>
+								</div>
+								<div class="panel-body">
+									<H2>Sniadanie</H2><br>
+									<c:out value="${sniadanie[5].nazwa}" /><br>
+									<c:out value="${sniadanie[5].opis}" /><br>
+									<H2>Obiad</H2><br>
+									<c:out value="${drugie_sniadanie[5].nazwa}" /><br>
+									<c:out value="${drugie_sniadanie[5].opis}" /><br>
+									<H2>Przed treningiem</H2><br>
+									<c:out value="${przed_treningiem[5].nazwa}" /><br>
+									<c:out value="${przed_treningiem[5].opis}" /><br>
+									<H2>Po treningu</H2><br>
+									<c:out value="${po_treningu[5].nazwa}" /><br>
+									<c:out value="${po_treningu[5].opis}" /><br>
+									<H2>Kolacja</H2><br>
+									<c:out value="${kolacja[5].nazwa}" /><br>
+									<c:out value="${kolacja[5].opis}" /><br>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+		</div>
+		<a name="PT"></a>
+		<div class="jumbotron">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<div class="media">
+						<div class="media-left">
+							<a class="media-left" href="#">
+								<img src="<%=request.getContextPath()%>/images/pt.jpg" alt="pt">
+							</a>
+						</div>
+						<div class="media-body">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<H1 class="panel-title">Niedziela</H1>
+								</div>
+								<div class="panel-body">
+									<H2>Sniadanie</H2><br>
+									<c:out value="${sniadanie[6].nazwa}" /><br>
+									<c:out value="${sniadanie[6].opis}" /><br>
+									<H2>Obiad</H2><br>
+									<c:out value="${drugie_sniadanie[6].nazwa}" /><br>
+									<c:out value="${drugie_sniadanie[6].opis}" /><br>
+									<H2>Przed treningiem</H2><br>
+									<c:out value="${przed_treningiem[6].nazwa}" /><br>
+									<c:out value="${przed_treningiem[6].opis}" /><br>
+									<H2>Po treningu</H2><br>
+									<c:out value="${po_treningu[6].nazwa}" /><br>
+									<c:out value="${po_treningu[6].opis}" /><br>
+									<H2>Kolacja</H2><br>
+									<c:out value="${kolacja[6].nazwa}" /><br>
+									<c:out value="${kolacja[6].opis}" /><br>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+		</div>
 
 		<img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="ale foka" class="img-rounded"><br><br>
 		<form>
