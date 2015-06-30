@@ -48,6 +48,18 @@ witness true greatness
 
 </form>
 
+
+<h1 align="center">Znajdz przepis</h1>
+<form method="GET" action="RecipeController">
+    Czego nie trawisz:
+    <input TYPE=checkbox name=ingredientname VALUE=mleko> Mleko
+    <input TYPE=checkbox name=ingredientname VALUE=woda> Woda
+    <input TYPE=checkbox name=ingredientname VALUE=suchar> Suchar
+    <input TYPE=checkbox name=ingredientname VALUE=banan> Banan
+    <input type="hidden" name="action" value="SearchRecipes">
+    <input type="Submit"value="Znajdz przepisy">
+
+</form>
 <form>
     <input type="button" onClick="window.print()" class="no-print" value="Wydrukuj lub ściągnij wypis w PDF">
 </form>
