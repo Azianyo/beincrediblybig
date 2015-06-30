@@ -36,7 +36,7 @@
 				</label>
 				<label>
 					<input type="radio" name="koks" id="maxi" value="maxi"/>
-					<img src="file://$MODULE_DIR$/src/main/webapp/images/maxiKoks.jpeg" alt="Koks">
+					<img src="<%=request.getContextPath()%>/images/maxiKoks.jpeg" alt="Koks">
 				</label>
 				<label>
 					<input type="radio" name="koks" id="ultra" value="ultra" checked>
