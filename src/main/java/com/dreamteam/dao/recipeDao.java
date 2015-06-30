@@ -189,9 +189,7 @@ public class recipeDao {
 
         List<Recipe> recipes = new ArrayList<Recipe>();
         List<List<Recipe>> recipesWithoutIngredient = new ArrayList<List<Recipe>>();
-        for(Ingredient i:dislikes) {
-            recipesWithoutIngredient.add(getRecipesWithoutIngredient(i.getId_skladnik()));
-        }
+        recipesWithoutIngredient.add(getRecipesWithoutIngredient2(dislikes));
 
         try {
             String selectSQL = "select * from przepis where typ=?";
