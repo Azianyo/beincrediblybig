@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>W chuj wyjebane</title>
+  <title>W </title>
   <meta charset="UTF-8">
 </head>
 <body>
