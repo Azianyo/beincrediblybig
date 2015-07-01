@@ -17,7 +17,6 @@
 			<li><a href="http://www.menshealth.pl/dieta/8-rzeczy-ktore-buduja-miesnie,3341,1" title="8 rzeczy które budują mieśnie">Cos o zarciu</a></li>
 			<li><a href="https://www.youtube.com/watch?v=jyjuUHNwWD4" title="Krzysiu...">Jak zyc?</a></li>
 			<li><a href="https://www.youtube.com/watch?v=ThyaLgEH3k0" title="Bruneika">Hyper Pump</a></li>
-			<li><a href="https://www.youtube.com/watch?v=bTHFjLYE6MA" title="Spejson">Jak pic?</a></li>
 			<li><a href="https://www.youtube.com/watch?v=oEXSLWH36xA" title="Kobiety">Panie</a></li>
 		</ul>
 	</nav>
