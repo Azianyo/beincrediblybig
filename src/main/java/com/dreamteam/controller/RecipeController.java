@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,8 +15,6 @@ import com.dreamteam.dao.recipeDao;
 import com.dreamteam.model.Diet;
 import com.dreamteam.model.Recipe;
 import com.dreamteam.model.Ingredient;
-import java.util.Random;
-//import com.dreamteam.model.PDFGenerator;
 
 public class RecipeController extends HttpServlet {
     private static final long serialVersionUID = 1L;
