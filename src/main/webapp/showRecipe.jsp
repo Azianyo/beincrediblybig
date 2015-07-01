@@ -15,12 +15,9 @@
         <head>
             <title>Przepis</title>
             <link rel="stylesheet" href="styleRecipe.css" type="text/css">
-            <div class="alert alert-success" role="alert"><img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="nagl" class="img-thumbnail"><h1>Twoj jadlospis na tydzien! Nic tylko przybierac na masie!</h1></div>
+            <div class="alert alert-success" role="alert"><img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="nagl" class="img-thumbnail"><h1>Przepis</h1></div>
         </head>
         <body>
-        <style type="text/css" media="print">
-            .no-print { display: none; }
-        </style>
         <style type="text/css" media="print">
             .no-print { display: none; }
         </style>
@@ -63,15 +60,12 @@
                 <div class="col-md-1"></div>
             </div>
         </div>
-        <form method="POST" action='FullRecipeController'>
-            <input type="hidden" name="id" value="<c:out value="${przepis.id_przepis}" />" />
-            <input type="submit" value="Przyznaj bicka" name="giveBiceps" class="btn btn-default btn-lg no-print"/>
-        </form>
-        <form method="POST" action='FullRecipeController'>
-            <input type="submit" value="Strona główna" name="mainPage" class="btn btn-default btn-lg no-print"/>
-        </form>
         <nav>
             <ul class="pager">
+                <form method="POST" action='FullRecipeController'>
+                    <input type="hidden" name="id" value="<c:out value="${przepis.id_przepis}" />" />
+                    <input type="submit" value="Przyznaj bicka" name="giveBiceps" class="btn btn-default btn-lg no-print"/>
+                </form><br>
                 <form>
                     <input type="button" onClick="window.print()" class="btn btn-default btn-lg no-print" value="Jadlospis w PDF">
                 </form>
