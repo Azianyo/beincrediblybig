@@ -74,6 +74,7 @@ public class RecipeController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
 
+        /*
         if (action.equalsIgnoreCase("show")) {
             Recipe recipe = new Recipe();
             recipe.setNazwa(request.getParameter("nazwa"));
@@ -92,7 +93,8 @@ public class RecipeController extends HttpServlet {
             RequestDispatcher view = request.getRequestDispatcher(LIST_RECIPE);
             request.setAttribute("przepisy", dao.getAllRecipes());
             view.forward(request, response);
-        } else if (action.equalsIgnoreCase("Stworz diete")) {
+        } else */
+        if (action.equalsIgnoreCase("Stworz diete")) {
             ingredientDAO ingredient_dao = new ingredientDAO();
             forward = DIET_GENERATOR;
             String [] dislikes_ingredient_name = request.getParameterValues("ingredientname");
