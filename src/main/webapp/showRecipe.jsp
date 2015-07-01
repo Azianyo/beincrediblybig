@@ -32,26 +32,26 @@
                                     <H2><b>Nazwa</b></H2><br>
                                     <b><c:out value="${przepis.nazwa}" /></b><br>
                                     <img src="<c:out value="${przepis.zdjecie}" />" alt="" height=400 width=400><br>
-                                    <c:out value="${przepis.opis}" /><br>
-                                <table border=1>
-                                    <thead>
-                                    <tr>
-                                        <th>Skladniki</th>
-                                        <th>Ilosc</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <c:forEach items="${skladniki}" var="skladnik">
+                                    <c:out value="${przepis.opis}" /><br><br>
+                                    <table border=1>
+                                        <thead>
                                         <tr>
-                                            <td><c:out value="${skladnik.ingredient.nazwa}" /></td>
-                                            <td><c:out value="${skladnik.amount}" /></td>
+                                            <th>Skladniki</th>
+                                            <th>Ilosc</th>
                                         </tr>
-                                    </c:forEach>
-                                    </tbody>
-                                </table><br>
-                                <fieldset>
-                                    Ilosc bickow: <c:out value="${przepis.ocena}"/>
-                                </fieldset><br>
+                                        </thead>
+                                        <tbody>
+                                        <c:forEach items="${skladniki}" var="skladnik">
+                                            <tr>
+                                                <td><c:out value="${skladnik.ingredient.nazwa}" /></td>
+                                                <td><c:out value="${skladnik.amount}" /></td>
+                                            </tr>
+                                        </c:forEach>
+                                        </tbody>
+                                    </table><br>
+                                    <fieldset>
+                                        Ilosc bickow: <c:out value="${przepis.ocena}"/>
+                                    </fieldset><br>
                                 </div>
                             </div>
                         </div>
