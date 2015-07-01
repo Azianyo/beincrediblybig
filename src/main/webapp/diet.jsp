@@ -359,4 +359,8 @@
 	</div>
 	<div class="col-md-2"></div>
 </div>
+<footer id="footer">
+	<p>Copyright by Koksownia &copy; 2015</p>
+	<p> Strona by Wielki koksu</p>
+</footer>
 </html>
