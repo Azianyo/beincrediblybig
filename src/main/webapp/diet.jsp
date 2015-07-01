@@ -13,9 +13,9 @@
 	<div class="col-md-2"></div>
 	<div class="col-md-8">
 		<head>
-			<title>Wygenerowany jadlospis</title>
+			<title>Wygenerowany jadłospis</title>
 			<link rel="stylesheet" href="styleDiet.css" type="text/css">
-			<div class="alert alert-success" role="alert"><img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="nagl" class="img-thumbnail"><h1>Twoj jadlospis na tydzien! Nic tylko przybierac na masie!</h1></div>
+			<div class="alert alert-success" role="alert"><img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="nagl" class="img-thumbnail"><h1>Twoj jadłospis na tydzień! Nic tylko przybierać na masie!</h1></div>
 		</head>
 		<body>
 		<style type="text/css" media="print">
@@ -42,10 +42,10 @@
 						<div class="media-body">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<H1 class="panel-title">Poniedzialek</H1>
+									<H1 class="panel-title">Poniedziałek</H1>
 								</div>
 								<div class="panel-body">
-									<H2>Sniadanie</H2><br>
+									<H2>Śniadanie</H2><br>
 									<b><c:out value="${sniadanie[0].nazwa}" /></b><br>
 									<img src="<c:out value="${sniadanie[0].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${sniadanie[0].opis}" /><br>
@@ -90,7 +90,7 @@
 									<H1 class="panel-title">Wtorek</H1>
 								</div>
 								<div class="panel-body">
-									<H2>Sniadanie</H2><br>
+									<H2>Śniadanie</H2><br>
 									<b><c:out value="${sniadanie[1].nazwa}" /></b><br>
 									<img src="<c:out value="${sniadanie[1].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${sniadanie[1].opis}" /><br>
@@ -135,7 +135,7 @@
 									<H1 class="panel-title">Sroda</H1>
 								</div>
 								<div class="panel-body">
-									<H2>Sniadanie</H2><br>
+									<H2>Śniadanie</H2><br>
 									<b><c:out value="${sniadanie[2].nazwa}" /></b><br>
 									<img src="<c:out value="${sniadanie[2].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${sniadanie[2].opis}" /><br>
@@ -180,7 +180,7 @@
 									<H1 class="panel-title">Czwartek</H1>
 								</div>
 								<div class="panel-body">
-									<H2>Sniadanie</H2><br>
+									<H2>Śniadanie</H2><br>
 									<b><c:out value="${sniadanie[3].nazwa}" /></b><br>
 									<img src="<c:out value="${sniadanie[3].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${sniadanie[3].opis}" /><br>
@@ -225,7 +225,7 @@
 									<H1 class="panel-title">Piatek</H1>
 								</div>
 								<div class="panel-body">
-									<H2>Sniadanie</H2><br>
+									<H2>Śniadanie</H2><br>
 									<b><c:out value="${sniadanie[4].nazwa}" /></b><br>
 									<img src="<c:out value="${sniadanie[4].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${sniadanie[4].opis}" /><br>
@@ -270,7 +270,7 @@
 									<H1 class="panel-title">Sobota</H1>
 								</div>
 								<div class="panel-body">
-									<H2>Sniadanie</H2><br>
+									<H2>Śniadanie</H2><br>
 									<b><c:out value="${sniadanie[5].nazwa}" /></b><br>
 									<img src="<c:out value="${sniadanie[5].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${sniadanie[5].opis}" /><br>
@@ -315,7 +315,7 @@
 									<H1 class="panel-title">Niedziela</H1>
 								</div>
 								<div class="panel-body">
-									<H2>Sniadanie</H2><br>
+									<H2>Śniadanie</H2><br>
 									<b><c:out value="${sniadanie[6].nazwa}" /></b><br>
 									<img src="<c:out value="${sniadanie[6].zdjecie}" />" alt="" width="50" height="50"><br>
 									<c:out value="${sniadanie[6].opis}" /><br>
