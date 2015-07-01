@@ -26,9 +26,6 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
                     <div class="media">
-                        <a class="media-left" href="#">
-                            <img src="<%=request.getContextPath()%>/images/pon.jpg" alt="pon">
-                        </a>
                         <div class="media-body">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
