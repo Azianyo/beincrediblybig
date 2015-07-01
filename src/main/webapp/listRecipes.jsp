@@ -11,7 +11,6 @@
 <html>
 <head>
     <title>Lista wszystkich przepisow</title>
-    <link rel="stylesheet" href="styleDiet.css" type="text/css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script type="text/javascript" charset="UTF-8"></script>
     <meta name="Description" content="Strona najlepszych koksiarzy" >
