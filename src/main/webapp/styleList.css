@@ -1,0 +1,20 @@
+#header
+{
+    height:170px;
+    background-color:grey;
+    background-image: url("images/miesnie.jpeg");
+    text-align:center;
+}
+
+#footer
+{
+    height:100px;
+    background:grey;
+}
+
+#footer p
+{
+    text-align:center;
+    line-height:10px;
+    padding-top: 30px;
+}
