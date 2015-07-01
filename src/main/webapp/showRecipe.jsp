@@ -1,47 +1,79 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="styleRecipe.css" >
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/JavaScript" src="js/index.js"></script>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Przepis na bicka</title>
-</head>
-  <body>
-  <fieldset>
-      <c:out value="${przepis.nazwa}"/>
-  </fieldset>
-  <td><img src="${przepis.zdjecie}" alt="" border=3 height=400 width=400></td>
-  <table border=1>
-    <thead>
-    <tr>
-      <th>Skladniki</th>
-        <th> Ilosc</th>
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach items="${skladniki}" var="skladnik">
-      <tr>
-        <td><c:out value="${skladnik.ingredient.nazwa}" /></td>
-          <td><c:out value="${skladnik.amount}" /></td>
-      </tr>
-    </c:forEach>
-    </tbody>
-  </table>
-  <br>
-  <fieldset>
-    <c:out value="${przepis.opis}"/>
-  </fieldset>
-  <fieldset>
-      Ilosc bickow: <c:out value="${przepis.ocena}"/>
-  </fieldset>
-  <br>
-    <form method="POST" action='FullRecipeController'>
-        <input type="hidden" name="id" value="<c:out value="${przepis.id_przepis}" />" />
-      <input type="submit" value="Przyznaj bicka" name="giveBiceps" />
-    </form>
-    <form method="POST" action='FullRecipeController'>
-      <input type="submit" value="Strona główna" name="mainPage" />
-    </form>
-  </body>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <head>
+            <title>Przepis</title>
+            <link rel="stylesheet" href="styleRecipe.css" type="text/css">
+            <div class="alert alert-success" role="alert"><img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="nagl" class="img-thumbnail"><h1>Twoj jadlospis na tydzien! Nic tylko przybierac na masie!</h1></div>
+        </head>
+        <body>
+        <style type="text/css" media="print">
+            .no-print { display: none; }
+        </style>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="media">
+                        <a class="media-left" href="#">
+                            <img src="<%=request.getContextPath()%>/images/pon.jpg" alt="pon">
+                        </a>
+                        <div class="media-body">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <H1 class="panel-title">Poniedzialek</H1>
+                                </div>
+                                <div class="panel-body">
+                                    <H2>Nazwa</H2><br>
+                                    <b><c:out value="${przepis.nazwa}" /></b><br>
+                                    <img src="<c:out value="${przepis.zdjecie}" />" alt="" height=400 width=400><br>
+                                    <c:out value="${przepis.opis}" /><br>
+                                <table border=1>
+                                    <thead>
+                                    <tr>
+                                        <th>Skladniki</th>
+                                        <th>Ilosc</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <c:forEach items="${skladniki}" var="skladnik">
+                                        <tr>
+                                            <td><c:out value="${skladnik.ingredient.nazwa}" /></td>
+                                            <td><c:out value="${skladnik.amount}" /></td>
+                                        </tr>
+                                    </c:forEach>
+                                    </tbody>
+                                </table><br>
+                                <fieldset>
+                                    Ilosc bickow: <c:out value="${przepis.ocena}"/>
+                                </fieldset><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+        <form method="POST" action='FullRecipeController'>
+            <input type="hidden" name="id" value="<c:out value="${przepis.id_przepis}" />" />
+            <input type="submit" value="Przyznaj bicka" name="giveBiceps" class="btn btn-default btn-lg no-print"/>
+        </form>
+        <form method="POST" action='FullRecipeController'>
+            <input type="submit" value="Strona główna" name="mainPage" class="btn btn-default btn-lg no-print"/>
+        </form>
+        </body>
+    </div>
+</div>
 </html>
