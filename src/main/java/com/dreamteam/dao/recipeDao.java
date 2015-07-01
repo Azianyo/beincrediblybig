@@ -15,9 +15,6 @@ import com.dreamteam.model.Ingredient;
 import com.dreamteam.model.Recipe;
 import com.dreamteam.util.DbUtil;
 
-/**
- * chuj, dupa, kurwa, cipa
- */
 public class recipeDao {
     private Connection connection;
 
