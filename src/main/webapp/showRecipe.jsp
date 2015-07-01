@@ -21,6 +21,9 @@
         <style type="text/css" media="print">
             .no-print { display: none; }
         </style>
+        <style type="text/css" media="print">
+            .no-print { display: none; }
+        </style>
         <div class="jumbotron">
             <div class="row">
                 <div class="col-md-1"></div>
@@ -28,11 +31,8 @@
                     <div class="media">
                         <div class="media-body">
                             <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <H1 class="panel-title">Poniedzialek</H1>
-                                </div>
                                 <div class="panel-body">
-                                    <H2>Nazwa</H2><br>
+                                    <H2><b>Nazwa</b></H2><br>
                                     <b><c:out value="${przepis.nazwa}" /></b><br>
                                     <img src="<c:out value="${przepis.zdjecie}" />" alt="" height=400 width=400><br>
                                     <c:out value="${przepis.opis}" /><br>
@@ -70,7 +70,21 @@
         <form method="POST" action='FullRecipeController'>
             <input type="submit" value="Strona główna" name="mainPage" class="btn btn-default btn-lg no-print"/>
         </form>
+        <nav>
+            <ul class="pager">
+                <form>
+                    <input type="button" onClick="window.print()" class="btn btn-default btn-lg no-print" value="Jadlospis w PDF">
+                </form>
+                <form method="POST" action='FullRecipeController'>
+                    <input type="submit" value="Strona główna" class="btn btn-default btn-lg no-print" name="mainPage" />
+                </form>
+            </ul>
+        </nav>
         </body>
     </div>
 </div>
+<footer id="footer">
+    <p>Copyright by Koksownia &copy; 2015</p>
+    <p>Strona by Wielki koksu</p>
+</footer>
 </html>
