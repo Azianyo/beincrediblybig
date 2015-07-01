@@ -12,9 +12,15 @@
 <head>
     <title>Lista wszystkich przepisow</title>
     <link rel="stylesheet" href="styleDiet.css" type="text/css">
-    <div class="alert alert-success" role="alert"><img src="<%=request.getContextPath()%>/images/bialko_nagl.jpg" alt="nagl" class="img-thumbnail"><h1>Wszystkie przepisy w jednym miejscu</h1></div>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" charset="UTF-8"></script>
+    <meta name="Description" content="Strona najlepszych koksiarzy" >
+    <meta name="author" content="Wielki Koks">
 </head>
 <body>
+<header id="header">
+    <h1><a href="#" title="Strona przepisow">Wszystkie przepisy w jednym miejscu</a></h1>
+</header>
 <style type="text/css" media="print" scoped>
     .no-print { display: none; }
 </style>
