@@ -29,9 +29,9 @@
                         <div class="media-body">
                             <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <H2><b>Nazwa</b></H2><br>
-                                    <b><c:out value="${przepis.nazwa}" /></b><br>
-                                    <img src="<c:out value="${przepis.zdjecie}" />" alt="" height=400 width=400><br>
+                                    <H2><b>Nazwa</b></H2>
+                                    <b><c:out value="${przepis.nazwa}" /></b><br><br>
+                                    <img src="<c:out value="${przepis.zdjecie}" />" alt="" height=400 width=400><br><br>
                                     <c:out value="${przepis.opis}" /><br><br>
                                     <table border=1>
                                         <thead>
