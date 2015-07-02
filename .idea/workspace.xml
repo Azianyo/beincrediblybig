@@ -65,18 +65,18 @@
       <file leaf-file-name="recipeDao.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamteam/dao/recipeDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2821497">
-              <caret line="156" column="10" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.706334">
+              <caret line="184" column="21" selection-start-line="184" selection-start-column="21" selection-end-line="184" selection-end-column="21" />
               <folding>
-                <element signature="e#7724#7738#0" expanded="true" />
-                <marker date="1435853567988" expanded="true" signature="670:748" placeholder="insert into ..." />
-                <marker date="1435853567988" expanded="true" signature="1376:1414" placeholder="delete from ..." />
-                <marker date="1435853567988" expanded="true" signature="1733:1814" placeholder="update przep..." />
-                <marker date="1435853567988" expanded="true" signature="2684:2705" placeholder="select * fro..przepis..." />
-                <marker date="1435853567988" expanded="true" signature="3495:3535" placeholder="select * fro..przepis..." />
-                <marker date="1435853567988" expanded="true" signature="4334:4381" placeholder="select id_pr..przepis_skladnik..." />
-                <marker date="1435853567988" expanded="true" signature="4755:4784" placeholder="select * fro..przepis..." />
-                <marker date="1435853567988" expanded="true" signature="6012:6045" placeholder="select * fro..przepis..." />
+                <element signature="e#7726#7740#0" expanded="true" />
+                <marker date="1435853771166" expanded="true" signature="670:748" placeholder="insert into ..." />
+                <marker date="1435853771166" expanded="true" signature="1376:1414" placeholder="delete from ..." />
+                <marker date="1435853771166" expanded="true" signature="1733:1814" placeholder="update przep..." />
+                <marker date="1435853771166" expanded="true" signature="2684:2705" placeholder="select * fro..przepis..." />
+                <marker date="1435853771166" expanded="true" signature="3495:3535" placeholder="select * fro..przepis..." />
+                <marker date="1435853771166" expanded="true" signature="4334:4381" placeholder="select id_pr..przepis_skladnik..." />
+                <marker date="1435853771166" expanded="true" signature="4755:4784" placeholder="select * fro..przepis..." />
+                <marker date="1435853771166" expanded="true" signature="6012:6045" placeholder="select * fro..przepis..." />
               </folding>
             </state>
           </provider>
@@ -689,7 +689,7 @@
       <workItem from="1435782159991" duration="413000" />
       <workItem from="1435782602902" duration="30000" />
       <workItem from="1435782661732" duration="2243000" />
-      <workItem from="1435843637609" duration="10064000" />
+      <workItem from="1435843637609" duration="10269000" />
     </task>
     <task id="LOCAL-00001" summary="Wygląd strony">
       <created>1435782246240</created>
@@ -883,11 +883,17 @@
       <option name="project" value="LOCAL" />
       <updated>1435853640785</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Deploy">
+      <created>1435853781453</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1435853781453</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13539000" />
+    <option name="totallyTimeSpent" value="13744000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -1173,18 +1179,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamteam/dao/recipeDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2821497">
-          <caret line="156" column="10" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.706334">
+          <caret line="184" column="21" selection-start-line="184" selection-start-column="21" selection-end-line="184" selection-end-column="21" />
           <folding>
-            <element signature="e#7724#7738#0" expanded="true" />
-            <marker date="1435853567988" expanded="true" signature="670:748" placeholder="insert into ..." />
-            <marker date="1435853567988" expanded="true" signature="1376:1414" placeholder="delete from ..." />
-            <marker date="1435853567988" expanded="true" signature="1733:1814" placeholder="update przep..." />
-            <marker date="1435853567988" expanded="true" signature="2684:2705" placeholder="select * fro..przepis..." />
-            <marker date="1435853567988" expanded="true" signature="3495:3535" placeholder="select * fro..przepis..." />
-            <marker date="1435853567988" expanded="true" signature="4334:4381" placeholder="select id_pr..przepis_skladnik..." />
-            <marker date="1435853567988" expanded="true" signature="4755:4784" placeholder="select * fro..przepis..." />
-            <marker date="1435853567988" expanded="true" signature="6012:6045" placeholder="select * fro..przepis..." />
+            <element signature="e#7726#7740#0" expanded="true" />
+            <marker date="1435853771166" expanded="true" signature="670:748" placeholder="insert into ..." />
+            <marker date="1435853771166" expanded="true" signature="1376:1414" placeholder="delete from ..." />
+            <marker date="1435853771166" expanded="true" signature="1733:1814" placeholder="update przep..." />
+            <marker date="1435853771166" expanded="true" signature="2684:2705" placeholder="select * fro..przepis..." />
+            <marker date="1435853771166" expanded="true" signature="3495:3535" placeholder="select * fro..przepis..." />
+            <marker date="1435853771166" expanded="true" signature="4334:4381" placeholder="select id_pr..przepis_skladnik..." />
+            <marker date="1435853771166" expanded="true" signature="4755:4784" placeholder="select * fro..przepis..." />
+            <marker date="1435853771166" expanded="true" signature="6012:6045" placeholder="select * fro..przepis..." />
           </folding>
         </state>
       </provider>
