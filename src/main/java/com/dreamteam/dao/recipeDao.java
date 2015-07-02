@@ -181,7 +181,7 @@ public class recipeDao {
                             }
                         }
                     if (Information == 0) {
-                        //recipes.add(przepis);
+                        recipes.add(przepis);
                     }
                 }else {
                     recipes.add(przepis);
@@ -193,9 +193,9 @@ public class recipeDao {
         return recipes;
     }
 
-    public List<Recipe> generateDiet(Diet diet,  List<Ingredient> dislikes){
+    public void generateDiet(Diet diet,  List<Ingredient> dislikes){
         int type = 1;
-        List<Recipe> recipes = new ArrayList<Recipe>();
+        List<List<Recipe>> recipes = new ArrayList<List<Recipe>>();
         List<Recipe> meal;
         for(List<Recipe> i : diet.get_Days()) {
             meal = this.getAllRecipes_byTyp(type, dislikes);
@@ -206,9 +206,10 @@ public class recipeDao {
                 Recipe recipe = meal.get(meal_position_in_list);
                 i.add(recipe);
             }
-            recipes = i;
+            recipes.add(i);
             type = type + 1;
+
         }
-        return recipes;
+        diet.set_Days(recipes);
     }
 }

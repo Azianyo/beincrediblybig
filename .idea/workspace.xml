@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2bb4184-3bbf-4cf9-84ec-cf497f072c11" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dreamteam/dao/recipeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/dreamteam/dao/recipeDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="beincrediblebig.iws" />
@@ -25,16 +26,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5">
-              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ingredientDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamteam/dao/ingredientDAO.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -66,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamteam/controller/RecipeController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="103" column="45" selection-start-line="103" selection-start-column="12" selection-end-line="103" selection-end-column="45" />
+              <caret line="103" column="29" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -75,18 +66,49 @@
       <file leaf-file-name="recipeDao.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamteam/dao/recipeDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6084453">
-              <caret line="175" column="32" selection-start-line="175" selection-start-column="32" selection-end-line="175" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.24952015">
+              <caret line="197" column="67" selection-start-line="195" selection-start-column="11" selection-end-line="197" selection-end-column="67" />
               <folding>
-                <marker date="1435850675103" expanded="true" signature="670:748" placeholder="insert into ..." />
-                <marker date="1435850675103" expanded="true" signature="1376:1414" placeholder="delete from ..." />
-                <marker date="1435850675103" expanded="true" signature="1733:1814" placeholder="update przep..." />
-                <marker date="1435850675103" expanded="true" signature="2684:2705" placeholder="select * fro..przepis..." />
-                <marker date="1435850675103" expanded="true" signature="3495:3535" placeholder="select * fro..przepis..." />
-                <marker date="1435850675103" expanded="true" signature="4334:4381" placeholder="select id_pr..przepis_skladnik..." />
-                <marker date="1435850675103" expanded="true" signature="4755:4784" placeholder="select * fro..przepis..." />
-                <marker date="1435850675103" expanded="true" signature="6012:6045" placeholder="select * fro..przepis..." />
+                <element signature="e#7740#7754#0" expanded="true" />
+                <marker date="1435852397647" expanded="true" signature="670:748" placeholder="insert into ..." />
+                <marker date="1435852397647" expanded="true" signature="1376:1414" placeholder="delete from ..." />
+                <marker date="1435852397647" expanded="true" signature="1733:1814" placeholder="update przep..." />
+                <marker date="1435852397647" expanded="true" signature="2684:2705" placeholder="select * fro..przepis..." />
+                <marker date="1435852397647" expanded="true" signature="3495:3535" placeholder="select * fro..przepis..." />
+                <marker date="1435852397647" expanded="true" signature="4334:4381" placeholder="select id_pr..przepis_skladnik..." />
+                <marker date="1435852397647" expanded="true" signature="4755:4784" placeholder="select * fro..przepis..." />
+                <marker date="1435852397647" expanded="true" signature="6012:6045" placeholder="select * fro..przepis..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="diet.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/diet.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.0">
+              <caret line="275" column="71" selection-start-line="273" selection-start-column="55" selection-end-line="275" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Diet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamteam/model/Diet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="26" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.65384614">
+              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,9 +128,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/webapp/showRecipe.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/diet.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dreamteam/controller/RecipeController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/dreamteam/dao/recipeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dreamteam/controller/RecipeController.java" />
       </list>
     </option>
   </component>
@@ -542,6 +564,16 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -658,7 +690,7 @@
       <workItem from="1435782159991" duration="413000" />
       <workItem from="1435782602902" duration="30000" />
       <workItem from="1435782661732" duration="2243000" />
-      <workItem from="1435843637609" duration="7539000" />
+      <workItem from="1435843637609" duration="9479000" />
     </task>
     <task id="LOCAL-00001" summary="Wygląd strony">
       <created>1435782246240</created>
@@ -840,11 +872,17 @@
       <option name="project" value="LOCAL" />
       <updated>1435850684693</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Deploy">
+      <created>1435851367285</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1435851367285</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11014000" />
+    <option name="totallyTimeSpent" value="12954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -1064,14 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/dietGenerator.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-22.884615">
@@ -1088,22 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamteam/controller/RecipeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="103" column="45" selection-start-line="103" selection-start-column="12" selection-end-line="103" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/diet.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="9.414142">
-          <caret line="317" column="49" selection-start-line="317" selection-start-column="49" selection-end-line="317" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamteam/model/Recipe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35892513">
@@ -1112,19 +1126,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33205375">
+          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamteam/model/Diet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="26" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/diet.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="275" column="71" selection-start-line="273" selection-start-column="55" selection-end-line="275" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamteam/controller/RecipeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="29" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dreamteam/dao/recipeDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6084453">
-          <caret line="175" column="32" selection-start-line="175" selection-start-column="32" selection-end-line="175" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.24952015">
+          <caret line="197" column="67" selection-start-line="195" selection-start-column="11" selection-end-line="197" selection-end-column="67" />
           <folding>
-            <marker date="1435850675103" expanded="true" signature="670:748" placeholder="insert into ..." />
-            <marker date="1435850675103" expanded="true" signature="1376:1414" placeholder="delete from ..." />
-            <marker date="1435850675103" expanded="true" signature="1733:1814" placeholder="update przep..." />
-            <marker date="1435850675103" expanded="true" signature="2684:2705" placeholder="select * fro..przepis..." />
-            <marker date="1435850675103" expanded="true" signature="3495:3535" placeholder="select * fro..przepis..." />
-            <marker date="1435850675103" expanded="true" signature="4334:4381" placeholder="select id_pr..przepis_skladnik..." />
-            <marker date="1435850675103" expanded="true" signature="4755:4784" placeholder="select * fro..przepis..." />
-            <marker date="1435850675103" expanded="true" signature="6012:6045" placeholder="select * fro..przepis..." />
+            <element signature="e#7740#7754#0" expanded="true" />
+            <marker date="1435852397647" expanded="true" signature="670:748" placeholder="insert into ..." />
+            <marker date="1435852397647" expanded="true" signature="1376:1414" placeholder="delete from ..." />
+            <marker date="1435852397647" expanded="true" signature="1733:1814" placeholder="update przep..." />
+            <marker date="1435852397647" expanded="true" signature="2684:2705" placeholder="select * fro..przepis..." />
+            <marker date="1435852397647" expanded="true" signature="3495:3535" placeholder="select * fro..przepis..." />
+            <marker date="1435852397647" expanded="true" signature="4334:4381" placeholder="select id_pr..przepis_skladnik..." />
+            <marker date="1435852397647" expanded="true" signature="4755:4784" placeholder="select * fro..przepis..." />
+            <marker date="1435852397647" expanded="true" signature="6012:6045" placeholder="select * fro..przepis..." />
           </folding>
         </state>
       </provider>
