@@ -151,8 +151,8 @@ public class recipeDao {
     public List<Recipe> getAllRecipes_byTyp(int typ, List<Ingredient> dislikes) {
 
         List<Recipe> recipes = new ArrayList<Recipe>();
-        List<List<Recipe>> recipesWithoutIngredient = new ArrayList<List<Recipe>>();
-        recipesWithoutIngredient.add(getRecipesWithoutIngredient(dislikes));
+        List<Recipe> recipesWithoutIngredient;
+        recipesWithoutIngredient = (getRecipesWithoutIngredient(dislikes));
 
         try {
             String selectSQL = "select * from przepis where typ=?";
@@ -170,15 +170,15 @@ public class recipeDao {
                 przepis.setZdjecie(rs.getString("zdjecie"));
                 int Information = 0;
                 if (dislikes.size() != 0) {
-                    for (List<Recipe> list : recipesWithoutIngredient) {
-                        for (Recipe r : list) {
+
+                        for (Recipe r : recipesWithoutIngredient) {
                             if (r.getId_przepis() == przepis.getId_przepis()) {
                                 //recipes.add(przepis);
                                 Information = 1;
 
                             }
                         }
-                    }
+
                     if (Information == 0) {
                         recipes.add(przepis);
                     }
