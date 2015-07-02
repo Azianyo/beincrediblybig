@@ -180,7 +180,7 @@ public class recipeDao {
                         }
 
                     if (Information == 0) {
-                        //recipes.add(przepis);
+                        recipes.add(przepis);
                     }
                 }else {
                     recipes.add(przepis);
