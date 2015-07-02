@@ -174,6 +174,7 @@ public class recipeDao {
                         for (Recipe r : list) {
                             if (r.getId_przepis() == przepis.getId_przepis()) {
                                 recipes.add(przepis);
+                                Information = true;
                                 break;
                             }
                         }
