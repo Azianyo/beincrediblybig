@@ -170,15 +170,16 @@ public class recipeDao {
                 przepis.setZdjecie(rs.getString("zdjecie"));
                 int Information = 0;
                 if (dislikes.size() != 0) {
-
                         for (Recipe r : recipesWithoutIngredient) {
                             if (r.getId_przepis() == przepis.getId_przepis()) {
-                                recipes.add(przepis);
+                                //recipes.add(przepis);
                                 Information = 1;
-
+                                break;
+                            }
+                            else {
+                                Information = 0;
                             }
                         }
-
                     if (Information == 0) {
                         recipes.add(przepis);
                     }
