@@ -180,9 +180,6 @@ public class recipeDao {
                                 Information = 0;
                             }
                         }
-                    if (Information == 0) {
-                       // recipes.add(przepis);
-                    }
                 }else {
                     recipes.add(przepis);
                 }
@@ -215,7 +212,6 @@ public class recipeDao {
             }
             recipes.add(i);
             type = type + 1;
-
         }
         diet.set_Days(recipes);
     }
