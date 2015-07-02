@@ -200,7 +200,7 @@ public class recipeDao {
             for (int counter = 0; counter < 7; counter++) {
                 int list_size = meal.size();
                 Random rand = new Random();
-                int meal_position_in_list = rand.nextInt(list_size);
+                int meal_position_in_list = rand.nextInt(list_size+1);
                 Recipe recipe = meal.get(meal_position_in_list);
                 i.add(recipe);
             }
