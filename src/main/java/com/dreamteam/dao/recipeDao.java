@@ -196,8 +196,9 @@ public class recipeDao {
     public List<Recipe> generateDiet(Diet diet,  List<Ingredient> dislikes){
         int type = 1;
         List<Recipe> recipes = new ArrayList<Recipe>();
+        List<Recipe> meal;
         for(List<Recipe> i : diet.get_Days()) {
-            List<Recipe> meal = this.getAllRecipes_byTyp(type, dislikes);
+            meal = this.getAllRecipes_byTyp(type, dislikes);
             for (int counter = 0; counter < 7; counter++) {
                 int list_size = meal.size();
                 Random rand = new Random();
