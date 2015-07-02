@@ -172,7 +172,7 @@ public class recipeDao {
                     Information = 0;
                         for (Recipe r : recipesWithoutIngredient) {
                             if ((r.getId_przepis() == przepis.getId_przepis()) && (Information == 0)) {
-                                recipes.add(przepis);
+                                //recipes.add(przepis);
                                 Information = 1;
                                 break;
                             }
@@ -181,7 +181,7 @@ public class recipeDao {
                             }
                         }
                     if (Information == 0) {
-                        //recipes.add(przepis);
+                        recipes.add(przepis);
                     }
                 }else {
                     recipes.add(przepis);
@@ -201,10 +201,17 @@ public class recipeDao {
             meal = this.getAllRecipes_byTyp(type, dislikes);
             for (int counter = 0; counter < 7; counter++) {
                 int list_size = meal.size();
-                Random rand = new Random();
-                int meal_position_in_list = rand.nextInt(list_size);
-                Recipe recipe = meal.get(meal_position_in_list);
-                i.add(recipe);
+                if (list_size == 0){
+                    Recipe empty = new Recipe();
+                    Recipe recipe = empty;
+                    i.add(recipe);
+                }
+                else {
+                    Random rand = new Random();
+                    int meal_position_in_list = rand.nextInt(list_size);
+                    Recipe recipe = meal.get(meal_position_in_list);
+                    i.add(recipe);
+                }
             }
             recipes.add(i);
             type = type + 1;

@@ -46,5 +46,14 @@ public class Recipe {
     public void setTyp(int typ) {
         this.typ = typ;
     }
+
+    public Recipe(){
+        this.id_przepis = 0;
+        this.nazwa = "NIE MAM CO DLA CIEBIE DAĆ";
+        this.opis = "";
+        this.typ = 0;
+        this.zdjecie = "";
+    }
 }
+
 
