@@ -173,14 +173,14 @@ public class recipeDao {
                     for (List<Recipe> list : recipesWithoutIngredient) {
                         for (Recipe r : list) {
                             if (r.getId_przepis() == przepis.getId_przepis()) {
-                                recipes.add(przepis);
+                                //recipes.add(przepis);
                                 Information = true;
                                 break;
                             }
                         }
                     }
                     if (Information == false) {
-
+                        recipes.add(przepis);
                     }
                 }else {
                     recipes.add(przepis);
@@ -200,7 +200,7 @@ public class recipeDao {
             for (int counter = 0; counter < 7; counter++) {
                 int list_size = meal.size();
                 Random rand = new Random();
-                int meal_position_in_list = rand.nextInt(list_size+1);
+                int meal_position_in_list = rand.nextInt(list_size);
                 Recipe recipe = meal.get(meal_position_in_list);
                 i.add(recipe);
             }
