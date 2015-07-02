@@ -159,7 +159,7 @@ public class recipeDao {
             PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
             preparedStatement.setInt(1, typ);
             ResultSet rs = preparedStatement.executeQuery();
-
+            int Information = 0;
             while (rs.next()) {
                 Recipe przepis = new Recipe();
                 przepis.setId_przepis(rs.getLong("id_przepis"));
@@ -168,7 +168,7 @@ public class recipeDao {
                 przepis.setOcena(rs.getInt("ocena"));
                 przepis.setTyp(rs.getInt("typ"));
                 przepis.setZdjecie(rs.getString("zdjecie"));
-                int Information = 0;
+                Information = 0;
                 if (dislikes.size() != 0) {
                         for (Recipe r : recipesWithoutIngredient) {
                             if (r.getId_przepis() == przepis.getId_przepis()) {
