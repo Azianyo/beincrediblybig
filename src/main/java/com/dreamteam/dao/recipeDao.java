@@ -173,14 +173,14 @@ public class recipeDao {
                     for (List<Recipe> list : recipesWithoutIngredient) {
                         for (Recipe r : list) {
                             if (r.getId_przepis() == przepis.getId_przepis()) {
-                                recipes.add(przepis);
+                                //recipes.add(przepis);
                                 Information = true;
 
                             }
                         }
                     }
                     if (Information == false) {
-                        //recipes.add(przepis);
+                        recipes.add(przepis);
                     }
                 }else {
                     recipes.add(przepis);
