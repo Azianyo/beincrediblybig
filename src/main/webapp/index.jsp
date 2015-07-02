@@ -40,35 +40,35 @@
 		</div>
 		<h4>Czego nie trawisz?</h4>
 		<div id="warzywa">
-			<label id="warzywa">Warzywa:</label><br>
+			<label>Warzywa:</label><br>
 			<input type="checkbox" name="ingredientname" value="Marchewka" id="warzywa1">Marchewka<br>
 			<input type="checkbox" name="ingredientname" value="Cebula" id="warzywa2">Cebula<br>
 			<input type="checkbox" name="ingredientname" value="Papryka" id="warzywa3">Papryka<br>
 			<input type="checkbox" name="ingredientname" value="Pietruszka" id="warzywa4">Pietruszka<br>
 		</div>
 		<div id="owoce">
-			<label id="owoce">Owoce:</label><br>
+			<label>Owoce:</label><br>
 			<input type="checkbox" name="ingredientname" value="Jablko" id="owoce1">Jabłko<br>
 			<input type="checkbox" name="ingredientname" value="Pitahaja" id="owoce2">Pitahaja<br>
 			<input type="checkbox" name="ingredientname" value="Gruszka" id="owoce3">Gruszka<br>
 			<input type="checkbox" name="ingredientname" value="Poziomka" id="owoce4">Poziomka<br>
 		</div>
 		<div id="mieso">
-			<label id="mieso">Mięso:</label><br>
+			<label>Mięso:</label><br>
 			<input type="checkbox" name="ingredientname" value="Baranina" id="mieso1">Baranina<br>
 			<input type="checkbox" name="ingredientname" value="Ryby" id="mieso2">Ryby<br>
 			<input type="checkbox" name="ingredientname" value="Kurczak" id="mieso3">Kurczak<br>
 			<input type="checkbox" name="ingredientname" value="Wolowina" id="mieso4">Wołowina<br>
 		</div>
 		<div id="nabial">
-			<label id="nabial">Nabiał:</label><br>
+			<label>Nabiał:</label><br>
 			<input type="checkbox" name="ingredientname" value="Jogurt" id="nabial1">Jogurt<br>
 			<input type="checkbox" name="ingredientname" value="Mleko" id="nabial2">Mleko<br>
 			<input type="checkbox" name="ingredientname" value="Ser" id="nabial3">Ser<br>
 			<input type="checkbox" name="ingredientname" value="Jaja" id="nabial4">Jaja<br>
 		</div>
 		<div id="inne">
-			<label id="inne">Inne:</label><br>
+			<label>Inne:</label><br>
 			<input type="checkbox" name="ingredientname" value="Makaron" id="inne1">Makaron<br>
 			<input type="checkbox" name="ingredientname" value="Pieczywo" id="inne2">Pieczywo<br>
 			<input type="checkbox" name="ingredientname" value="Kuskus" id="inne3">Kuskus<br>
