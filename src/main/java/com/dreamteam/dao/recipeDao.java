@@ -168,18 +168,18 @@ public class recipeDao {
                 przepis.setOcena(rs.getInt("ocena"));
                 przepis.setTyp(rs.getInt("typ"));
                 przepis.setZdjecie(rs.getString("zdjecie"));
-                boolean Information = false;
+                int Information = 0;
                 if (dislikes.size() != 0) {
                     for (List<Recipe> list : recipesWithoutIngredient) {
                         for (Recipe r : list) {
                             if (r.getId_przepis() == przepis.getId_przepis()) {
                                 //recipes.add(przepis);
-                                Information = true;
+                                Information = 1;
 
                             }
                         }
                     }
-                    if (Information == false) {
+                    if (Information == 0) {
                         recipes.add(przepis);
                     }
                 }else {
