@@ -172,7 +172,7 @@ public class recipeDao {
                 if (dislikes.size() != 0) {
                         for (Recipe r : recipesWithoutIngredient) {
                             if (r.getId_przepis() == przepis.getId_przepis()) {
-                                //recipes.add(przepis);
+                                recipes.add(przepis);
                                 Information = 1;
                                 break;
                             }
@@ -184,7 +184,7 @@ public class recipeDao {
                         recipes.add(przepis);
                     }
                 }else {
-                    recipes.add(przepis);
+                    //recipes.add(przepis);
                 }
             }
         } catch (SQLException e) {
